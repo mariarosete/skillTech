@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cursos</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/estilos/admin.css">
+    <link rel="stylesheet" href="/estilos/index.css">
+    <link rel="stylesheet" href="/estilos/modalBorrado.css">
+
+    <!-- JS -->
+    <script src="/js/insertarCurso.js"></script>
+    <script src="/js/gestionCurso.js"></script>
+    
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+    <!-- Enlace al favicon -->
+   <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+</head>
+<body>
+
+<!-- Encabezado con imagen -->
+<div class="header">
+    <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+</div>
+
+<!-- Menú y submenú -->
+<nav>
+    <ul>
+        <li><a href="/usuarios/html/admin/indexAdmin.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="/usuarios/html/admin/indexAdmin.html" title="Panel Admin"><i class="fas fa-cogs"></i> Gestión <i class="fas fa-chevron-down"></i></a>
+            <ul>
+                <li><a href="/usuarios/html/admin/gestionUsuarios.html">Usuarios</a></li>
+                <li><a href="/usuarios/html/admin/gestionCursos.html">Cursos</a></li>
+                <li><a href="/usuarios/html/admin/gestionContenido.html">Contenido</a></li>
+                <li><a href="/usuarios/html/admin/formularioSoporteAdmin.html">Solicitud de Soporte</a></li>
+            </ul>
+        </li>
+        <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+    </ul>
+</nav>
+
+<h1><i class="fas fa-graduation-cap"></i> Gestión de Cursos</h1>
+
+<!-- Botón de agregar curso -->
+<div class="agregar-contacto">
+    <a href="#" id="crearCurso"><i class="fas fa-plus"></i> Agregar Nuevo Curso</a>
+</div>
+
+<!-- Modal para crear curso -->
+<div id="modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="registro-div">
+            <form id="registro2" class="formCurso">
+                <h2 class="title"><i class="fas fa-graduation-cap"></i> Nuevo Curso</h2>
+                <span class="close" id="cerrarModal">&times;</span>
+
+                <div class="inputContainer">
+                    <input type="text" id="titulo" class="input" name="nombre" required>
+                    <label for="titulo" id="tituloLabel" class="label">Título:</label>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="descripcion" id="descripcionLabel" class="label">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" class="input" rows="5" cols="60" required></textarea>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="categoria" id="categoriaLabel" class="label"></label>
+                    <select id="categoria" name="categoria" class="input" required>
+                        <option value="">Seleccione una categoría</option>
+                        <option value="Programación">Programación</option>
+                        <option value="Desarrollo Web">Desarrollo Web</option>
+                        <option value="Bases de datos y SQL">Bases de datos y SQL</option>
+                        <option value="Seguridad Informática">Seguridad Informática</option>
+                        <option value="Tecnologías emergentes">Tecnologías emergentes</option>
+                    </select>
+                </div>
+
+                <input type="submit" class="botonEnviar" value="Añadir">
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para editar curso -->
+<div id="editarModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="registro-div">
+            
+            <form id="formularioEdicion" class="formCurso">
+                <div class="encabezado-formulario">
+                    <div class="imagen-perfil">
+                        <label for="inputFotoCurso" class="icon"><i class="fas fa-plus"></i></label>
+                        <input type="file" id="inputFotoCurso" accept="image/*" style="display: none;">
+                        <img id="previewFotoCurso" src="/imagenes/curso.png" alt="Imagen de perfil">
+                    </div>
+                    <h2 class="title"><i class="fas fa-edit"></i> Editar Curso</h2>
+                    <span class="close" id="cerrarModal2">&times;</span>
+                </div>
+            
+                <div class="inputContainer">
+                    <input type="text" id="editarTitulo" class="input" name="titulo" placeholder="Dejar en blanco para mantener el valor actual">
+                    <label for="editarTitulo" class="label">Título</label>
+                </div>
+
+                <div class="inputContainer">
+                    <textarea id="editarDescripcion" class="input" name="descripcion" rows="5" cols="60" placeholder="Dejar en blanco para mantener el valor actual"></textarea>
+                    <label for="editarDescripcion" class="label">Descripción</label>
+                </div>
+
+                <div class="inputContainer">
+                    <select id="editarCategoria" class="input" name="categoria">
+                        <option value="">Seleccione una categoría</option>
+                        <option value="Programación">Programación</option>
+                        <option value="Desarrollo Web">Desarrollo Web</option>
+                        <option value="Bases de datos y SQL">Bases de datos y SQL</option>
+                        <option value="Seguridad Informática">Seguridad Informática</option>
+                        <option value="Tecnologías emergentes">Tecnologías emergentes</option>
+                    </select>
+                    <label for="editarCategoria" class="label">Categoría</label>
+                </div>
+                <input type="submit" class="botonRegistro" value="Guardar">
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Tabla Cursos -->
+<div class="contenedor-tabla2">
+    <table class="tablaCursos" id="tablaCursos">
+        <thead>
+        <tr>
+            <th><i class="fas fa-heading"></i> Título</th>
+            <th><i class="fas fa-file-alt"></i> Descripcion</th>
+            <th><i class="fas fa-tags"></i> Categoría</th>
+            <th><i class="fas fa-cogs"></i> Acciones</th>
+        </tr>
+        </thead>
+        <tbody id="tbodyCursos">
+        <!-- Filas de la tabla dinámicamente -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal de confirmación -->
+<div id="confirmModal" class="modal confirm-modal">
+    <div class="modal-content">
+        <h2>Confirmar Eliminación <i class="fas fa-trash-alt accion"></i></h2>
+        <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+        <div class="confirm-buttons">
+            <button id="confirmarEliminar">Sí, eliminar</button>
+            <button id="cancelarEliminar">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de éxito para la modificación del usuario -->
+<div id="mensajeExitoModal" class="modal bienvenida-modal">
+    <div class="modal-content">
+        <h2><i class="fas fa-check-circle icon"></i> Modificación Exitosa</h2>
+        <p>¡Los detalles del curso se han modificado correctamente!</p>
+    </div>
+</div>
+
+<!-- Modal de éxito para la inserción de usuario -->
+<div id="mensajeExitoModal2" class="modal bienvenida-modal">
+    <div class="modal-content">
+        <h2><i class="fas fa-check-circle icon"></i> ¡Registro exitoso!</h2>
+        <p>El curso se ha creado correctamente.</p>
+    </div>
+</div>
+
+ <!-- Script para poder insertar otra imagen en el formulario de edicción -->
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputFotoCurso = document.querySelector('#inputFotoCurso');
+        const previewFotoCurso = document.querySelector('#previewFotoCurso');
+
+        inputFotoCurso.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const base64Image = event.target.result;
+                    previewFotoCurso.src = base64Image;
+                    
+                    const courseId = getCourseIdFromURL();
+                    localStorage.setItem(`courseImage_${courseId}`, base64Image);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        const courseId = getCourseIdFromURL();
+
+        const courseImage = localStorage.getItem(`courseImage_${courseId}`);
+
+        if (courseImage) {
+            previewFotoCurso.src = courseImage;
+        }
+
+        function getCourseIdFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+    });
+</script>
+
+<!--Script para cerrar sesión  -->
+<script>
+        
+    var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+    botonCerrarSesion.addEventListener('click', function() {
+        window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+    });
+
+</script>
+</body>
+</html>

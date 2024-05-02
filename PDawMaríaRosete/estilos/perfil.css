@@ -1,0 +1,158 @@
+@import url("comun.css");
+
+/* Perfil de usuario */
+.perfil {
+    max-width: 900px;
+    margin: 50px auto; 
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+    margin-bottom: 100px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    height: 90%;
+    width: 90%;
+}
+
+.izquierda {
+    width: calc(70% - 20px); 
+}
+
+.derecha {
+    width: calc(30% - 20px); 
+    margin-left: 20px; 
+}
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 60px;  
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.avatar img {
+    width: 100%;
+    height: auto;
+}
+
+.avatar-overlay {
+    margin-left: 10px;
+}
+
+.estadisticas {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 80px;
+    margin-right: -70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.estadisticas h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+.estadisticas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.estadisticas ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.estadisticas ul li i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+/* Ocultar el input de tipo file */
+#inputFotoPerfil {
+    display: none;
+}
+
+/* Estilos para el formulario */
+#formularioEdicion {
+    margin-top: 50px; 
+    margin-bottom: 50px; 
+    height: 40%;
+    margin-left: 40px;
+    border: 2px solid #ACBEF2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.inputContainer {
+    margin-bottom: 40px; 
+    margin-top: 40px;
+}
+
+.label {   
+    margin-bottom: 12px; 
+    color: #555; 
+    font-weight: bold;
+}
+
+.inputContainer input[type="text"],
+.inputContainer input[type="email"],
+.inputContainer input[type="password"],
+.inputContainer select {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    padding: 12px 15px; 
+}
+
+.inputContainer input[type="text"]:focus,
+.inputContainer input[type="email"]:focus,
+.inputContainer input[type="password"]:focus,
+.inputContainer select:focus {
+    border-color: #007bff;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+}
+
+.botones {
+    margin-top: 30px; 
+    text-align: center; 
+}
+
+button {
+    padding: 12px 20px; 
+    border: none;
+    border-radius: 25px; 
+    background-color: var(--color-azulOscuro); 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--color-azulClaro); 
+}
+.botones {
+    margin-top: 55px; 
+    text-align: center; 
+}
+
+.botones button:first-child {
+    margin-right: 10px;
+}
+
+

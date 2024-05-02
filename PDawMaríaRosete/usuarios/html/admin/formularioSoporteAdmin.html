@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Soporte Admin</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/estilos/admin.css">
+    <link rel="stylesheet" href="/estilos/index.css">
+    <link rel="stylesheet" href="/estilos/formularioAdminSoporte.css">
+
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+  <!-- Enlace al favicon -->
+  <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+    
+</head>
+<body>
+
+    <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+    </div>
+            
+    <!-- Menú y submenú -->
+    <nav>
+        <ul>
+            <li><a href="/usuarios/html/admin/indexAdmin.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="/usuarios/html/admin/indexAdmin.html" title="Panel Admin"><i class="fas fa-cogs"></i> Gestión <i class="fas fa-chevron-down"></i></a>
+                <ul>
+                    <li><a href="/usuarios/html/admin/gestionUsuarios.html">Usuarios</a></li>
+                    <li><a href="/usuarios/html/admin/gestionCursos.html">Cursos</a></li>
+                    <li><a href="/usuarios/html/admin/gestionContenido.html">Contenido</a></li>
+                    <li><a href="/usuarios/html/admin/formularioSoporteAdmin.html">Solicitud de Soporte</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <h1><i class="fas fa-envelope"></i> Solicitudes de Soporte</h1>
+
+    <div class="contenedor">
+        <div class="admin-section">
+            <h2><i class="fas fa-envelope"></i> Solicitudes</h2>
+            
+            <!-- Lista de solicitudes de soporte -->
+            <div id="solicitudes">
+                <!-- Las solicitudes dinámicamente -->
+            </div>
+            
+            <!-- Formulario para responder a las solicitudes -->
+            <form id="respuestaForm">
+                <h2><i class="fas fa-reply"></i> Responder a la Solicitud</h2>
+                <label for="respuesta">Respuesta:</label>
+                <textarea id="respuesta" name="respuesta" rows="5" cols="35" required></textarea>
+                <input type="hidden" id="idSolicitud" name="idSolicitud"> <!-- Campo oculto para almacenar el ID de la solicitud -->
+                <button type="submit" class="botonRegistro">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de éxito -->
+    <div id="mensajeExitoModal" class="modal bienvenida-modal" style="display: none;">
+        <div class="modal-content">
+            <h2><i class="fas fa-user-check icon"></i> ¡Respuesta de soporte enviada correctamente!</h2>
+        </div>
+    </div>
+
+    <!-- Script para solicitudes de soporte y respuestas asociadas  -->
+    <script>
+        window.onload = function() {
+       
+            const token = localStorage.getItem('token');
+            var solicitudesContainer = document.getElementById("solicitudes");
+            var solicitudActiva = null; 
+    
+            function cargarSolicitudes() {
+                fetch('http://localhost:8080/solicitaSoporte/buscarSoporte', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + localStorage.getItem('token') 
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    solicitudesContainer.innerHTML = "";
+    
+                    // Filtrar las solicitudes pendientes de respuesta
+                    const solicitudesPendientes = data.filter(solicitud => !solicitud.respuesta);
+    
+                    // Mostrar cada solicitud pendiente en la lista
+                    for (const solicitud of solicitudesPendientes) {
+                        if (!solicitudActiva || solicitud.idsolicitaSoporte !== solicitudActiva.dataset.id) { // Excluir la solicitud activa
+                            var solicitudDiv = document.createElement("div");
+                            solicitudDiv.classList.add("solicitud");
+                            solicitudDiv.dataset.id = solicitud.idsolicitaSoporte; // Guardar el ID de la solicitud en un atributo de datos
+    
+                            var usuario = document.createElement("p");
+                            usuario.innerHTML = "<strong><i class='fas fa-user'></i> Usuario:</strong> " + solicitud.usuario.nombre + " " + solicitud.usuario.apellidos;
+
+    
+                            var curso = document.createElement("p");
+    
+                            if (solicitud.materialCurso && solicitud.materialCurso.curso) {
+                                curso.innerHTML = "<strong><i class='fas fa-book-open'></i> Material del Curso:</strong> " + solicitud.materialCurso.nombre;
+                            } else {
+                                curso.innerHTML = "<strong>Material del Curso:</strong> No disponible";
+                            }
+    
+                            var descripcion = document.createElement("p");
+                            descripcion.innerHTML = "<strong><i class='fas fa-comment'></i> Descripción del problema:</strong> " + solicitud.descripcion;
+    
+                            solicitudDiv.append(usuario);
+                            solicitudDiv.append(curso);
+                            solicitudDiv.append(descripcion);
+    
+                            solicitudesContainer.append(solicitudDiv);
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al cargar las solicitudes:', error);
+                });
+            }
+    
+            cargarSolicitudes();
+    
+            document.getElementById("respuestaForm").addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                var respuesta = document.getElementById('respuesta').value;
+                var idSolicitud = document.getElementById('idSolicitud').value; // Obtener el ID de la solicitud
+    
+                if (idSolicitud) {
+                    fetch('http://localhost:8080/solicitaSoporte/modificar/' + idSolicitud, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + localStorage.getItem('token') 
+                        },
+                        body: JSON.stringify({
+                            respuesta: respuesta
+                        })
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Error al enviar respuesta: ' + response.statusText);
+                        }
+                        
+                        document.getElementById('mensajeExitoModal').style.display = 'block';
+                        setTimeout(function() {
+                            document.getElementById('mensajeExitoModal').style.display = 'none';
+                        }, 3000); 
+    
+                        // Reiniciar el formulario
+                        document.getElementById("respuestaForm").reset();
+    
+                        // Eliminar la solicitud de la lista
+                        if (idSolicitud) {
+                            var solicitudDiv = document.querySelector('.solicitud[data-id="' + idSolicitud + '"]');
+                            if (solicitudDiv) {
+                                solicitudesContainer.removeChild(solicitudDiv); // Eliminar la solicitud de la lista
+                            } else {
+                                console.error('No se encontró la solicitud en la lista.');
+                            }
+                        } else {
+                            console.error('No se proporcionó ID de solicitud.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error al enviar respuesta:', error);
+                    });
+                } else {
+                    console.error('No se proporcionó ID de solicitud.');
+                }
+            });
+    
+            solicitudesContainer.addEventListener('click', function(e) {
+                var solicitudDivs = document.querySelectorAll('.solicitud');
+    
+                for (const div of solicitudDivs) {
+                    div.classList.remove('active');
+                }
+                var target = e.target;
+                if (target.classList.contains('solicitud')) {
+                    target.classList.add('active');
+                    solicitudActiva = target; // Actualizar la solicitud activa
+                    document.getElementById("idSolicitud").value = target.dataset.id; // Actualizar el valor del campo oculto con el ID de la solicitud activa
+                } else if (target.parentElement.classList.contains('solicitud')) {
+                    target.parentElement.classList.add('active');
+                    solicitudActiva = target.parentElement; // Actualizar la solicitud activa
+                    document.getElementById("idSolicitud").value = target.parentElement.dataset.id; // Actualizar el valor del campo oculto con el ID de la solicitud activa
+                }
+            });
+        };
+    </script>
+
+    <!--Script para cerrar sesión  -->
+    <script>
+        
+        var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+        botonCerrarSesion.addEventListener('click', function() {
+            window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+        });
+
+    </script>
+</body>
+</html>

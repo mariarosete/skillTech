@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Inscripciones</title>
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="/estilos/index.css">
+    <link rel="stylesheet" href="/estilos/admin.css">
+    <link rel="stylesheet" href="/estilos/inscripciones.css">
+    
+    <!-- JS -->
+    <script src="/js/inscripciones.js"></script>
+    <script src="/js/inscripciones_submenu.js"></script>
+
+   <!-- Fontawesome -->
+   <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+   
+   <!-- Enlace al favicon -->
+   <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+
+</head>
+<body>
+
+    <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+    </div>
+    
+  <!-- Menú y submenú -->
+  <nav>
+    <ul>
+        <li><a href="/usuarios/html/registrado/indexRegistrado.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="/usuarios/html/registrado/listaCursosRegistrado.html" title="Catálogo"><i class="fas fa-book-open"></i> Catálogo</a></li>
+        <li><a href="/usuarios/html/registrado/perfilUsuario.html" title="Perfil de Usuario"><i class="fas fa-user-circle"></i> Mi Perfil</a></li>
+        <li>
+            <a href="/usuarios/html/registrado/cursosInscritos.html" id="enlaceMisCursos" title="Mis Inscripciones"><i class="fas fa-user-graduate"></i> Mis inscripciones <i class="fas fa-chevron-down"></i></a>
+            <ul id="submenuInscripciones">
+                <!-- Inscripciones dinámicamente-->
+            </ul>
+        </li>
+        <li><a href="/usuarios/html/registrado/soporte.html" title="Soporte"><i class="fas fa-question-circle"></i> Soporte</a></li>
+        <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+    </ul>
+</nav>
+
+    <!-- Introduccion -->
+    <div class="testimonios">
+        <div class="testimonio">
+            <h2><i class="fas fa-user-graduate"></i> Mis Inscripciones</h2>
+                <p>Aquí encontrarás los cursos en los que estás inscrito actualmente. ¡Sigue aprendiendo y aprovecha al máximo tu experiencia de aprendizaje!</p>
+        
+        </div>
+    </div>
+
+    <div class="contenedor-inscripciones">
+        <!-- Inscripciones -->
+        <section class="seccion-inscripciones">
+            <ul class="inscripciones-lista" id="listaInscripciones">
+                <!-- Inscripciones dinámicamente -->
+            </ul>
+        </section>
+    </div>
+    
+     <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h3><img src="/imagenes/icono.png" alt="SkillTech Logo" class="logo">SkillTech</h3>
+            <p>Bienvenido al mundo de los cursos de informática. Descubre tendencias, adquiere habilidades prácticas y mantente actualizado. Explora cursos exclusivos y avanza en tu camino hacia la maestría informática.</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-map-marker-alt"></i> Localización</h3>
+            <p>Avenida La Costa, 25<br>33202 Gijón, Asturias<br>España</p>
+        </div>
+        <div class="footer-column">
+            <h3 class="contact-heading"><i class="fas fa-phone"></i> Contacto</h3>
+            <p class="phone-icon"><i class="fas fa-mobile-alt"></i> +34 653 111 222</p>
+            <p><i class="fas fa-envelope"></i> SkillTech@mail.com</p>
+            <p><i class="fab fa-facebook"></i> www.facebook.com</p>
+        </div>
+    </footer>
+         
+   <!--Script para cerrar sesión  -->
+    <script>
+            
+        var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+        botonCerrarSesion.addEventListener('click', function() {
+            window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+        });
+
+    </script>
+</body>
+</html>
+
+

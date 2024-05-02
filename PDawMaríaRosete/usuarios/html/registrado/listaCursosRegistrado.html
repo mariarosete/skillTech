@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cursos</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/estilos/admin.css">
+    <link rel="stylesheet" href="/estilos/index.css">
+    <link rel="stylesheet" href="/estilos/fichacursos.css">
+    
+    <!-- JS -->
+    <script src="/js/cursos.js" defer></script>
+    <script src="/js/modal.js"></script>
+    <script src="/js/inscripciones_submenu.js"></script>
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+    <!-- Enlace al favicon -->
+   <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+</head>
+<body>
+    <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+    </div>
+
+    <!-- Menú y submenú -->
+    <nav>
+        <ul>
+            <li><a href="/usuarios/html/registrado/indexRegistrado.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="/usuarios/html/registrado/listaCursosRegistrado.html" title="Catálogo"><i class="fas fa-book-open"></i> Catálogo</a></li>
+            <li><a href="/usuarios/html/registrado/perfilUsuario.html" title="Perfil de Usuario"><i class="fas fa-user-circle"></i> Mi Perfil</a></li>
+            <li>
+                <a href="/usuarios/html/registrado/cursosInscritos.html" id="enlaceMisCursos" title="Mis Inscripciones"><i class="fas fa-user-graduate"></i> Mis inscripciones <i class="fas fa-chevron-down"></i></a>
+                <ul id="submenuInscripciones">
+                    <!-- Inscripciones dinámicamente -->
+                </ul>
+            </li>
+            <li><a href="/usuarios/html/registrado/soporte.html" title="Soporte"><i class="fas fa-question-circle"></i> Soporte</a></li>
+            <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+        </ul>
+    </nav>
+    <!-- Contenedor para bienvenida -->
+    <div class="testimonios">
+        <div class="testimonio">
+            <h2><i class="fas fa-book-open"></i> Bienvenido al Catálogo de Cursos de SkillTech</h2>
+            <p>Explora nuestra selección de cursos expertamente diseñados para ayudarte a alcanzar tus metas de aprendizaje. Desde desarrollo web y programación hasta seguridad y tecnologías emergentes, tenemos todo lo que necesitas para potenciar tus habilidades y avanzar en tu carrera. ¡Comienza tu viaje de aprendizaje hoy mismo!</p>
+
+        </div>
+    </div>
+    
+    <!-- Contenedor para las fichas de los cursos --> 
+    <div class="cursos-container">
+        <section class="info-cursos"></section>
+    </div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-column">
+        <h3><img src="/imagenes/icono.png" alt="SkillTech Logo" class="logo">SkillTech</h3>
+        <p>Bienvenido al mundo de los cursos de informática. Descubre tendencias, adquiere habilidades prácticas y mantente actualizado. Explora cursos exclusivos y avanza en tu camino hacia la maestría informática.</p>
+    </div>
+    <div class="footer-column">
+        <h3><i class="fas fa-map-marker-alt"></i> Localización</h3>
+        <p>Avenida La Costa, 25<br>33202 Gijón, Asturias<br>España</p>
+    </div>
+    <div class="footer-column">
+        <h3 class="contact-heading"><i class="fas fa-phone"></i> Contacto</h3>
+        <p class="phone-icon"><i class="fas fa-mobile-alt"></i> +34 653 111 222</p>
+        <p><i class="fas fa-envelope"></i> SkillTech@mail.com</p>
+        <p><i class="fab fa-facebook"></i> www.facebook.com</p>
+    </div>
+</footer>
+
+<!-- Script para que giren las fichas de los cursos -->
+<script>
+    function rotarFicha(button) {
+    const rotateContainer = button.closest(".rotate-container");
+    rotateContainer.children[0].classList.toggle("rotar-ficha-back");
+    rotateContainer.children[1].classList.toggle("rotar-ficha-front");
+}
+function volverFicha(button) {
+    const rotateContainer = button.closest(".rotate-container");
+    rotateContainer.children[0].classList.toggle("rotar-ficha-back");
+    rotateContainer.children[1].classList.toggle("rotar-ficha-front");
+}
+</script> 
+<!--Script para cerrar sesión  -->
+<script>
+        
+    var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+    botonCerrarSesion.addEventListener('click', function() {
+        window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+    });
+
+</script>
+</body>
+</html>

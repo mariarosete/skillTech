@@ -1,0 +1,9 @@
+{
+    "cursos": [
+      {"categoria": "Desarrollo web", "inscripciones": 15},
+      {"categoria": "Programación", "inscripciones": 20},
+      {"categoria": "Bases de datos", "inscripciones": 12},
+      {"categoria": "Seguridad", "inscripciones": 6},
+      {"categoria": "Tecnologías", "inscripciones":6}
+    ]
+  }

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillTech</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/estilos/admin.css">
+    <link rel="stylesheet" href="/estilos/index.css">
+      
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/carruselAnonimo.js" defer></script>
+    <script src="/js/grafico.js"></script>
+    <script src="/js/modal.js"></script>
+    <script src="/js/buscarCursosCategoria.js"></script>
+    <script src="/js/buscarCursosTitulo.js"></script>
+    
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+    <!-- Enlace al favicon -->
+   <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+  </head>
+
+<body>
+    
+ <!-- Encabezado con imagen -->
+ <div class="header">
+    <img src="/imagenes/header/Header Proyecto.jpg" alt="Imagen de encabezado">
+</div>
+
+    <!-- Menú y submenú -->
+    <nav>
+        <ul>
+            <li><a href="/usuarios/html/anonimo/indexAnonimo.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="/usuarios/html/anonimo/listaCursosAnonimo.html" title="Catálogo"><i class="fas fa-book-open"></i> Catálogo</a></li>
+            <li><a href="#" class="login" id="abrirModal"><i class="fas fa-user-lock"></i> Iniciar sesión</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Mensaje Bienvenida -->
+    <div class="testimonios">
+        <div class="testimonio">
+            
+            <h2><i class="fas fa-graduation-cap"></i> Encuentra en SkillTech la formación que mejor se adapte a ti</h2>
+            <p>Descubre una amplia variedad de cursos diseñados para ayudarte a alcanzar tus metas. Explora nuestras opciones de formación, con contenido de calidad impartido por expertos en la materia.</p>
+        </div>
+    </div> 
+       
+    <!-- Contenedor para Carrusel y Gráfico -->
+    <div class="contenedor-graficos">
+        <!-- Carrusel de cursos -->
+        <div class="carrusel">
+            <div class="atras">
+                <img id="atras" src="/imagenes/atras.svg" alt="atras" loading="lazy">
+            </div>
+            <div class="imagenes">
+                <div id="img"></div>
+                <div id="texto" class="texto">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="adelante">
+                <img id="adelante" src="/imagenes/adelante.svg" alt="adelante" loading="lazy">
+            </div>
+        </div>
+        
+        <!-- Contenedor del gráfico -->
+        <div class="contenedor-grafico">
+            <canvas id="graficoInscripciones"></canvas>
+        </div>
+    </div>
+
+    <div class="puntos" id="puntos"></div>
+    
+    <div class="container">
+        <h1 class="titulo"><i class="fas fa-search"></i> Buscador de Cursos</h1>
+        <div class="buscadores">
+            <!-- Formulario de búsqueda por categoría -->
+            <form id="formBusquedaCategoria">
+                <select id="selectCategoria">
+                    <option value="">Seleccionar categoría</option>
+                    <option value="Desarrollo web">Desarrollo web</option>
+                    <option value="Programación">Programación</option>
+                    <option value="Bases de datos">Bases de datos</option>
+                    <option value="Seguridad">Seguridad</option>
+                    <option value="Tecnologias">Tecnologías</option>
+                </select>
+                <button type="submit">Buscar por categoría</button>
+            </form>
+            <!-- Formulario de búsqueda por nombre -->
+            <form id="formBusquedaTitulo">
+                <input type="text" id="inputTitulo" placeholder="Ingrese el nombre del curso">
+                <button type="submit">Buscar por nombre</button>
+            </form>
+        </div>
+
+        <!-- Contenedor para mostrar los resultados de la búsqueda -->
+        <div id="contenedorResultados"></div>
+    </div>  
+
+    <!-- Contenedor para Características clave -->
+    <section class="seccion-iconos">
+        <h2><i class="fas fa-star"></i> Características Clave</h2>
+        <div class="iconos">
+            <div class="icono">
+                <img src="/imagenes/variedadCursos.jpg" alt="Acceso ilimitado a cursos">
+                <p>Acceso ilimitado a cursos</p>
+            </div>
+            <div class="icono">
+                <img src="/imagenes/profesor.jpg" alt="Instructores expertos">
+                <p>Instructores expertos</p>
+            </div>
+            <div class="icono">
+                <img src="/imagenes/update.avif" alt="Contenido actualizado regularmente">
+                <p>Contenido actualizado regularmente</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenedor de Recomendaciones de cursos -->
+    <div class="contenedor-recomendaciones">
+        <h2><i class="fas fa-star"></i> Cursos Destacados</h2>
+        <div class="recomendaciones">
+            <div class="recomendacion">
+                <a href="/usuarios//html/anonimo/cursoJavascriptAnonimo.html">
+                    <img src="/imagenes/CursoJs.jpg" alt="JavaScript">
+                </a>
+                <div class="titulo">Curso de JavaScript</div>
+                <div class="descripcion">Desarrollo web con JavaScript</div>
+            </div>
+            <div class="recomendacion">
+                <img src="/imagenes/CursoCybersecurity.jpg" alt="Spring">
+                <div class="titulo">Curso Cybersecurity</div>
+                <div class="descripcion">Aprende los fundamentos de la ciberseguridad</div>
+            </div>
+            <div class="recomendacion">
+                <img src="/imagenes/CursoBigData.jpg" alt="Python">
+                <div class="titulo">Curso Big Data</div>
+                <div class="descripcion">Aprende a aprovechar el poder de los datos</div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Contenedor de Testimonios de clientes -->
+    <section class="seccion-testimonios">
+        <h2><i class="fas fa-comment-alt"></i> Testimonios de Clientes Satisfechos</h2>
+        <div class="testimonios">
+            <div class="testimonio">
+                <p>"Realmente disfruté del curso de Desarrollo Web de SkillTech. Los materiales eran claros y fáciles de entender, y el instructor hizo un excelente trabajo explicando los conceptos complicados de manera simple. ¡Definitivamente recomendaría este curso a cualquiera que quiera aprender desarrollo web!"</p>
+                <p class="nombre">- Laura García</p>
+            </div>
+            <div class="testimonio">
+                <p>"Tomé el curso de Introducción a la Programación en SkillTech y quedé impresionado. La plataforma era fácil de navegar y el contenido del curso estaba bien organizado. Además, el soporte al cliente fue excepcional. ¡Gracias, SkillTech, por una gran experiencia de aprendizaje!"</p>
+                <p class="nombre">- José Martínez</p>
+            </div>
+            <div class="testimonio">
+                <p>"Como profesional de TI, siempre estoy buscando oportunidades para mejorar mis habilidades. El curso de Seguridad Informática de SkillTech superó mis expectativas. Los temas fueron relevantes y las prácticas fueron muy útiles. ¡Muy recomendable para cualquier persona en el campo de la seguridad cibernética!"</p>
+                <p class="nombre">- María Fernández</p>
+            </div>
+        </div>
+    </section>
+     <!-- Contenedor de Noticias -->
+    <section class="seccion-noticias">
+        <h2><i class="fas fa-newspaper"></i> Últimas Noticias de SkillTech</h2>
+        <div class="noticias">
+            <div class="noticia">
+                <img src="/imagenes/CursoHtml.jpg" alt="Noticia HTML">
+                <div class="contenido-noticia">
+                    <h3>Lanzamiento del Nuevo Curso de HTML Avanzado</h3>
+                    <p class="fecha">Publicado el 25 de mayo de 2024</p>
+                    <p>Estamos emocionados de anunciar el lanzamiento de nuestro nuevo curso de HTML Avanzado. En este curso, aprenderás técnicas avanzadas de HTML, incluyendo formularios interactivos, animaciones con CSS y mucho más. ¡No te pierdas esta oportunidad de llevar tus habilidades de desarrollo web al siguiente nivel!</p>
+                </div>
+            </div>
+            <div class="noticia">
+                <img src="/imagenes/spring.jpg" alt="Noticia Spring Framework">
+                <div class="contenido-noticia">
+                    <h3>Actualización del Curso de Spring Framework</h3>
+                    <p class="fecha">Publicado el 20 de mayo de 2024</p>
+                    <p>Nos complace anunciar una importante actualización de nuestro curso de Spring Framework. Hemos agregado nuevas lecciones y contenido actualizado para reflejar las últimas tendencias y mejores prácticas en el desarrollo de aplicaciones Java. ¡Aprovecha esta oportunidad para dominar uno de los frameworks más populares en el desarrollo de aplicaciones empresariales!</p>
+                </div>
+            </div>
+            <div class="noticia">
+                <img src="/imagenes/CursoJs.jpg" alt="Noticia JavaScript">
+                <div class="contenido-noticia">
+                    <h3>Descubre las Novedades de JavaScript Moderno en Nuestro Curso Gratuito</h3>
+                    <p class="fecha">Publicado el 15 de abril de 2024</p>
+                    <p>Únete a nuestro curso gratuito donde exploraremos las últimas características y mejores prácticas en el desarrollo frontend con JavaScript Moderno. Aprenderás sobre async/await, destructuring, arrow functions y más. Este curso es perfecto para desarrolladores web que desean mantenerse actualizados con las últimas tendencias en JavaScript.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventana modal de inicio de sesión -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="registro-div">
+                <!-- formulario -->
+                <form id="registro" class="form">
+                    <h2 class="title"><i class="fas fa-user"></i> Bienvenid@</h2>
+                    <span class="close" id="cerrarModal">&times;</span>
+                    <!-- Campo Nombre -->
+                    <div class="inputContainer">
+                        <input type="text" id="usuario" class="input" name="usuario" required>
+                        <label for="usuario" id="labelUsuario" class="label">Usuario:</label>
+                    </div>
+                    <!-- Campo Contraseña -->
+                    <div class="inputContainer">
+                        <input type="password" id="contrasena" class="input" name="contrasena" required>
+                        <label for="password" id="labelPassword" class="label">Contraseña:</label>
+                    </div>
+                    <!-- Enlace a la página de registro -->
+                    <p>¿No tienes una cuenta? <a href="#" id="mostrarRegistro">Regístrate</a></p>
+                    <!-- Botón de registro -->
+                    <input type="submit" class="botonEnviar" value="Entrar">
+
+                    <!-- Mensaje de error -->
+                    <p class="mensaje-error" id="mensajeError" style="display: none; color: #ff5b5b;"><i class="fas fa-exclamation-circle"></i> Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.</p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ventana modal de registro -->
+    <div id="modalRegistro" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="registro-div">
+                <!-- Formulario de registro -->
+                <form id="registro2" class="form">
+
+                    <h2 class="title"><i class="fas fa-user"></i> Regístrate</h2>
+                    <span class="close" id="cerrarModal2">&times;</span>
+                    <!-- Campo Nombre -->
+                    <div class="inputContainer">
+                        <input type="text" id="nombre" class="input" name="nombre" required>
+                        <label for="nombre" id="labelNombre" class="label">Nombre:</label>
+                    </div>
+                    <!-- Campo Apellidos -->
+                    <div class="inputContainer">
+                        <input type="text" id="apellidos" class="input" name="apellidos" required>
+                        <label for="apellidos" id="labelApellidos" class="label">Apellidos:</label>
+                    </div>
+                    <!-- Campo Correo -->
+                    <div class="inputContainer">
+                        <input type="email" id="correo" class="input" name="correo" required>
+                        <label for="correo" id="labelCorreo" class="label">Correo:</label>
+                    </div>
+                    <!-- Campo Contraseña -->
+                    <div class="inputContainer">
+                        <input type="password" id="password" class="input" name="password" required>
+                        <label for="password" id="labelPass" class="label">Contraseña:</label>
+                    </div>
+                    <!-- Campo oculto para idrol -->
+                    <input type="hidden" class="input" id="idrol" name="idrol" value="REGISTRADO">
+
+                    <!-- Botón de registro -->
+                    <input type="submit" class="botonRegistro" value="Registrarse">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de bienvenida para administrador -->
+    <div id="bienvenidaModalAdmin" class="modal bienvenida-modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-user-shield icon"></i> Bienvenid@ de nuevo </h2>
+            <p>¡Hola administrador!</p>
+        </div>
+    </div>
+
+    <!-- Modal de bienvenida para usuario registrado -->
+    <div id="bienvenidaModalRegistrado" class="modal bienvenida-modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-user icon"></i> Bienvenid@ de nuevo </h2>
+            <p>¡Es genial verte aquí!</p>
+        </div>
+    </div>
+
+    <!-- Modal de bienvenida para usuario registrado -->
+    <div id="bienvenidaModalRegistro" class="modal bienvenida-modal" style="display: none;">
+        <div class="modal-content">
+            <h2><i class="fas fa-user-check icon"></i> Bienvenid@ <span id="nombreUsuarioRegistradoo"></span></h2>
+            <p>Gracias por unirte a nosotros.</p>
+            <p id="registroExitosoMessage" style="display: none; color: green;">¡Te has registrado correctamente!</p>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h3><img src="/imagenes/icono.png" alt="SkillTech Logo" class="logo">SkillTech</h3>
+            <p>Bienvenido al mundo de los cursos de informática. Descubre tendencias, adquiere habilidades prácticas y mantente actualizado. Explora cursos exclusivos y avanza en tu camino hacia la maestría informática.</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-map-marker-alt"></i> Localización</h3>
+            <p>Avenida La Costa, 25<br>33202 Gijón, Asturias<br>España</p>
+        </div>
+        <div class="footer-column">
+            <h3 class="contact-heading"><i class="fas fa-phone"></i> Contacto</h3>
+            <p class="phone-icon"><i class="fas fa-mobile-alt"></i> +34 653 111 222</p>
+            <p><i class="fas fa-envelope"></i> SkillTech@mail.com</p>
+            <p><i class="fab fa-facebook"></i> www.facebook.com</p>
+        </div>
+    </footer>
+    
+   <!-- Script para manejar el LOGIN -->
+    <script>
+        document.querySelector("#registro").addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Obtener los valores del formulario
+            var nombreUsuario = document.querySelector('#usuario').value;
+            var clave = document.querySelector('#contrasena').value;
+
+            // Realizar la solicitud Fetch
+            fetch('http://localhost:8080/usuarios/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ nombreUsuario: nombreUsuario, clave: clave })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al iniciar sesión');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Almacenar el token JWT y el ID de usuario en localStorage
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('idUsuario', data.idUsuario);
+
+                // Obtener el nombre de usuario
+                var nombreUsuario = data.nombreUsuario;
+                // Mostrar el nombre de usuario solo para el usuario registrado
+                var nombreUsuarioRegistradooElement = document.querySelector('#nombreUsuarioRegistradoo');
+                
+                if (nombreUsuarioRegistradooElement) {
+                    nombreUsuarioRegistradooElement.textContent = nombreUsuario;
+                } else {
+                    console.error('Elemento de nombre de usuario no encontrado en el DOM.');
+                }
+                // Redireccionar según EL ROL DEL USUARIO
+                if (data.rol === 'ADMINISTRADOR') {
+                    document.querySelector('#bienvenidaModalAdmin').style.display = 'block';
+                    // Redireccionar 
+                    setTimeout(function() {
+                        window.location.href = '/usuarios/html/admin/indexAdmin.html';
+                    }, 3000);
+                } else if (data.rol === 'REGISTRADO') {
+                    document.querySelector('#bienvenidaModalRegistrado').style.display = 'block';
+                    // Redireccionar 
+                    setTimeout(function() {
+                        window.location.href = '/usuarios/html/registrado/indexRegistrado.html';
+                    }, 3000);
+                } else {
+                    console.error('Rol de usuario desconocido');
+                }
+            })
+            .catch(error => {
+                // Mostrar mensaje de error
+                document.querySelector('#mensajeError').style.display = 'block';
+                console.error('Error:', error);
+            });
+        });
+
+    </script>
+
+
+<!-- Script para REGISTRAR un usuario en la BBDD desde el formulario de registro -->
+<script>
+    document.querySelector("#registro2").addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Obtener los valores del formulario
+    var nombre = document.querySelector('#nombre').value;
+    var apellidos = document.querySelector('#apellidos').value;
+    var correo = document.querySelector('#correo').value;
+    var password = document.querySelector('#password').value;
+    var rol = "REGISTRADO"; 
+
+    // Verificar que los campos no estén vacíos
+    if (nombre === '' || apellidos === '' || correo === '' || password === '') {
+        console.error('Por favor, complete todos los campos.');
+        return;
+    }
+
+    // Crear un objeto JSON con los datos del usuario
+    var usuario = {
+        nombre: nombre,
+        apellidos: apellidos,
+        correo: correo,
+        password: password,
+        rol: rol 
+    };
+
+    // Realizar la solicitud Fetch
+    fetch('http://localhost:8080/usuarios/insertar', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(usuario)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al registrar el usuario');
+        }
+        // Mostrar la ventana modal de bienvenida para el usuario registrado
+        var nombreUsuarioRegistradoElement = document.querySelector('#nombreUsuarioRegistradoo');
+        if (nombreUsuarioRegistradoElement) {
+            nombreUsuarioRegistradoElement.textContent = nombre; 
+        } else {
+            console.error('Elemento nombreUsuarioRegistrado no encontrado en el DOM.');
+        }
+        document.querySelector('#bienvenidaModalRegistro').style.display = 'block';
+        // Mostrar mensaje de registro exitoso
+        document.querySelector('#registroExitosoMessage').style.display = 'block';
+        setTimeout(function() {
+            document.querySelector('#registroExitosoMessage').style.display = 'none';
+            document.querySelector('#bienvenidaModalRegistro').style.display = 'none'; 
+        }, 3000);
+    })
+
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+</script>
+   
+</body>
+</html>
+

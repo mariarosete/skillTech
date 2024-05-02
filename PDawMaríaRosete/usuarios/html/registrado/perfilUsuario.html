@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario - SkillTech</title>
+        
+    <!-- CSS -->
+    <link rel="stylesheet" href="/estilos/admin.css">
+    <link rel="stylesheet" href="/estilos/index.css">
+    <link rel="stylesheet" href="/estilos/perfil.css"> 
+
+    <!-- JS -->
+    <script src="/js/perfilUsuario.js"></script>  
+    <script src="/js/inscripciones_submenu.js"></script> 
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+    <!-- Enlace al favicon -->
+   <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+
+</head>
+
+<body>
+    <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+    </div>
+
+    <!-- Menú y submenú -->
+    <nav>
+        <ul>
+            <li><a href="/usuarios/html/registrado/indexRegistrado.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="/usuarios/html/registrado/listaCursosRegistrado.html" title="Catálogo"><i class="fas fa-book-open"></i> Catálogo</a></li>
+            <li><a href="/usuarios/html/registrado/perfilUsuario.html" title="Perfil de Usuario"><i class="fas fa-user-circle"></i> Mi Perfil</a></li>
+            <li>
+                <a href="/usuarios/html/registrado/cursosInscritos.html" id="enlaceMisCursos" title="Mis Inscripciones"><i class="fas fa-user-graduate"></i> Mis inscripciones <i class="fas fa-chevron-down"></i></a>
+                <ul id="submenuInscripciones">
+                    <!-- Inscripciones dinámicamente -->
+                </ul>
+            </li>
+            <li><a href="/usuarios/html/registrado/soporte.html" title="Soporte"><i class="fas fa-question-circle"></i> Soporte</a></li>
+            <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <!-- Introducción -->
+    <div class="testimonios">
+        <div class="testimonio">
+            <h2><i class="fas fa-user-circle"></i> Mi Perfil</h2>
+            <p>Administra tu información personal y foto de perfil desde esta sección. Mantén tus datos actualizados fácilmente. Personaliza tu experiencia en SkillTech según tus preferencias.</p>
+        </div>
+    </div>
+
+   <!-- Contenido del perfil de usuario -->
+    <div class="perfil">
+        <div class="contenedor">
+            <div class="izquierda">
+                <div class="datos">
+                    <form id="formularioEdicion">
+                        <h2><i class="fas fa-user-edit"></i> Editar Perfil</h2>
+                        <!-- Campo Nombre -->
+                        <div class="inputContainer">
+                            <input type="text" id="editarNombre" class="input" name="nombre" placeholder="Nombre completo">
+                            <label for="editarNombre" class="label">Nombre:</label>  
+                        </div>
+                        <!-- Campo Apellidos -->
+                        <div class="inputContainer">
+                            <input type="text" id="editarApellidos" class="input" name="apellidos" placeholder="Apellidos">
+                            <label for="editarApellidos" class="label">Apellidos:</label>
+                        </div>
+                        <!-- Campo Correo -->       
+                        <div class="inputContainer">
+                            <input type="email" id="editarCorreo" class="input" name="correo" placeholder="Correo electrónico">
+                            <label for="editarCorreo" class="label">Correo:</label>   
+                        </div>
+                        <!-- Campo Contraseña -->
+                        <div class="inputContainer">
+                            <input type="password" id="editarPassword" class="input" name="password" required>
+                            <label for="password" id="labelPass" class="label">Contraseña:</label>
+                        </div>
+                        <!-- Botones -->
+                        <div class="inputContainer">
+                            <div class="botones">
+                                <button type="submit">Guardar</button>
+                                <button type="button" id="cancelar">Cancelar</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <!-- Contenedor parte derecha -->
+            <div class="derecha">
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <img id="previewFotoPerfil" src="/imagenes/avatar-default.jpg">
+                    </div>
+                    <div class="avatar-overlay">
+                        <label for="inputFotoPerfil">
+                            <i class="fas fa-plus"></i>
+                        </label>
+                        <input type="file" id="inputFotoPerfil" accept="image/*">
+                    </div>
+                </div>
+            
+                <div class="estadisticas">
+                    <h2>Estadísticas</h2>
+                    <ul>
+                        <li><i class="fas fa-graduation-cap"></i> <strong>Cursos completados:</strong> 10</li>
+                        <li><i class="fas fa-star"></i> <strong>Promedio de calificación:</strong> 8.5</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Modal de éxito -->
+    <div id="mensajeExitoModal" class="modal bienvenida-modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-check-circle icon"></i> Éxito</h2>
+            <p>Los detalles del usuario se han modificado correctamente.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h3><img src="/imagenes/icono.png" alt="SkillTech Logo" class="logo">SkillTech</h3>
+            <p>Bienvenido al mundo de los cursos de informática. Descubre tendencias, adquiere habilidades prácticas y mantente actualizado. Explora cursos exclusivos y avanza en tu camino hacia la maestría informática.</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-map-marker-alt"></i> Localización</h3>
+            <p>Avenida La Costa, 25<br>33202 Gijón, Asturias<br>España</p>
+        </div>
+        <div class="footer-column">
+            <h3 class="contact-heading"><i class="fas fa-phone"></i> Contacto</h3>
+            <p class="phone-icon"><i class="fas fa-mobile-alt"></i> +34 653 111 222</p>
+            <p><i class="fas fa-envelope"></i> SkillTech@mail.com</p>
+            <p><i class="fab fa-facebook"></i> www.facebook.com</p>
+        </div>
+    </footer>
+
+    <!--Script para obtener imagen de perfil  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const inputFotoPerfil = document.querySelector('#inputFotoPerfil');
+            const previewFotoPerfil = document.querySelector('#previewFotoPerfil');
+            const token = localStorage.getItem('token'); // Obtener el token JWT almacenado en localStorage
+    
+            inputFotoPerfil.addEventListener('change', function() {
+                const file = this.files[0]; 
+    
+                if (file) {
+                    const reader = new FileReader(); 
+                    
+                    reader.onload = function(event) {
+                        const base64Image = event.target.result; // Obtener la imagen en formato Base64
+                        const userId = getIdUsuarioFromToken(token); // Obtener el ID de usuario del token JWT
+                        localStorage.setItem(`profileImage_${userId}`, base64Image); // Guardar la imagen en el almacenamiento local con una clave única usuario
+                        previewFotoPerfil.src = base64Image; // Mostrar la vista previa de la imagen
+                    };
+    
+                    reader.readAsDataURL(file); 
+                }
+            });
+    
+            const userId = getIdUsuarioFromToken(token); // Obtener el ID de usuario del token JWT
+            const profileImage = localStorage.getItem(`profileImage_${userId}`); // Obtener la imagen del almacenamiento local asociada a este usuario
+    
+            if (profileImage) {
+                previewFotoPerfil.src = profileImage;
+            }
+        });
+    
+        // Función para obtener el ID de usuario del token JWT
+        function getIdUsuarioFromToken(token) {
+            const tokenParts = token.split('.');
+            const payload = JSON.parse(atob(tokenParts[1]));
+            console.log(payload);
+            return payload.userId;
+        }
+    </script>
+    
+    <!--Script para cerrar sesión  -->
+    <script>
+        
+        var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+        botonCerrarSesion.addEventListener('click', function() {
+            window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+        });
+
+    </script>
+</body>
+</html>

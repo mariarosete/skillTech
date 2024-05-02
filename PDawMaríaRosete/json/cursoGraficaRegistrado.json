@@ -1,0 +1,10 @@
+{
+    "cursos": [
+      {"categoria": "Desarrollo web", "cantidad_cursos": 3},
+      {"categoria": "Programación", "cantidad_cursos": 4},
+      {"categoria": "Bases de datos", "cantidad_cursos": 1},
+      {"categoria": "Seguridad", "cantidad_cursos": 2},
+      {"categoria": "Tecnologias", "cantidad_cursos": 2}
+    ]
+  }
+  

@@ -1,0 +1,653 @@
+@import url("comun.css");
+
+/* Estilos para la lista de cursos */
+.global{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Estilos para la lista de cursos */
+#listaInscripciones {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+#listaInscripciones li {
+    width: calc(50% - 10px); 
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; 
+}
+
+.curso-titulo {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.curso-categoria,
+.curso-descripcion {
+    font-style: italic;
+    margin-bottom: 5px;
+    color: var(--color-oro);
+}
+
+/***************Carrusel*************************************/
+.carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 50%; 
+    height: auto; 
+    margin-top: 30px; 
+    margin-left: 20px;
+}
+
+.atras, .adelante {
+    margin: 0 10px; 
+}
+
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    height: auto; 
+}
+
+.img {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
+    height: 450px; 
+    width: 800px; 
+    border-radius: 15px;
+    margin: 5px;
+    object-fit: cover;
+}
+
+.texto {
+    overflow: hidden;
+    position: absolute;
+    flex-direction: column;
+    transform: translateY(0px);
+    margin-bottom: 15px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(63, 106, 138, 0.21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 30%; 
+    height: 10%; 
+    transition: height 1s, transform 1s, background-color 1s;
+}
+
+.texto h3 {
+    text-shadow: 0px 0px 15px black;
+    margin: 10px 0; 
+    color: white;
+    font-weight: 300;
+    font-size: 27px;
+    text-align: center;
+}
+
+.texto p {
+    align-items: center;
+    padding: 20px;
+    color: white;
+    font-size: 0px;
+    font-weight: 300;
+    height: 200%;
+    
+}
+
+.imagenes:hover .texto {
+    transform: translateY(-8%);
+    height: 270px;
+    background-color: rgba(63, 106, 138, 0.71);
+}
+
+.imagenes:hover .texto p {
+    font-size: 20px;
+    font-weight: 300;
+    text-shadow: 0px 0px 10px #000000;
+}
+
+.puntos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 380px; 
+    margin-top: -48px;
+}
+
+.puntos p {
+    font-size: 60px;
+    font-weight: 300;
+    color: black;
+}
+
+.puntos .bold {
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: var(--color-azulMuyOscuro);
+}
+
+/* Contenedor de gráficos */
+.contenedor-graficos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+/* Contenedor de gráfico individual */
+.contenedor-grafico {
+    flex: 0 0 45%; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+}
+
+/* Estilos específicos para el gráfico */
+canvas {
+    max-width: 100%;
+    height: 400px; 
+    margin-top: 10px;
+    display: block;
+}
+
+/*********Estilos Iconos******************/
+.seccion-iconos {
+    text-align: center;
+    margin-top: 50px;
+    background-color: #acbef2; 
+    padding: 30px; 
+    border-radius: 15px; 
+    max-width: 1400px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-bottom: 100px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.seccion-iconos h2 {
+    font-size: 30px; 
+    font-weight: bold; 
+    color: white; 
+}
+
+.iconos {
+    display: flex;
+    justify-content: space-around; 
+    gap: 20px;
+}
+
+.icono {
+    flex-basis: calc(30% - 20px); 
+    border: 2px solid #021140; 
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s ease; 
+    background-color: #fff; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.icono:hover {
+    transform: translateY(-5px); 
+}
+
+.icono img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+}
+
+.icono p {
+    margin-top: 10px;
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #021140; 
+}
+
+/* Estilos para los testimonios */
+.seccion-testimonios {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1400px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.seccion-testimonios h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #021140; 
+}
+
+.testimonios {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    margin-top: 20px;
+}
+
+.testimonio {
+    flex-basis: calc(50% - 40px); 
+    background-color: #f7f7f7; 
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease; 
+}
+
+.testimonio:hover {
+    transform: translateY(-5px); 
+}
+
+.testimonio p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+.testimonio .nombre {
+    font-style: italic;
+    color: #777; 
+}
+/***********Noticias*******************/
+.seccion-noticias {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;    
+}
+
+.seccion-noticias h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #021140; 
+}
+
+.noticias {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 100;
+}
+
+.noticia {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease; 
+}
+
+.noticia:hover {
+    transform: translateY(-5px); 
+}
+
+.noticia img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.contenido-noticia {
+    padding: 20px;
+}
+
+.contenido-noticia h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #021140;
+}
+
+.fecha {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.contenido-noticia p {
+    color: #333; 
+    line-height: 1.5; 
+}
+
+.enlace-noticia {
+    display: inline-block;
+    background-color: #021140;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; 
+}
+
+.enlace-noticia:hover {
+    background-color: #01446b; 
+}
+
+/***Footer************************/
+footer {
+    background-color: #909FDC;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+
+.footer-column {
+    flex: 1; 
+    max-width: 33.33%; 
+    padding: 0 10px; 
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.footer-column h3 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    color: #021140; 
+}
+.contact-heading {
+    margin-left: -40px; 
+}
+
+.footer-column p {
+    font-size: 18px; 
+    margin-bottom: 0; 
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.phone-icon {
+    margin-right: 17px; 
+}
+
+.footer-column p.has-icon {
+    display: flex; 
+    align-items: center; 
+    text-align: left; 
+}
+
+.footer-column:first-child {
+    margin-top: -20px; 
+}
+.footer-column:first-child p {
+    margin-top: -15px; 
+}
+
+/* Estilos para el formulario de registro */
+#registro,
+#registro2 {
+    max-width: 500px;
+    height: 150%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#mostrarRegistro {
+    color: #0056b3; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: color 0.3s; 
+}
+
+#mostrarRegistro:hover {
+    font-size: 1.1em; 
+}
+
+/* Estilos para el contenedor de Recomendaciones de cursos(index Registrado) */
+.contenedor-recomendaciones {
+    text-align: center;
+    margin-top: 50px;
+    max-width: 1400px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px; 
+    padding-right: 20px; 
+    margin-bottom: 50px;
+}
+
+.contenedor-recomendaciones h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #021140; 
+}
+
+/* Estilos para las recomendaciones de cursos */
+.recomendaciones {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px; 
+}
+
+.recomendacion {
+    width: 30%; 
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.recomendacion img {
+    width: 400px; 
+    height: 230px; 
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.recomendacion .titulo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.recomendacion .descripcion {
+    font-style: italic;
+    color: #666;
+}
+
+/****Estilos para buscador de Cursos***********************/
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buscadores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.buscadores form {
+    display: flex;
+    align-items: center;
+}
+
+.buscadores select,
+.buscadores input[type="text"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+    width: 300px;
+}
+
+.buscadores button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: var(--color-azulOscuro);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.buscadores button:hover {
+    background-color: var(--color-azulClaro);
+}
+
+#contenedorResultados {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#contenedorResultados div {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales para la ventana modal */
+.bienvenida-modal {
+    transition: opacity 0.3s ease;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+}
+
+/* Contenido de la ventana modal */
+.bienvenida-modal .modal-content {
+    background: linear-gradient(45deg, #ffffff, #f0f0f0);
+    background-color: #fefefe;
+    text-align: center;
+    margin: auto;
+    padding: 40px;
+    border: 2px solid #294973; 
+    width: 60%; 
+    max-width: 600px; 
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilos para el título */
+.bienvenida-modal h2 {
+    margin-top: 0;
+    color: #294973;
+    font-size: 24px;
+}
+
+/* Estilos para el texto */
+.bienvenida-modal p {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 18px;
+}
+
+/* Estilos para el icono */
+.bienvenida-modal .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--color-azulMuyOscuro); 
+}
+
+/* Estilos generales para la ventana modal */
+.bienvenida-modal {
+    transition: opacity 0.3s ease;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+}
+
+/* Contenido de la ventana modal */
+.bienvenida-modal .modal-content {
+    background: linear-gradient(45deg, #ffffff, #f0f0f0);
+    background-color: #fefefe;
+    text-align: center;
+    margin: auto;
+    padding: 40px;
+    border: 2px solid #294973; 
+    width: 60%; 
+    max-width: 600px; 
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilos para el título */
+.bienvenida-modal h2 {
+    margin-top: 0;
+    color: #294973;
+    font-size: 24px;
+}
+
+/* Estilos para el texto */
+.bienvenida-modal p {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 18px;
+}
+
+/* Estilos para el icono */
+.bienvenida-modal .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--color-azulMuyOscuro); 
+}
+
+
+

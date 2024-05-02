@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillTech Usuario Administrador</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/estilos/admin.css">
+    
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+    <!-- Enlace al favicon -->
+   <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+</head>
+<body>
+    <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+    </div>
+           
+    <!-- Menú y submenú -->
+    <nav>
+        <ul>
+            <li><a href="/usuarios/html/admin/indexAdmin.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="/usuarios/html/admin/indexAdmin.html" title="Panel Admin"><i class="fas fa-cogs"></i> Gestión <i class="fas fa-chevron-down"></i></a>
+                <ul>
+                    <li><a href="/usuarios/html/admin/gestionUsuarios.html">Usuarios</a></li>
+                    <li><a href="/usuarios/html/admin/gestionCursos.html">Cursos</a></li>
+                    <li><a href="/usuarios/html/admin/gestionContenido.html">Contenido</a></li>
+                    <li><a href="/usuarios/html/admin/formularioSoporteAdmin.html">Solicitud de Soporte</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+   
+    <div class="contenedor">
+        <div class="secciones">
+            <a href="/usuarios/html/admin/gestionUsuarios.html" class="seccion">
+                <img src="/imagenes/usuarios.png" alt="Gestión de Usuarios">
+                <h2><i class="fas fa-user"></i> Gestión de Usuarios</h2>
+            </a>
+            <a href="/usuarios/html/admin/gestionCursos.html" class="seccion">
+                <img src="/imagenes/cursos.jpg" alt="Gestión de Cursos">
+                <h2><i class="fas fa-graduation-cap"></i> Gestión de Cursos</h2>
+            </a>
+            <a href="/usuarios/html/admin/gestionContenido.html" class="seccion">
+                <img src="/imagenes/contenido.jpg" alt="Gestión de Contenido">
+                <h2><i class="fas fa-book-open"></i> Gestión de Contenido</h2>
+            </a>
+            <a href="/usuarios/html/admin/formularioSoporteAdmin.html" class="seccion">
+                <img src="/imagenes/soporte.jpg" alt="Solicitudes de Soporte">
+                <h2><i class="fas fa-envelope"></i> Solicitudes de Soporte</h2>
+            </a>
+        </div>
+    </div>
+
+    <!--Script para cerrar sesión  -->
+    <script>
+            
+        var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+        botonCerrarSesion.addEventListener('click', function() {
+            window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+        });
+
+    </script>
+</body>
+</html>

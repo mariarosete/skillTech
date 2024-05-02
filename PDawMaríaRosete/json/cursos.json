@@ -1,0 +1,106 @@
+[{
+    "id": "01",
+    "nombre": "Curso Html",
+    "imagen":"CursoHtml.jpg",
+    "info": "El curso de HTML es el punto de partida esencial para aquellos que desean sumergirse en el fascinante mundo del desarrollo web. Aprenderás los fundamentos del lenguaje de marcado HTML, que es la columna vertebral de cualquier página web. ",
+    "enlace": "/usuarios/html/registrado/cursoHtmlRegistrado.html"
+
+},
+
+{
+    "id": "02",
+    "nombre": "Curso Java",
+    "imagen":"CursoJava.jpg",
+    "info":"El curso de Java te sumergirá en el emocionante mundo de la programación orientada a objetos. Desde la sintaxis básica hasta conceptos avanzados, explorarás cómo Java se ha convertido en uno de los lenguajes de programación más versátiles y utilizados."
+
+},
+
+{
+    "id": "03",
+    "nombre": "Curso JavaScript",
+    "imagen":"CursoJs.jpg",
+    "info":"El curso de JavaScript te sumergirá en el fascinante mundo de la programación del lado del cliente. Desde manipular el DOM hasta interactuar con servidores y crear aplicaciones web dinámicas, te proporcionará las habilidades esenciales para convertirte en un desarrollador web.",
+    "enlace": "/usuarios/html/registrado/cursoJavascriptRegistrado.html"
+    
+    
+
+},
+
+{
+    "id": "04",
+    "nombre": "Curso Spring",
+    "imagen": "spring.jpg",
+    "info":"El curso de Spring Framework es una inmersión completa en uno de los frameworks más influyentes para el desarrollo de aplicaciones Java empresariales. Aprenderás a utilizar las características potentes y flexibles de Spring para crear aplicaciones Java eficientes, seguras y mantenibles. "
+
+},
+
+{
+    "id": "05",
+    "nombre": "Curso Python",
+    "imagen":"CursoPython.jpg",
+    "info": "El curso de Python es una introducción completa a uno de los lenguajes de programación más populares y versátiles en la actualidad. Desde la resolución de problemas simples hasta el desarrollo de aplicaciones web y científicas avanzadas."
+
+},
+
+{
+    "id": "06",
+    "nombre": "Curso Css",
+    "imagen":"CursoCSS.jpg",
+    "info": "El curso de CSS te llevará más allá de la estructura básica de HTML, permitiéndote dar vida y estilo a tus páginas web. Desde la creación de diseños responsivos hasta la animación de elementos, CSS es la clave para transformar tus ideas en experiencias visuales impactantes. "
+
+},
+
+
+
+{
+    "id": "07",
+    "nombre": "Curso React JS",
+    "imagen":"CursoReact.jpg",
+    "info": "El curso de React te sumergirá en el emocionante mundo del desarrollo de interfaces de usuario modernas. React, es una biblioteca JavaScript popular para construir aplicaciones web interactivas y reactivas. Aprenderás desde los conceptos fundamentales hasta las prácticas avanzadas."
+
+},
+
+{
+    "id": "08",
+    "nombre": "Curso Sql",
+    "imagen":"CursoSQL.jpg",
+    "info": "El curso de SQL es una guía para aquellos que desean adentrarse en el mundo de la gestión y manipulación de datos en bases de datos relacionales. Desde la creación de tablas hasta consultas avanzadas, aprenderás a utilizar el lenguaje SQL para interactuar con bases de datos de manera efectiva. "
+
+},
+
+{
+    "id": "09",
+    "nombre": "Curso Networking",
+    "imagen":"CursoNetworking.jpg",
+    "info": "El curso de Networking es una inmersión completa en el mundo de las redes informáticas, diseñado para aquellos que buscan comprender los fundamentos esenciales que permiten la conectividad eficiente de sistemas y dispositivos."
+
+},
+
+
+{
+    "id": "10",
+    "nombre": "Curso Cybersecurity",
+    "imagen":"CursoCybersecurity.jpg",
+    "info": "El curso de Ciberseguridad es una exploración integral del fascinante y crítico campo de la seguridad informática. Este curso abarca desde los conceptos fundamentales hasta las estrategias avanzadas de protección de sistemas y datos. "
+
+},
+
+{
+    "id": "11",
+    "nombre": "Curso Cloud Computing",
+    "imagen":"CursoCloudComputing.jpg",
+    "info": "Este curso es una inmersión completa en la revolucionaria tecnología que está transformando la manera en que se diseñan, implementan y escalan aplicaciones. Desde los conceptos básicos de la computación en la nube hasta las prácticas avanzadas de arquitectura de sistemas distribuidos."
+
+},
+
+{
+    "id": "12",
+    "nombre": "Curso Big Data",
+    "imagen":"CursoBigData.jpg",
+    "info": "El curso de Big Data es una inmersión profunda en el fascinante mundo de la gestión y análisis de grandes volúmenes de datos. Diseñado para aquellos que desean aprovechar la explosión de datos en la era digital."
+
+}
+
+
+
+]

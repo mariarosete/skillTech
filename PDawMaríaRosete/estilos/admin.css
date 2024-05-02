@@ -1,0 +1,309 @@
+@import url("comun.css");
+
+h2,h1{
+  text-align: center;
+}
+
+/************** CSS para la tabla de usuarios y tabla de cursos ****************************/
+.tablaUsuarios,.tablaCursos,.tablaContenido {
+    width: 60%;
+    border-collapse: separate; 
+    border-spacing: 0; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid #ddd;
+}
+
+.tablaUsuarios th, .tablaUsuarios td,.tablaCursos th, .tablaCursos td, .tablaContenido td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;   
+}
+
+.tablaUsuarios th, .tablaCursos th, .tablaContenido th {
+    background-color:var(--color-azulOscuro);
+    color: white;
+    text-align: left;
+    font-weight: bold; 
+    font-size: 16px;
+    padding: 12px;       
+}
+
+.tablaUsuarios tr, .tablaCursos tr, .tablaContenido tr {
+    transition: background-color 0.3s;
+}
+
+.tablaUsuarios tbody tr:hover, .tablaCursos tbody tr:hover, .tablaContenido tbody tr:hover {
+    background-color: var(--color-azulClaro); 
+    color: white;   
+}
+
+.tablaUsuarios tbody tr:nth-child(even):hover {
+    background-color: var(--color-azulClaro); 
+    color: white;    
+}
+
+.tablaUsuarios tbody tr:nth-child(even) {
+    background-color: #e0e0e0; 
+}
+
+.contenedor-tabla {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 70vh; 
+    margin-bottom: 15px; 
+}
+
+.contenedor-tabla2 {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 80vh; 
+  margin-bottom: 15px; 
+}
+
+.tablaUsuarios .accion.modificar, .tablaCursos .accion.modificar, .tablaContenido .accion.modificar{
+    margin-right: 50px; 
+}
+  /*******************Secciones index Admin*******************************/
+
+.contenedor {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 70vh; 
+}
+
+.secciones {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.seccion {
+    text-align: center;
+    width: 350px;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid var(--color-azulMuyOscuro);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    background-color: var(--color-azulOscuro);
+}
+
+.seccion:hover {
+    transform: translateY(-5px);
+}
+
+.seccion img {
+    width: 350px; 
+    height: 220px; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.seccion h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/**************Botón Agregar Usuario**************************************/
+.agregar-contacto {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.agregar-contacto a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #739FD9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.seccion {
+    text-decoration: none;   
+}
+
+/*******Estilos para el formulario de crear usuario**************************************/
+.title {
+    font-size: 26px; 
+    color: var(--color-azulOscuro); 
+    margin-bottom: 20px; 
+    text-align: center; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-weight: bold;
+  }
+  
+.registro-div {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+  
+#registro {
+    background-color: white;
+    width: 350px;
+    height: 480px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+.inputContainer {
+    position: relative;
+    height: 45px;
+    width: 90%;
+    margin-bottom: 35px;
+ }
+  
+.input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    z-index: 1;
+  }
+
+  #editarDescripcion{
+    height: 60px;
+    margin-top: 10px;
+  }
+  
+.label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+    background-color: white;
+    color: #DADCE0;
+    font-size: 16px;
+    transition: 0.5s;
+    z-index: 0;
+}
+
+::placeholder {
+    color: transparent;
+}
+  
+.botonEnviar, .botonRegistro {
+    display: block;
+    margin: 30px auto 0; 
+    padding: 15px 30px;
+    border: none;
+    background-color: var(--color-azulOscuro);
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: fit-content;
+}
+  
+.botonEnviar:hover, .botonRegistro:hover {
+    background-color: var(--color-azulMuyOscuro);
+    transform: translateY(-2px);
+}
+
+.input:focus + .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-azulOscuro);
+}
+  
+.input:not(:placeholder-shown)+ .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+}
+  
+.input:focus {
+    border: 2px solid var(--color-azulOscuro);
+}
+  
+/* Estilos para el encabezado del formulario */
+.encabezado-formulario {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 20px;
+}
+  
+.imagen-perfil img {
+    width: 181px; 
+    height: 170px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+#registro2 {
+    background-color: white;
+    width: 350px;
+    height: 380px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+#formularioEdicionContenido {
+    background-color: white;
+    width: 400px;
+    height: 600px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+#formularioEdicion {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+.formUsuario{
+    height: 700px;
+    width: 400px;
+}
+
+.formCurso{
+    height: 550px;
+    width: 360px;
+}
+
+#formularioEdicion2 {
+    background-color: white;
+    width: 350px;
+    height: 480px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+} 
+
+#registroContenido{
+    background-color: white;
+    width: 350px;
+    height: 480px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+  

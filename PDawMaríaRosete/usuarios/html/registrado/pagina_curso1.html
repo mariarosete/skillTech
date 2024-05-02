@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de HTML</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/estilos/admin.css">
+    <link rel="stylesheet" href="/estilos/index.css">
+    <link rel="stylesheet" href="/estilos/objetivosCursoJs.css"> 
+    <link rel="stylesheet" href="/estilos/materialCurso.css">
+
+     <!-- JS -->
+     <script src="/js/materialCursoHtml.js"></script>
+     <script src="/js/inscripciones_submenu.js"></script>
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+    <!-- Enlace al favicon -->
+   <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+</head>
+
+<body>
+
+    <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+    </div>
+    
+   <!-- Menú y submenú -->
+   <nav>
+    <ul>
+        <li><a href="/usuarios/html/registrado/indexRegistrado.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="/usuarios/html/registrado/listaCursosRegistrado.html" title="Catálogo"><i class="fas fa-book-open"></i> Catálogo</a></li>
+        <li><a href="/usuarios/html/registrado/perfilUsuario.html" title="Perfil de Usuario"><i class="fas fa-user-circle"></i> Mi Perfil</a></li>
+        <li>
+            <a href="/usuarios/html/registrado/cursosInscritos.html" id="enlaceMisCursos" title="Mis Inscripciones"><i class="fas fa-user-graduate"></i> Mis inscripciones <i class="fas fa-chevron-down"></i></a>
+            <ul id="submenuInscripciones">
+                <!-- Inscripciones dinámicamente  -->
+            </ul>
+        </li>
+        <li><a href="/usuarios/html/registrado/soporte.html" title="Soporte"><i class="fas fa-question-circle"></i> Soporte</a></li>
+        <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+    </ul>
+</nav>
+
+    <main class="main">
+
+   <!-- Mensaje de Bienvenida para el Curso de HTML -->
+    <div class="testimonios">
+        <div class="testimonio">
+            <h2><i class="fas fa-graduation-cap"></i> Bienvenido al Curso de HTML</h2>
+            <p>¡Aprende HTML, el lenguaje fundamental para crear páginas web! En este curso, explorarás los conceptos básicos de HTML y aprenderás a estructurar y diseñar páginas web desde cero.</p>
+            <p>El curso está diseñado para proporcionarte una sólida comprensión de HTML, desde las etiquetas básicas hasta técnicas más avanzadas de diseño y maquetación. Con ejemplos prácticos y proyectos aplicados, estarás listo para crear páginas web atractivas y funcionales.</p>
+        </div>
+    </div>
+
+     <!-- Contenedor para imagen HTML y temario -->
+  <div class="contenedor-colorido">
+    <div class="contenedor-flex">
+        <div class="curso-imagen">
+            <img src="/imagenes/CursoHtml.jpg" alt="Imagen del curso">
+        </div>
+        <div class="temario">
+            <h3><i class="fas fa-book-open"></i> Temario del curso</h3>
+            <ul>
+                <li>Introducción a HTML</li>
+                <li>Estructura básica de una página HTML</li>
+                <li>Etiquetas y elementos HTML</li>
+                <li>Formularios y elementos de entrada</li>
+                <li>Estilos y diseño con CSS</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+<!-- Contenedor para mostrar los materiales del curso -->
+<div class="contenedor-recomendaciones">
+    <h2><i class="fas fa-book"></i> Materiales del Curso</h2>
+    <div class="recomendaciones">
+        <!-- Introducción a HTML -->
+        <div class="recomendacion">
+            <img src="/imagenes/introducionhtml.jpg" alt="HTML">
+            <div class="titulo">INTRODUCCIÓN A HTML</div>
+            <div class="descripcion">A continuación, encontrarás una lista de materiales disponibles para este curso. Estos recursos te ayudarán a profundizar tus conocimientos y practicar lo aprendido.</div>
+            <!-- Lista de materiales -->
+            <ul class="materials-list" id="introduccion-html-materials-list">
+                
+                <!-- Los materiales de los cursos se cargarán dinámicamente -->
+            </ul>
+        </div>
+
+        <!-- Estructura básica de una página HTML -->
+        <div class="recomendacion">
+            <img src="/imagenes/htmlycss.jpg" alt="HTML">
+            <div class="titulo">ESTRUCTURA BÁSICA DE UNA PÁGINA HTML</div>
+            <div class="descripcion">A continuación, encontrarás una lista de materiales disponibles para este curso. Estos recursos te ayudarán a profundizar tus conocimientos y practicar lo aprendido.</div>
+            <!-- Lista de materiales -->
+            <ul class="materials-list" id="estructura-html-materials-list">
+                
+                <!-- Los materiales de los cursos se cargarán dinámicamente-->
+            </ul>
+        </div>
+
+        <!-- Etiquetas y elementos HTML -->
+        <div class="recomendacion">
+            <img src="/imagenes/htmlobjetivo1.jpg" alt="HTML">
+            <div class="titulo">ETIQUETAS Y ELEMENTOS HTML</div>
+            <div class="descripcion">A continuación, encontrarás una lista de materiales disponibles para este curso. Estos recursos te ayudarán a profundizar tus conocimientos y practicar lo aprendido.</div>
+            <!-- Lista de materiales -->
+            <ul class="materials-list" id="etiquetas-html-materials-list">
+                <!-- Los materiales de los cursos se cargarán dinámicamente -->
+            </ul>
+        </div>
+   
+    </div>
+</div>
+
+<!-- Sección de Preguntas Frecuentes -->
+<section class="faq-section">
+    <h2><i class="fas fa-question-circle"></i> Preguntas Frecuentes</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <h3>¿Cuál es la duración del curso?</h3>
+            <p>El curso tiene una duración total de 4 semanas, con una carga horaria de 20 horas.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Necesito conocimientos previos para tomar este curso?</h3>
+            <p>No se requieren conocimientos previos. El curso está diseñado para principiantes en HTML.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Cuál es el coste del curso?</h3>
+            <p>El curso es totalmente gratuito. En SkillTech creemos en el acceso igualitario a la educación, por lo que este curso en particular no tiene ningún coste asociado.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>¿Hay algún requisito técnico para tomar el curso?</h3>
+            <p>Solo necesitas acceso a un ordenador con conexión a internet. No se requieren conocimientos técnicos avanzados.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Perfil del Instructor para el Curso de HTML -->
+<section class="perfil-instructor">
+    <h2><i class="fas fa-user"></i> Perfil del Instructor</h2>
+    <div class="instructor-info">
+        <div class="instructor-image">
+            <img src="/imagenes/profesora.jpg" alt="Imagen del instructor">
+        </div>
+        <div class="instructor-details">
+            <h3>Marta González</h3>
+            <p>Marta González es una diseñadora web con una amplia experiencia en la creación de páginas web atractivas y funcionales. Con más de 8 años en la industria, Marta ha trabajado en proyectos diversos y ha desarrollado un profundo conocimiento en HTML y diseño web. Como instructora, Marta se compromete a guiar a sus estudiantes en el aprendizaje de HTML y a ayudarlos a desarrollar habilidades para crear sitios web de calidad.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Testimonios de Estudiantes para el Curso de HTML -->
+<section class="seccion-testimonios">
+    <h2><i class="fas fa-users"></i> Testimonios de Estudiantes</h2>
+
+    <div class="testimonios">
+        <div class="testimonio">
+            <p>"Tomé el curso de HTML y quedé encantado con el contenido y la enseñanza. Los ejemplos prácticos fueron muy útiles para entender los conceptos básicos y aplicarlos en proyectos personales. ¡Recomiendo este curso a todos los interesados en el diseño web!"</p>
+            <p class="nombre">- Carlos López</p>
+        </div>
+        <div class="testimonio">
+            <p>"El curso de HTML superó mis expectativas. Los materiales son muy completos y fáciles de entender, lo que facilita el aprendizaje incluso para aquellos sin experiencia previa en diseño web. ¡Gracias SkillTech por ofrecer este excelente curso!"</p>
+            <p class="nombre">- Laura Fernández</p>
+        </div>
+        <div class="testimonio">
+            <p>"Estoy muy satisfecho con el curso de HTML. Los instructores son muy amables y están siempre dispuestos a ayudar. Ahora me siento más seguro diseñando mis propias páginas web. ¡Lo recomiendo totalmente!" </p>
+            <p class="nombre">- Juan García</p>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-column">
+        <h3><img src="/imagenes/icono.png" alt="SkillTech Logo" class="logo">SkillTech</h3>
+        <p>Bienvenido al mundo de los cursos de informática. Descubre tendencias, adquiere habilidades prácticas y mantente actualizado. Explora cursos exclusivos y avanza en tu camino hacia la maestría informática.</p>
+    </div>
+    <div class="footer-column">
+        <h3><i class="fas fa-map-marker-alt"></i> Localización</h3>
+        <p>Avenida La Costa, 25<br>33202 Gijón, Asturias<br>España</p>
+    </div>
+    <div class="footer-column">
+        <h3 class="contact-heading"><i class="fas fa-phone"></i> Contacto</h3>
+        <p class="phone-icon"><i class="fas fa-mobile-alt"></i> +34 653 111 222</p>
+        <p><i class="fas fa-envelope"></i> SkillTech@mail.com</p>
+        <p><i class="fab fa-facebook"></i> www.facebook.com</p>
+    </div>
+</footer>
+  <!--Script para cerrar sesión  -->
+    <script>
+            
+        var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+        botonCerrarSesion.addEventListener('click', function() {
+            window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+        });
+
+    </script>
+</body>
+</html>

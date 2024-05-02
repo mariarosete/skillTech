@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/estilos/admin.css">
+    <link rel="stylesheet" href="/estilos/index.css">
+    <link rel="stylesheet" href="/estilos/objetivosCursoJs.css">
+    <link rel="stylesheet" href="/estilos/materialCurso.css">
+
+    <!-- JS -->
+    <script src="/js/materialCursoJs.js"></script>
+    <script src="/js/inscripciones_submenu.js"></script>
+
+   <!-- Fontawesome -->
+   <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+   <!-- Enlace al favicon -->
+   <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+</head>
+
+<body>
+
+   <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+    </div>
+    <!-- Menú y submenú -->
+    <nav>
+        <ul>
+            <li><a href="/usuarios/html/registrado/indexRegistrado.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="/usuarios/html/registrado/listaCursosRegistrado.html" title="Catálogo"><i class="fas fa-book-open"></i> Catálogo</a></li>
+            <li><a href="/usuarios/html/registrado/perfilUsuario.html" title="Perfil de Usuario"><i class="fas fa-user-circle"></i> Mi Perfil</a></li>
+            <li>
+                <a href="/usuarios/html/registrado/cursosInscritos.html" id="enlaceMisCursos" title="Mis Inscripciones"><i class="fas fa-user-graduate"></i> Mis inscripciones <i class="fas fa-chevron-down"></i></a>
+                <ul id="submenuInscripciones">
+                    <!-- Inscripciones dinámicamente -->
+                </ul>
+            </li>
+            <li><a href="/usuarios/html/registrado/soporte.html" title="Soporte"><i class="fas fa-question-circle"></i> Soporte</a></li>
+            <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <!-- Mensaje de Bienvenida -->
+        <div class="testimonios">
+            <div class="testimonio">
+                <h2><i class="fas fa-graduation-cap"></i> Bienvenido al Curso de JavaScript</h2>
+                <p>¡Aprende JavaScript, el lenguaje de programación fundamental para el desarrollo web! En este curso, explorarás los conceptos básicos de JavaScript y aprenderás a trabajar con variables, tipos de datos, funciones y estructuras de control.</p>
+        <p>El curso está diseñado para proporcionarte una sólida comprensión de JavaScript, desde los fundamentos hasta temas más avanzados como la manipulación del DOM y el uso de AJAX y promesas. Con ejemplos prácticos y proyectos aplicados, estarás listo para crear interactividad dinámica en tus sitios web.</p>
+            </div>
+        </div>
+
+        <!-- Contenedor para imagen Js y temario -->
+        <div class="contenedor-colorido">
+            <div class="contenedor-flex">
+                <div class="curso-imagen">
+                    <img src="/imagenes/CursoJs.jpg" alt="Imagen del curso">
+                </div>
+                <div class="temario">
+                    <h3><i class="fas fa-book-open"></i> Temario del curso</h3>
+                    <ul>
+                        <li>Introducción a JavaScript</li>
+                        <li>Variables y tipos de datos</li>
+                        <li>Funciones y estructuras de control</li>
+                        <li>Manipulación del DOM</li>
+                        <li>AJAX y Promesas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenedor para mostrar los materiales del curso -->
+        <div class="contenedor-recomendaciones">
+            <h2><i class="fas fa-book"></i> Materiales del Curso</h2>
+            <div class="recomendaciones">
+                <!-- Introducción a JavaScript -->
+                <div class="recomendacion">
+                    <img src="/imagenes/introduccionJs.jpeg" alt="JavaScript">
+                    <div class="titulo">INTRODUCCIÓN A JAVASCRIPT</div>
+                    <div class="descripcion">A continuación, encontrarás una lista de materiales disponibles para este curso. Estos recursos te ayudarán a profundizar tus conocimientos y practicar lo aprendido.</div>
+                    <!-- Lista de materiales -->
+                    <ul class="materials-list" id="introduccion-js-materials-list">
+
+                        <!-- Los materiales de los cursos se cargarán dinámicamente -->
+                    </ul>
+                </div>
+
+                <!-- Variables y tipos de datos -->
+                <div class="recomendacion">
+                    <img src="/imagenes/variablesJS.jpg" alt="JavaScript">
+                    <div class="titulo">VARIABLES Y TIPOS DE DATOS</div>
+                    <div class="descripcion">A continuación, encontrarás una lista de materiales disponibles para este curso. Estos recursos te ayudarán a profundizar tus conocimientos y practicar lo aprendido.</div>
+                    <!-- Lista de materiales -->
+                    <ul class="materials-list" id="variables-js-materials-list">
+
+                        <!-- Los materiales de los cursos se cargarán dinámicamente -->
+                    </ul>
+                </div>
+
+                <!-- Funciones y estructuras de control -->
+                <div class="recomendacion">
+                    <img src="/imagenes/funcionesJs.png" alt="JavaScript">
+                    <div class="titulo">FUNCIONES Y ESTRUCTURAS DE CONTROL</div>
+                    <div class="descripcion">A continuación, encontrarás una lista de materiales disponibles para este curso. Estos recursos te ayudarán a profundizar tus conocimientos y practicar lo aprendido.</div>
+                    <!-- Lista de materiales -->
+                    <ul class="materials-list" id="funciones-js-materials-list">
+                        <!-- Los materiales de los cursos se cargarán dinámicamente -->
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    <!-- Sección de Preguntas Frecuentes -->
+        <section class="faq-section">
+            <h2><i class="fas fa-question-circle"></i> Preguntas Frecuentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>¿Cuál es la duración del curso?</h3>
+                    <p>El curso tiene una duración total de 6 semanas, con una carga horaria de 30 horas.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Necesito conocimientos previos para tomar este curso?</h3>
+                    <p>No se requieren conocimientos previos específicos. Este curso es adecuado tanto para principiantes como para aquellos con experiencia previa en programación.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Cuál es el coste del curso?</h3>
+                    <p>El curso es gratuito para todos los estudiantes. En SkillTech, nos comprometemos a proporcionar acceso gratuito a la educación en tecnología.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Hay algún requisito técnico para tomar el curso?</h3>
+                    <p>Para participar en el curso, solo necesitas acceso a un ordenador con conexión a internet. No se requieren conocimientos técnicos avanzados, pero es útil tener un entendimiento básico de programación.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Perfil del Instructor -->
+        <section class="perfil-instructor">
+            <h2><i class="fas fa-user"></i> Perfil del Instructor</h2>
+            <div class="instructor-info">
+                <div class="instructor-image">
+                    <img src="/imagenes/profesorr.jpg" alt="Imagen del instructor">
+                </div>
+                <div class="instructor-details">
+                    <h3>Pedro Álvarez</h3>
+                    <p>Pedro Álvarez es un desarrollador web experimentado con más de 10 años de experiencia en la industria. Ha trabajado en una variedad de proyectos web y tiene un profundo conocimiento de JavaScript y otras tecnologías web. Como instructor, Pedro se compromete a ayudar a sus estudiantes a alcanzar su máximo potencial y a dominar las habilidades necesarias para tener éxito en el desarrollo web.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Testimonios de Estudiantes -->
+        <section class="seccion-testimonios">
+            <h2><i class="fas fa-users"></i> Testimonios de Estudiantes</h2>
+        
+            <div class="testimonios">
+                <div class="testimonio">
+                    <p>"Tomé el curso de JavaScript y quedé impresionado con la calidad del contenido y la enseñanza. Los ejercicios prácticos fueron especialmente útiles para reforzar lo que aprendí en cada lección. ¡Altamente recomendado!"</p>
+                    <p class="nombre">- Ana Sánchez</p>
+                </div>
+                <div class="testimonio">
+                    <p>"El curso de JavaScript superó mis expectativas. Los conceptos se presentaron de manera clara y concisa, y los ejemplos prácticos me ayudaron a comprender rápidamente. ¡Gracias SkillTech!"</p>
+                    <p class="nombre">- María Rodríguez</p>
+                </div>
+                <div class="testimonio">
+                    <p>"Estoy muy satisfecho con el curso de JavaScript. La plataforma de aprendizaje es fácil de usar y los instructores son muy competentes. Ahora me siento mucho más seguro trabajando con JavaScript en mis proyectos." </p>
+                    <p class="nombre">- Juan Pérez</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h3><img src="/imagenes/icono.png" alt="SkillTech Logo" class="logo">SkillTech</h3>
+            <p>Bienvenido al mundo de los cursos de informática. Descubre tendencias, adquiere habilidades prácticas y mantente actualizado. Explora cursos exclusivos y avanza en tu camino hacia la maestría informática.</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-map-marker-alt"></i> Localización</h3>
+            <p>Avenida La Costa, 25<br>33202 Gijón, Asturias<br>España</p>
+        </div>
+        <div class="footer-column">
+            <h3 class="contact-heading"><i class="fas fa-phone"></i> Contacto</h3>
+            <p class="phone-icon"><i class="fas fa-mobile-alt"></i> +34 653 111 222</p>
+            <p><i class="fas fa-envelope"></i> SkillTech@mail.com</p>
+            <p><i class="fab fa-facebook"></i> www.facebook.com</p>
+        </div>
+    </footer>
+    <!--Script para cerrar sesión  -->
+    <script>
+            
+        var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+        botonCerrarSesion.addEventListener('click', function() {
+            window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+        });
+
+    </script>
+</body>
+</html>

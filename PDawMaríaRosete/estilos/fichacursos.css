@@ -1,0 +1,132 @@
+@import url("comun.css");
+
+/*******************Estilos Fichas de Cursos**********************/
+.cursos-container {
+    max-width: 1500px;
+    margin: 10px auto;      
+}
+
+.btn-rotate {
+    display: block;
+    cursor: pointer;
+    color: var(--color-azulMuyOscuro);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.2rem 1rem; 
+    margin: 1rem auto 0 auto;
+    text-decoration: none;
+    background-color: var(--color-azulClaro);
+    border-radius: 2px;
+    border: 0;
+    text-align: center;
+    width: 40%;
+    height: 40px;
+    line-height: 40px; 
+}
+
+.btn-rotate:hover {
+    background-color: var(--color-azulMuyOscuro);
+    border-radius: 2px;
+    color: var(--color-blanco);
+    font-weight: bold; 
+}
+
+.rotate-container .ficha-front .btn-rotate,
+.rotate-container .ficha-back .btn-rotate {
+    margin-top: auto; 
+    margin-bottom: 20px; 
+    margin-top: 10px;
+}
+
+.info-cursos{
+    backdrop-filter: blur(10px);
+    padding: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 304px);
+    grid-auto-rows: 240px;
+    justify-content: center;
+    grid-gap: 1rem;
+    border-radius: 8px;
+    row-gap: 80px;
+    column-gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    grid-auto-rows: 350px; 
+    row-gap: 25px; 
+    margin-bottom: 100px;
+}
+
+.rotate-container {
+    position: relative;
+}
+
+.rotate-container .ficha-front,
+.rotate-container .ficha-back {
+    background-color: var(--color-azulClaro);
+    border: 1px solid var(--color-oro);
+    border-radius: 10px;
+    width: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    transition: transform 0.5s linear 0s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    border: 2px solid var(--color-claro);
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.rotate-container .ficha-front {
+    transform: perspective(900px) rotateY(0deg);
+}
+
+.rotate-container .ficha-back {
+    transform: perspective(900px) rotateY(180deg);
+}
+
+.rotate-container .ficha-front h4, .ficha-back h4 {
+    font-size: 1.1rem; 
+    padding: 0.3rem 0; 
+    font-weight: bold;
+    width: 88%;
+    text-align: center;
+    color: var(--color-blanco);
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-azulMuyOscuro); 
+    border-radius: 15px; 
+    padding: 8px 16px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.rotate-container .ficha-front img {
+    width: 290px;
+    height: 200px; 
+    border-radius: 10px; 
+    object-fit: cover; 
+}
+
+.rotate-container .ficha-back p {
+    font-size: 0.9rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.2;
+    color: black;
+    text-align: justify;
+    padding: 10px 15px;
+}
+
+.rotate-container .rotar-ficha-front {
+    transform: perspective(1600px) rotateY(-180deg);
+}
+
+.rotate-container .rotar-ficha-back {
+    transform: perspective(1600px) rotateY(0deg);
+}
+
+
+

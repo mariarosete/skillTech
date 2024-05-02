@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Soporte</title>
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="/estilos/soporte.css">
+    <link rel="stylesheet" href="/estilos/index.css">
+
+    <!-- JS-->
+    <script src="/js/soporte.js"></script>   
+    <script src="/js/inscripciones_submenu.js"></script>      
+        
+   <!-- Fontawesome -->
+   <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+   <!-- Enlace al favicon -->
+   <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+ 
+</head>
+<body>
+    <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+    </div>
+    <!-- Menú y submenú -->
+    <nav>
+        <ul>
+            <li><a href="/usuarios/html/registrado/indexRegistrado.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="/usuarios/html/registrado/listaCursosRegistrado.html" title="Catálogo"><i class="fas fa-book-open"></i> Catálogo</a></li>
+            <li><a href="/usuarios/html/registrado/perfilUsuario.html" title="Perfil de Usuario"><i class="fas fa-user-circle"></i> Mi Perfil</a></li>
+            <li>
+                <a href="/usuarios/html/registrado/cursosInscritos.html" id="enlaceMisCursos" title="Mis Inscripciones"><i class="fas fa-user-graduate"></i> Mis inscripciones <i class="fas fa-chevron-down"></i></a>
+                <ul id="submenuInscripciones">
+                    <!-- Inscripciones dinámicamente  -->
+                </ul>
+            </li>
+            <li><a href="/usuarios/html/registrado/soporte.html" title="Soporte"><i class="fas fa-question-circle"></i> Soporte</a></li>
+            <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <!-- Introduccion -->
+    <div class="testimonios">
+        <div class="testimonio">
+            <h2><i class="fas fa-question-circle"></i> Solicitud de Soporte</h2>
+                <p>En SkillTech, nuestro equipo de soporte técnico está aquí para resolver cualquier problema que tengas. Utiliza nuestro formulario de soporte para comunicarte con nosotros y resolver cualquier inconveniente que surja durante tu aprendizaje</p>
+        
+        </div>
+    </div>
+
+    <!-- Contenedor para formulario de soporte -->
+    <div class="contenedor">
+        <div class="soporte">
+            <h2><i class="fas fa-comment"></i> Formulario de Soporte</h2>
+
+            <form id="registro">
+                <label for="descripcion">Descripción del Problema:</label>
+                <textarea id="descripcion" name="descripcion" rows="5" cols="35" required></textarea>
+
+                <label for="curso">Material del Curso:</label>
+                <select id="material_curso">
+                    <!-- Opciones de los cursos dinámicamente-->
+                </select>
+
+                <label for="captura">Captura de Pantalla:</label>
+                <input type="file" id="captura" name="captura">
+
+                <label for="gravedad">Gravedad del Problema:</label>
+                <select id="gravedad" name="gravedad">
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                    <option value="critica">Crítica</option>
+                </select>
+
+                <button type="submit" class="botonRegistro">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Sección para mostrar la respuesta -->
+        <div id="respuestaAdminSection">
+            <h2><i class="fas fa-comments"></i> Respuesta de Soporte</h2>
+            <p id="respuestaAdmin"></p>
+        </div>
+    </div>
+    
+    <!-- Modal de bienvenida para usuario registrado -->
+    <div id="solicitudSoporteExitosaMessage" class="modal bienvenida-modal" style="display: none;">
+        <div class="modal-content">
+            <h2><i class="fas fa-user-check icon"></i> ¡Solicitud de soporte enviada correctamente!</h2>
+            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h3><img src="/imagenes/icono.png" alt="SkillTech Logo" class="logo">SkillTech</h3>
+            <p>Bienvenido al mundo de los cursos de informática. Descubre tendencias, adquiere habilidades prácticas y mantente actualizado. Explora cursos exclusivos y avanza en tu camino hacia la maestría informática.</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-map-marker-alt"></i> Localización</h3>
+            <p>Avenida La Costa, 25<br>33202 Gijón, Asturias<br>España</p>
+        </div>
+        <div class="footer-column">
+            <h3 class="contact-heading"><i class="fas fa-phone"></i> Contacto</h3>
+            <p class="phone-icon"><i class="fas fa-mobile-alt"></i> +34 653 111 222</p>
+            <p><i class="fas fa-envelope"></i> SkillTech@mail.com</p>
+            <p><i class="fab fa-facebook"></i> www.facebook.com</p>
+        </div>
+    </footer>
+    <!--Script para cerrar sesión  -->
+    <script>
+        
+        var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+        botonCerrarSesion.addEventListener('click', function() {
+            window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+        });
+
+    </script>
+</body>
+</html>

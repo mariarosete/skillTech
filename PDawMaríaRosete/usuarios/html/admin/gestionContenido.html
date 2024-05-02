@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Contenido</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/estilos/admin.css">
+    <link rel="stylesheet" href="/estilos/index.css">
+    <link rel="stylesheet" href="/estilos/modalBorrado.css">
+    
+    <!-- JS -->
+    <script src="/js/insertarContenido.js"></script>
+    <script src="/js/gestionContenido.js"></script>
+    
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+    <!-- Enlace al favicon -->
+   <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+    
+</head>
+<body>
+
+      <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+    </div>
+     <!-- Menú y submenú -->
+     <nav>
+        <ul>
+            <li><a href="/usuarios/html/admin/indexAdmin.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="/usuarios/html/admin/indexAdmin.html" title="Panel Admin"><i class="fas fa-cogs"></i> Gestión <i class="fas fa-chevron-down"></i></a>
+                <ul>
+                    <li><a href="/usuarios/html/admin/gestionUsuarios.html">Usuarios</a></li>
+                    <li><a href="/usuarios/html/admin/gestionCursos.html">Cursos</a></li>
+                    <li><a href="/usuarios/html/admin/gestionContenido.html">Contenido</a></li>
+                    <li><a href="/usuarios/html/admin/formularioSoporteAdmin.html">Solicitud de Soporte</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+        </ul>
+    </nav>
+           
+    <h1><i class="fas fa-book-open"></i> Gestión de Contenido</h1>
+
+          <!-- Botón de agregar curso -->
+          <div class="agregar-contacto">
+            <a href="#" id="crearContenido"><i class="fas fa-plus"></i> Agregar Nuevo Contenido</a>
+        </div>
+    
+   <!-- Modal para crear contenido -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="registro-div">
+                <form id="registroContenido" class="formCurso">
+                    <h2 class="title"><i class="fas fa-book-open"></i> Nuevo Contenido</h2>
+                    <span class="close" id="cerrarModal">&times;</span>
+                    
+                    <div class="inputContainer">
+                        <input type="text" id="nombre" class="input" name="nombre" required>
+                        <label for="nombre" id="nombreLabel" class="label">Nombre:</label>
+                    </div>
+                    
+                    <div class="inputContainer">
+                        <label for="tipoMaterial" id="tipoMaterialLabel" class="label">Tipo de Material:</label>
+                        <select id="tipoMaterial" name="tipoMaterial" class="input" required>
+                            <option value="">Seleccione el tipo de material</option>
+                            <option value="0">PDF</option>
+                            <option value="1">VIDEO</option>
+                            <option value="2">PRESENTACION</option>
+                            <option value="3">ENLACE</option>
+                            <option value="4">OTRO</option>
+                        </select>
+                    </div>
+                    
+                    <div class="inputContainer">
+                        <input type="text" id="url" class="input" name="url" required>
+                        <label for="url" id="urlLabel" class="label">URL:</label>
+                    </div>
+                    
+                    <div class="inputContainer">
+                        <label for="curso_idcurso" id="cursoLabel" class="label">Curso:</label>
+                        <select id="curso_idcurso" name="curso_idcurso" class="input" required>
+                            <option value="">Seleccione el curso</option>
+                            <!-- Cargar dinámicamente los cursos disponibles -->
+                        </select>
+                    </div>
+                    
+                    <input type="submit" class="botonEnviar" value="Añadir">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para editar contenido -->
+    <div id="editarModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <!-- Formulario de edición con encabezado -->
+            <div class="registro-div">
+                <form id="formularioEdicionContenido" class="form">
+                    <!-- Encabezado del formulario con la imagen de perfil y el título -->
+                    <div class="encabezado-formulario">
+                        <div class="imagen-perfil">
+                            <img src="/imagenes/editarcontenido.jpg" alt="Imagen de perfil">
+                        </div>
+                        <h2 class="title"><i class="fas fa-edit"></i> Editar contenido</h2>
+                        <!-- Botón de cierre del modal de edición -->
+                        <span class="close" id="cerrarModal2">&times;</span>
+                    </div>
+                    
+                    <!-- Formulario de edición -->
+                    <div class="inputContainer">
+                        <input type="hidden" id="editarIdMaterialCurso" name="idmaterial_curso">
+                    </div>
+
+                    <div class="inputContainer">
+                        <input type="text" id="editarNombre" class="input" name="nombre" placeholder="Nombre">
+                        <label for="editarNombre" class="label">Nombre</label>
+                    </div>
+
+                    <div class="inputContainer">
+                        <select id="editarTipoMaterial" class="input" name="tipoMaterial">
+                            <option value="">Seleccione el tipo de material</option>
+                            <option value="0">PDF</option>
+                            <option value="1">VIDEO</option>
+                            <option value="2">PRESENTACION</option>
+                            <option value="3">ENLACE</option>
+                            <option value="4">OTRO</option>
+                        </select>
+                        <label for="editarTipoMaterial" class="label">Tipo de Material</label>
+                    </div>
+
+                    <div class="inputContainer">
+                        <input type="text" id="editarURL" class="input" name="url" placeholder="URL">
+                        <label for="editarURL" class="label">URL</label>
+                    </div>
+
+                    <input type="submit" class="botonRegistro" value="Guardar">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tabla de Contenido -->
+    <div class="contenedor-tabla">
+        <table class="tablaContenido" id="tablaContenido">
+            <thead>
+                <tr>
+                    <th><i class="fas fa-heading"></i> Nombre</th>
+                    <th><i class="fas fa-file-alt"></i> Tipo de Material</th>
+                    <th><i class="fas fa-link"></i> URL</th>
+                    <th><i class="fas fa-book"></i> Curso</th>
+                    <th><i class="fas fa-cogs"></i> Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyMateriales">
+                <!-- Filas de la tabla dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+     <!-- Modal de confirmación -->
+     <div id="confirmModal" class="modal confirm-modal">
+        <div class="modal-content">
+            <h2>Confirmar Eliminación <i class="fas fa-trash-alt accion"></i></h2>
+            <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+            <div class="confirm-buttons">
+                <button id="confirmarEliminar">Sí, eliminar</button>
+                <button id="cancelarEliminar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de éxito para la modificación del usuario -->
+    <div id="mensajeExitoModal" class="modal bienvenida-modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-check-circle icon"></i> Modificación Exitosa</h2>
+            <p>¡Los detalles del contenido del curso se han modificado correctamente!</p>
+        </div>
+    </div>
+    <!-- Modal de éxito para la inserción de usuario -->
+    <div id="mensajeExitoModal2" class="modal bienvenida-modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-check-circle icon"></i> ¡Registro exitoso!</h2>
+            <p>El contenido del curso se ha creado correctamente.</p>
+        </div>
+    </div>
+       
+    <!--Script para cerrar sesión  -->
+    <script>
+        
+        var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+        botonCerrarSesion.addEventListener('click', function() {
+            window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+        });
+
+    </script>
+</body>
+</html>

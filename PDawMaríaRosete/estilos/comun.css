@@ -1,0 +1,167 @@
+:root {
+    /*************TAMAÑOS LETRAS********************************/
+    --size-a: 20px;
+    --size-logo: 24px;
+    --size-iconodesplegable: 40px;
+    --size-modal: 18px;
+    --size-modalhover: 20px;
+    --size-modalh3: 25px;
+    --size-infovelo: 22px;
+    --size-close: 47px;
+
+    /*************COLORES***************************************/
+    --color-azulOscuro: #586BA6;
+    --color-blanco: #F2F2F2;
+    --color-azulClaro: #ACBEF2;
+    --color-azulMuyOscuro:#021140;
+    --color-claro:#D5DCF2;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #E4E4ED, #F5F5F5);   
+}
+
+html, body {
+    height: auto; 
+    margin: 0; 
+    padding: 0;     
+}
+
+.header img {
+   width: 100%; 
+   height: 100%;
+   object-fit:cover;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+h2{
+    color: var(--color-azulOscuro) 
+}
+
+/***Menú y Submenú**************************************/
+nav ul {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+nav ul li {
+    display: inline-block; 
+    margin-right: 20px; 
+}
+
+nav {
+    position: absolute; 
+    top: 44.5%; 
+    left: 0; 
+    width: 100%;
+    z-index: 2; 
+    background-color: rgba(88, 107, 166, 0.5);    
+    border-bottom: 4px solid rgba(2, 17, 64, 0.5); 
+    border-top: 4px solid rgba(2, 17, 64, 0.5);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px; 
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+nav ul li:hover > ul {
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+/*******Submenu*************************/
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: calc(100% + 14px); 
+    left: -8px;
+    width: 275px;
+    background-color: #BFC7D4;
+    transition: opacity 0.3s, visibility 0.3s, box-shadow 0.3s; 
+    border-radius: 5px;
+    transform: translateY(-10px); 
+}
+
+nav ul ul li a {
+    padding: 12px 20px;
+    color: #fff; 
+    text-decoration: none;
+}
+
+/* Estilo del enlace del menú principal cuando se hace hover */
+nav > ul > li:hover > a {
+    background-color: rgba(172, 190, 242, 0.5);
+    transform: scale(1.05); 
+}
+/* Mostrar el submenu al hacer hover sobre el elemento del menú principal */
+nav > ul > li:hover > ul {
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+nav ul ul li a:hover {
+    color: var(--color-azulMuyOscuro);
+}
+
+/* Estilo para la ventana modal de inicio de sesión */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(5px); 
+    transition: opacity 0.3s ease; 
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    cursor: pointer;
+    font-size: 26px;
+    width: 32px;
+    height: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    transition: color 0.3s ease; 
+}
+
+.close:hover {
+    color: #ff0000; 
+}
+
+
+
+ 

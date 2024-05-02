@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillTech Usuario Registrado</title>
+        
+     <!-- CSS-->
+     <link rel="stylesheet" href="/estilos/admin.css">
+     <link rel="stylesheet" href="/estilos/index.css">
+       
+     <!-- JS -->
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <script src="/js/carrusel.js" defer></script>
+     <script src="/js/graficoRegistrado.js"></script>
+     <script src="/js/buscarCursosCategoria.js"></script>
+     <script src="/js/buscarCursosTitulo.js"></script>
+     <script src="/js/inscripciones_submenu.js"></script>
+     <script src="/js/nombreUsuario.js"></script>
+     
+   <!-- Fontawesome -->
+   <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+   <!-- Enlace al favicon -->
+   <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+
+</head>
+
+<body>
+      
+<!-- Encabezado con imagen -->
+<div class="header">
+    <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+</div>
+
+<!-- Menú y submenú -->
+<nav>
+    <ul>
+        <li><a href="/usuarios/html/registrado/indexRegistrado.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="/usuarios/html/registrado/listaCursosRegistrado.html" title="Catálogo"><i class="fas fa-book-open"></i> Catálogo</a></li>
+        <li><a href="/usuarios/html/registrado/perfilUsuario.html" title="Perfil de Usuario"><i class="fas fa-user-circle"></i> Mi Perfil</a></li>
+        <li>
+            <a href="/usuarios/html/registrado/cursosInscritos.html" id="enlaceMisCursos" title="Mis Inscripciones"><i class="fas fa-user-graduate"></i> Mis inscripciones <i class="fas fa-chevron-down"></i></a>
+            <ul id="submenuInscripciones">
+                <!-- Inscripciones dinámicamente -->
+            </ul>
+        </li>
+        <li><a href="/usuarios/html/registrado/soporte.html" title="Soporte"><i class="fas fa-question-circle"></i> Soporte</a></li>
+        <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+    </ul>
+</nav>
+
+    <!--Mensaje de Bienvenida  -->
+    <div class="testimonios">
+        <div class="testimonio">
+            <h2>¡ Bienvenido de nuevo <span>@<span id="nombreUsuario"></span></span> !</h2>
+
+            <p>Tu destino para el aprendizaje personalizado. Descubre una variedad de cursos adaptados a tus necesidades y alcanza tus objetivos de aprendizaje de manera eficiente. ¡Comienza a aprender de forma inteligente hoy mismo!</p>
+
+        </div>
+    </div>
+       
+     <!--Contenedor para Carrusel y Gráfico  -->
+    <div class="contenedor-graficos">
+        <!--Carrusel de cursos  -->
+       <div class="carrusel">
+
+           <div class="atras">
+               <img id="atras" src="/imagenes/atras.svg" alt="atras" loading="lazy">
+           </div>
+
+           <div class="imagenes">
+               <div id="img">
+
+               </div>
+               
+               <div id="texto" class="texto">
+                   <h3></h3>
+                   <p></p>
+               </div>
+           </div>
+
+           <div class="adelante">
+               <img id="adelante" src="/imagenes/adelante.svg" alt="adelante" loading="lazy">
+           </div>
+
+       </div>
+       
+        <!-- Contenedor del gráfico -->
+       <div class="contenedor-grafico">
+           <canvas id="graficoCursosPorCategoria"></canvas>
+       </div>
+   </div>
+
+   <div class="puntos" id="puntos"></div>
+
+   <div class="container">
+        <h1 class="titulo"><i class="fas fa-search"></i> Buscador de Cursos</h1>
+        <div class="buscadores">
+             <!-- Formulario de búsqueda por categoría -->
+            <form id="formBusquedaCategoria">
+                <select id="selectCategoria">
+                    <option value="">Seleccionar categoría</option>
+                    <option value="Desarrollo web">Desarrollo web</option>
+                    <option value="Programación">Programación</option>
+                    <option value="Bases de datos">Bases de datos</option>
+                    <option value="Seguridad">Seguridad</option>
+                    <option value="Tecnologias">Tecnologias</option>
+                </select>
+                <button type="submit">Buscar por categoría</button>
+            </form>
+            <!-- Formulario de búsqueda por nombre -->
+            <form id="formBusquedaTitulo">
+                <input type="text" id="inputTitulo" placeholder="Ingrese el nombre del curso">
+                <button type="submit">Buscar por nombre</button>
+            </form>
+        </div>
+
+        <!-- Contenedor para mostrar los resultados de la búsqueda -->
+        <div id="contenedorResultados"></div>
+    </div>  
+
+   
+    <!-- Contenedor de Recomendaciones de cursos -->
+    <div class="contenedor-recomendaciones">
+        <h2><i class="fas fa-star"></i> Recomendaciones de Cursos</h2>
+        <div class="recomendaciones">
+            <div class="recomendacion">
+                <a href="/usuarios/html/registrado/cursoJavascriptRegistrado.html?idcurso=03">
+                    <img src="/imagenes/CursoJs.jpg" alt="JavaScript">
+                </a>
+                <div class="titulo">Curso de JavaScript</div>
+                <div class="descripcion">Desarrollo web con JavaScript</div>
+            </div>
+            <div class="recomendacion">
+                <a href="/usuarios//html/registrado/cursoHtmlRegistrado.html?idcurso=01">
+                    <img src="/imagenes/CursoHtml.jpg" alt="Html">
+                </a>
+                <div class="titulo">Curso HTML</div>
+                <div class="descripcion">Aprende los fundamentos del lenguaje de marcado HTML para crear páginas web.</div>
+            </div>
+            
+            <div class="recomendacion">
+                <img src="/imagenes/CursoPython.jpg" alt="Python">
+                <div class="titulo">Curso de Python</div>
+                <div class="descripcion">Introducción a la programación con Python</div>
+            </div>
+        </div>
+    </div>
+    <!--Contenedor para las noticias  -->
+    <section class="seccion-noticias">
+        <h2><i class="fas fa-newspaper"></i> Últimas Noticias de SkillTech</h2>
+    
+        <div class="noticias">
+            <div class="noticia">
+                <img src="/imagenes/CursoReact.jpg" alt="Noticia Curso React">
+                <div class="contenido-noticia">
+                    <h3>Lanzamiento del Nuevo Curso de React</h3>
+                    <p class="fecha">Publicado el 30 de mayo de 2024</p>
+                    <p>¡Estamos emocionados de anunciar el lanzamiento de nuestro nuevo curso de React! En este curso, aprenderás a construir aplicaciones web modernas y dinámicas utilizando el popular framework de JavaScript, React. Únete a nosotros y lleva tus habilidades de desarrollo web al siguiente nivel.</p>
+                </div>
+            </div>
+            <div class="noticia">
+                <img src="/imagenes/CursoPython.jpg" alt="Noticia Curso Python">
+                <div class="contenido-noticia">
+                    <h3>Ampliación del Curso de Python</h3>
+                    <p class="fecha">Publicado el 28 de mayo de 2024</p>
+                    <p>Nos complace anunciar que hemos ampliado nuestro curso de Python para incluir más contenido y ejercicios prácticos. Ya sea que estés comenzando con la programación o buscando mejorar tus habilidades, nuestro curso de Python te proporcionará los conocimientos necesarios para tener éxito en el mundo del desarrollo de software.</p>
+                </div>
+            </div>
+            <div class="noticia">
+                <img src="/imagenes/CursoCloudComputing.jpg" alt="Noticia Curso Cloud Computing">
+                <div class="contenido-noticia">
+                    <h3>Descubre el Futuro con Nuestro Curso de Cloud Computing</h3>
+                    <p class="fecha">Publicado el 26 de mayo de 2024</p>
+                    <p>¡Únete a nuestro curso de Cloud Computing y descubre cómo la computación en la nube está transformando la industria de la tecnología! Aprenderás sobre los fundamentos de la computación en la nube, servicios populares como AWS y Azure, y cómo implementar soluciones escalables y seguras en la nube. No te pierdas esta oportunidad de avanzar en tu carrera profesional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h3><img src="/imagenes/icono.png" alt="SkillTech Logo" class="logo">SkillTech</h3>
+            <p>Bienvenido al mundo de los cursos de informática. Descubre tendencias, adquiere habilidades prácticas y mantente actualizado. Explora cursos exclusivos y avanza en tu camino hacia la maestría informática.</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-map-marker-alt"></i> Localización</h3>
+            <p>Avenida La Costa, 25<br>33202 Gijón, Asturias<br>España</p>
+        </div>
+        <div class="footer-column">
+            <h3 class="contact-heading"><i class="fas fa-phone"></i> Contacto</h3>
+            <p class="phone-icon"><i class="fas fa-mobile-alt"></i> +34 653 111 222</p>
+            <p><i class="fas fa-envelope"></i> SkillTech@mail.com</p>
+            <p><i class="fab fa-facebook"></i> www.facebook.com</p>
+        </div>
+    </footer>
+
+    <!--Script para cerrar sesión  -->
+    <script>
+            
+        var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+        botonCerrarSesion.addEventListener('click', function() {
+            window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+        });
+
+    </script>                               
+</body>
+</html>
