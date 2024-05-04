@@ -404,6 +404,27 @@ footer {
 }
 
 /* Estilos para el formulario de registro */
+
+.title2 {
+    font-size: 26px; 
+    color: var(--color-azulOscuro); 
+    margin-bottom: 20px; 
+    text-align: center; 
+    letter-spacing: 2px; 
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-right: 36px;
+    
+  }
+  
+
+.title2 img {
+    width: 100px;   
+}
+
+
 #registro,
 #registro2 {
     max-width: 500px;

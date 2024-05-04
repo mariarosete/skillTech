@@ -52,6 +52,9 @@ h2,h1{
     height: 70vh; 
     margin-bottom: 15px; 
 }
+#tablaContenido,#tablaUsuarios,#tablaCursos{
+    width: 80%;
+}
 
 .contenedor-tabla2 {
   display: flex;
@@ -136,9 +139,12 @@ a.seccion {
     color: var(--color-azulOscuro); 
     margin-bottom: 20px; 
     text-align: center; 
-    text-transform: uppercase; 
     letter-spacing: 2px; 
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
   }
   
 .registro-div {

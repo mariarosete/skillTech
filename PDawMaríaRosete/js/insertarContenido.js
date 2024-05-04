@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Agregar opción por defecto
             const defaultOption = document.createElement('option');
             defaultOption.value = '';
-            defaultOption.textContent = 'Seleccione un curso';
+            //defaultOption.textContent = 'Seleccione un curso';
             selectCurso.appendChild(defaultOption);
             // Agregar cada curso como opción en el select
             cursos.forEach(curso => {
