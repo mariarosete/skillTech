@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Spring</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/estilos/admin.css">
+    <link rel="stylesheet" href="/estilos/index.css">
+    <link rel="stylesheet" href="/estilos/objetivosCursoJs.css"> 
+    <link rel="stylesheet" href="/estilos/materialCurso.css">
+
+    <!-- JS -->
+    <script src="/js/materialCursoSpring.js"></script>
+    <script src="/js/inscripciones_submenu.js"></script>
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+    <!-- Enlace al favicon -->
+    <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+</head>
+
+<body>
+
+    <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+    </div>
+    
+    <!-- Menú y submenú -->
+    <nav>
+        <ul>
+            <li><a href="/usuarios/html/registrado/indexRegistrado.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="/usuarios/html/registrado/listaCursosRegistrado.html" title="Catálogo"><i class="fas fa-book-open"></i> Catálogo</a></li>
+            <li><a href="/usuarios/html/registrado/perfilUsuario.html" title="Perfil de Usuario"><i class="fas fa-user-circle"></i> Mi Perfil</a></li>
+            <li>
+                <a href="/usuarios/html/registrado/cursosInscritos.html" id="enlaceMisCursos" title="Mis Inscripciones"><i class="fas fa-user-graduate"></i> Mis inscripciones <i class="fas fa-chevron-down"></i></a>
+                <ul id="submenuInscripciones">
+                    <!-- Inscripciones dinámicamente  -->
+                </ul>
+            </li>
+            <li><a href="/usuarios/html/registrado/soporte.html" title="Soporte"><i class="fas fa-question-circle"></i> Soporte</a></li>
+            <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mensaje de Bienvenida al Curso de Spring -->
+<div class="testimonios">
+    <div class="testimonio">
+        <h2><i class="fas fa-graduation-cap"></i> Bienvenido al Curso de Spring</h2>
+        <p>¡Aprende Spring, un marco de trabajo de código abierto para el desarrollo de aplicaciones Java! En este curso, explorarás los fundamentos de Spring y aprenderás a construir aplicaciones empresariales robustas y escalables.</p>
+        <p>El curso está diseñado para proporcionarte una comprensión profunda de Spring, desde la configuración básica hasta las técnicas avanzadas de desarrollo. Con ejemplos prácticos y proyectos aplicados, estarás listo para enfrentarte a desafíos reales en el mundo del desarrollo de software empresarial.</p>
+    </div>
+</div>
+
+<!-- Contenedor para imagen de Spring y temario -->
+<div class="contenedor-colorido">
+    <div class="contenedor-flex">
+        <div class="curso-imagen">
+            <img src="/imagenes/spring.jpg" alt="Imagen del curso">
+        </div>
+        <div class="temario">
+            <h3><i class="fas fa-book-open"></i> Temario del curso</h3>
+            <ul>
+                <li>Introducción a Spring</li>
+                <li>Configuración de Spring</li>
+                <li>Inyección de Dependencias</li>
+                <li>Spring MVC</li>
+                <li>Spring Boot</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Contenedor para mostrar los materiales del curso de Spring -->
+<div class="contenedor-recomendaciones">
+    <h2><i class="fas fa-book"></i> Materiales del Curso de Spring</h2>
+    <div class="recomendaciones">
+        <!-- Introducción a Spring -->
+        <div class="recomendacion">
+            <img src="/imagenes/javaIntroduccion.png" alt="Spring">
+            <div class="titulo">INTRODUCCIÓN A SPRING</div>
+            <div class="descripcion">A continuación, encontrarás una lista de materiales disponibles para este curso. Estos recursos te ayudarán a profundizar tus conocimientos y practicar lo aprendido.</div>
+            <!-- Lista de materiales -->
+            <ul class="materials-list" id="introduccion-spring-materials-list">
+                
+                <!-- Los materiales de los cursos se cargarán dinámicamente -->
+            </ul>
+        </div>
+
+        <!-- Configuración de Spring -->
+        <div class="recomendacion">
+            <img src="/imagenes/springConfiguracion.jpg" alt="Spring">
+            <div class="titulo">CONFIGURACIÓN DE SPRING</div>
+            <div class="descripcion">A continuación, encontrarás una lista de materiales disponibles para este curso. Estos recursos te ayudarán a profundizar tus conocimientos y practicar lo aprendido.</div>
+            <!-- Lista de materiales -->
+            <ul class="materials-list" id="configuracion-spring-materials-list">
+                
+                <!-- Los materiales de los cursos se cargarán dinámicamente-->
+            </ul>
+        </div>
+
+        <!-- Inyección de Dependencias -->
+        <div class="recomendacion">
+            <img src="/imagenes/springInyeccion.jpg" alt="Spring">
+            <div class="titulo">INYECCIÓN DE DEPENDENCIAS</div>
+            <div class="descripcion">A continuación, encontrarás una lista de materiales disponibles para este curso. Estos recursos te ayudarán a profundizar tus conocimientos y practicar lo aprendido.</div>
+            <!-- Lista de materiales -->
+            <ul class="materials-list" id="inyeccion-spring-materials-list">
+                <!-- Los materiales de los cursos se cargarán dinámicamente -->
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!-- Sección de Preguntas Frecuentes -->
+<section class="faq-section">
+    <h2><i class="fas fa-question-circle"></i> Preguntas Frecuentes</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <h3>¿Cuál es la duración del curso?</h3>
+            <p>El curso tiene una duración total de 6 semanas, con una carga horaria de 30 horas.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Necesito conocimientos previos para tomar este curso?</h3>
+            <p>Se recomienda tener conocimientos básicos de programación en Java.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Cuál es el coste del curso?</h3>
+            <p>El curso es gratuito para todos los usuarios registrados en SkillTech.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>¿Hay algún requisito técnico para tomar el curso?</h3>
+            <p>Es necesario tener acceso a un ordenador con conexión a internet y tener instalado Java Development Kit (JDK).</p>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Perfil del Instructor para el Curso de Spring -->
+<section class="perfil-instructor">
+    <h2><i class="fas fa-user"></i> Perfil del Instructor</h2>
+    <div class="instructor-info">
+        <div class="instructor-image">
+            <img src="/imagenes/profesorEugenio.jpg" alt="Imagen del instructor">
+        </div>
+        <div class="instructor-details">
+            <h3>Eugenio Álvarez</h3>
+            <p>Eugenio Álvarez es un desarrollador de software con más de 10 años de experiencia en el desarrollo de aplicaciones empresariales con Spring. Ha trabajado en proyectos diversos y tiene un profundo conocimiento en el desarrollo con este marco de trabajo. Como instructor, Eugenio se compromete a guiar a sus estudiantes en el aprendizaje de Spring y a ayudarlos a convertirse en desarrolladores competentes en este ámbito.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Testimonios de Estudiantes para el Curso de Spring -->
+<section class="seccion-testimonios">
+    <h2><i class="fas fa-users"></i> Testimonios de Estudiantes</h2>
+
+    <div class="testimonios">
+        <div class="testimonio">
+            <p>"Este curso de Spring me proporcionó una base sólida para el desarrollo de aplicaciones empresariales. Los ejemplos prácticos y los proyectos aplicados fueron muy útiles para comprender los conceptos. ¡Lo recomendaría a cualquier persona interesada en aprender Spring!"</p>
+            <p class="nombre">- Ana López</p>
+        </div>
+        <div class="testimonio">
+            <p>"Como desarrollador junior, encontré este curso de Spring muy informativo y bien estructurado. Los materiales del curso son excelentes y el instructor brinda un gran apoyo. ¡Ahora me siento más confiado para trabajar en proyectos Spring!"</p>
+            <p class="nombre">- Javier Ramírez</p>
+        </div>
+        <div class="testimonio">
+            <p>"El curso de Spring superó mis expectativas. Los casos prácticos y los ejercicios de programación me ayudaron a mejorar mis habilidades. ¡Definitivamente recomendaría este curso a cualquiera que quiera aprender Spring de manera efectiva!"</p>
+            <p class="nombre">- Marta González</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h3><img src="/imagenes/icono.png" alt="SkillTech Logo" class="logo">SkillTech</h3>
+            <p>Bienvenido al mundo de los cursos de informática. Descubre tendencias, adquiere habilidades prácticas y mantente actualizado. Explora cursos exclusivos y avanza en tu camino hacia la maestría informática.</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-map-marker-alt"></i> Localización</h3>
+            <p>Avenida La Costa, 25<br>33202 Gijón, Asturias<br>España</p>
+        </div>
+        <div class="footer-column">
+            <h3 class="contact-heading"><i class="fas fa-phone"></i> Contacto</h3>
+            <p class="phone-icon"><i class="fas fa-mobile-alt"></i> +34 653 111 222</p>
+            <p><i class="fas fa-envelope"></i> SkillTech@mail.com</p>
+            <p><i class="fab fa-facebook"></i> www.facebook.com</p>
+        </div>
+    </footer>
+    
+    <!-- Script para cerrar sesión -->
+    <script>
+        var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+        botonCerrarSesion.addEventListener('click', function() {
+            window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+        });
+    </script>
+</body>
+</html>

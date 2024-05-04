@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Java</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/estilos/admin.css">
+    <link rel="stylesheet" href="/estilos/index.css">
+    <link rel="stylesheet" href="/estilos/objetivosCursoJs.css"> 
+    <link rel="stylesheet" href="/estilos/materialCurso.css">
+
+    <!-- JS -->
+    <script src="/js/materialCursoJava.js"></script>
+    <script src="/js/inscripciones_submenu.js"></script>
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+    <!-- Enlace al favicon -->
+    <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+</head>
+
+<body>
+
+    <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+    </div>
+    
+    <!-- Menú y submenú -->
+    <nav>
+        <ul>
+            <li><a href="/usuarios/html/registrado/indexRegistrado.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="/usuarios/html/registrado/listaCursosRegistrado.html" title="Catálogo"><i class="fas fa-book-open"></i> Catálogo</a></li>
+            <li><a href="/usuarios/html/registrado/perfilUsuario.html" title="Perfil de Usuario"><i class="fas fa-user-circle"></i> Mi Perfil</a></li>
+            <li>
+                <a href="/usuarios/html/registrado/cursosInscritos.html" id="enlaceMisCursos" title="Mis Inscripciones"><i class="fas fa-user-graduate"></i> Mis inscripciones <i class="fas fa-chevron-down"></i></a>
+                <ul id="submenuInscripciones">
+                    <!-- Inscripciones dinámicamente  -->
+                </ul>
+            </li>
+            <li><a href="/usuarios/html/registrado/soporte.html" title="Soporte"><i class="fas fa-question-circle"></i> Soporte</a></li>
+            <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mensaje de Bienvenida al Curso de Java -->
+    <div class="testimonios">
+        <div class="testimonio">
+            <h2><i class="fas fa-graduation-cap"></i> Bienvenido al Curso de Java</h2>
+            <p>¡Aprende Java, un lenguaje poderoso y versátil para el desarrollo de software! En este curso, explorarás los fundamentos de Java y aprenderás a crear aplicaciones robustas y escalables.</p>
+            <p>El curso está diseñado para proporcionarte una sólida comprensión de Java, desde los conceptos básicos hasta técnicas avanzadas de programación. Con ejemplos prácticos y proyectos aplicados, estarás listo para enfrentarte a desafíos reales en el mundo del desarrollo de software.</p>
+        </div>
+    </div>
+
+    <!-- Contenedor para imagen de Java y temario -->
+    <div class="contenedor-colorido">
+        <div class="contenedor-flex">
+            <div class="curso-imagen">
+                <img src="/imagenes/CursoJava.jpg" alt="Imagen del curso">
+            </div>
+            <div class="temario">
+                <h3><i class="fas fa-book-open"></i> Temario del curso</h3>
+                <ul>
+                    <li>Introducción a Java</li>
+                    <li>Variables y tipos de datos en Java</li>
+                    <li>Estructuras de control en Java</li>
+                    <li>Programación orientada a objetos en Java</li>
+                    <li>Manejo de excepciones en Java</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor para mostrar los materiales del curso de Java -->
+    <div class="contenedor-recomendaciones">
+        <h2><i class="fas fa-book"></i> Materiales del Curso de Java</h2>
+        <div class="recomendaciones">
+            <!-- Introducción a Java -->
+            <div class="recomendacion">
+                <img src="/imagenes/JavaIntroduccion.jpg" alt="Java">
+                <div class="titulo">INTRODUCCIÓN A JAVA</div>
+                <div class="descripcion">A continuación, encontrarás una lista de materiales disponibles para este curso. Estos recursos te ayudarán a profundizar tus conocimientos y practicar lo aprendido.</div>
+                <!-- Lista de materiales -->
+                <ul class="materials-list" id="introduccion-java-materials-list">
+                    
+                    <!-- Los materiales de los cursos se cargarán dinámicamente -->
+                </ul>
+            </div>
+
+            <!-- Variables y tipos de datos en Java -->
+            <div class="recomendacion">
+                <img src="/imagenes/javaVariables.png" alt="Java">
+                <div class="titulo">VARIABLES Y TIPOS DE DATOS EN JAVA</div>
+                <div class="descripcion">A continuación, encontrarás una lista de materiales disponibles para este curso. Estos recursos te ayudarán a profundizar tus conocimientos y practicar lo aprendido.</div>
+                <!-- Lista de materiales -->
+                <ul class="materials-list" id="variables-java-materials-list">
+                    
+                    <!-- Los materiales de los cursos se cargarán dinámicamente-->
+                </ul>
+            </div>
+
+            <!-- Estructuras de control en Java -->
+            <div class="recomendacion">
+                <img src="/imagenes/JavaEstructuras.jpg" alt="Java">
+                <div class="titulo">ESTRUCTURAS DE CONTROL EN JAVA</div>
+                <div class="descripcion">A continuación, encontrarás una lista de materiales disponibles para este curso. Estos recursos te ayudarán a profundizar tus conocimientos y practicar lo aprendido.</div>
+                <!-- Lista de materiales -->
+                <ul class="materials-list" id="estructuras-java-materials-list">
+                    <!-- Los materiales de los cursos se cargarán dinámicamente -->
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Sección de Preguntas Frecuentes -->
+    <section class="faq-section">
+        <h2><i class="fas fa-question-circle"></i> Preguntas Frecuentes</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>¿Cuál es la duración del curso?</h3>
+                <p>El curso tiene una duración total de 6 semanas, con una carga horaria de 30 horas.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Necesito conocimientos previos para tomar este curso?</h3>
+                <p>Se recomienda tener conocimientos básicos de programación, pero no son obligatorios.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Cuál es el coste del curso?</h3>
+                <p>El curso es gratuito para todos los usuarios registrados en SkillTech.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>¿Hay algún requisito técnico para tomar el curso?</h3>
+                <p>Es necesario tener acceso a un ordenador con conexión a internet y tener instalado Java Development Kit (JDK).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Perfil del Instructor para el Curso de Java -->
+    <section class="perfil-instructor">
+        <h2><i class="fas fa-user"></i> Perfil del Instructor</h2>
+        <div class="instructor-info">
+            <div class="instructor-image">
+                <img src="/imagenes/profesorJesus.avif" alt="Imagen del instructor">
+            </div>
+            <div class="instructor-details">
+                <h3>Jesús Álvarez</h3>
+                <p>Jesús Álvarez es un desarrollador de software con más de 10 años de experiencia en Java. Ha trabajado en proyectos diversos y tiene un profundo conocimiento en el desarrollo de aplicaciones Java. Como instructor, Jesús se compromete a guiar a sus estudiantes en el aprendizaje de Java y a ayudarlos a convertirse en programadores Java competentes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios de Estudiantes para el Curso de Java -->
+    <section class="seccion-testimonios">
+        <h2><i class="fas fa-users"></i> Testimonios de Estudiantes</h2>
+
+        <div class="testimonios">
+            <div class="testimonio">
+                <p>"Este curso de Java me ayudó a mejorar mis habilidades de programación y a entender mejor los conceptos avanzados de Java. Los proyectos prácticos fueron especialmente útiles para aplicar lo aprendido en situaciones reales. ¡Lo recomiendo altamente!"</p>
+                <p class="nombre">- María Gutiérrez</p>
+            </div>
+            <div class="testimonio">
+                <p>"Como estudiante de informática, encontré este curso de Java muy completo y bien estructurado. Los materiales son de alta calidad y los ejercicios son desafiantes. ¡Definitivamente amplió mis conocimientos en Java!"</p>
+                <p class="nombre">- Alejandro Martínez</p>
+            </div>
+            <div class="testimonio">
+                <p>"El curso de Java superó mis expectativas. Los instructores son expertos en Java y están siempre dispuestos a ayudar. Ahora me siento más confiado para enfrentar proyectos Java más avanzados en el futuro."</p>
+                <p class="nombre">- Carlos Rodríguez</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h3><img src="/imagenes/icono.png" alt="SkillTech Logo" class="logo">SkillTech</h3>
+            <p>Bienvenido al mundo de los cursos de informática. Descubre tendencias, adquiere habilidades prácticas y mantente actualizado. Explora cursos exclusivos y avanza en tu camino hacia la maestría informática.</p>
+        </div>
+        <div class="footer-column">
+            <h3><i class="fas fa-map-marker-alt"></i> Localización</h3>
+            <p>Avenida La Costa, 25<br>33202 Gijón, Asturias<br>España</p>
+        </div>
+        <div class="footer-column">
+            <h3 class="contact-heading"><i class="fas fa-phone"></i> Contacto</h3>
+            <p class="phone-icon"><i class="fas fa-mobile-alt"></i> +34 653 111 222</p>
+            <p><i class="fas fa-envelope"></i> SkillTech@mail.com</p>
+            <p><i class="fab fa-facebook"></i> www.facebook.com</p>
+        </div>
+    </footer>
+    
+    <!-- Script para cerrar sesión -->
+    <script>
+        var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+        botonCerrarSesion.addEventListener('click', function() {
+            window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+        });
+    </script>
+</body>
+</html>

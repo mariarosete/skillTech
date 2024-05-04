@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Definir la variable idUsuario antes de llamar a la función getIdUsuarioFromToken
     let idUsuario;
 
+
+   /*Divide el token JWT en sus partes, decodifica la parte central y devuelve el ID de usuario 
+   extraído del payload(parte central de un token JWT que contiene la información codificada, como datos de usuario.)*/
     // Función para obtener el ID de usuario del token JWT
     function getIdUsuarioFromToken(token) {
         const tokenParts = token.split('.');

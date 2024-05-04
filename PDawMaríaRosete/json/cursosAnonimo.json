@@ -12,7 +12,8 @@
     "id": "02",
     "nombre": "Curso Java",
     "imagen":"CursoJava.jpg",
-    "info":"El curso de Java te sumergirá en el emocionante mundo de la programación orientada a objetos. Desde la sintaxis básica hasta conceptos avanzados, explorarás cómo Java se ha convertido en uno de los lenguajes de programación más versátiles y utilizados."
+    "info":"El curso de Java te sumergirá en el emocionante mundo de la programación orientada a objetos. Desde la sintaxis básica hasta conceptos avanzados, explorarás cómo Java se ha convertido en uno de los lenguajes de programación más versátiles y utilizados.",
+    "enlace": "/usuarios/html/anonimo/cursoJavaAnonimo.html"
 
 },
 
@@ -31,7 +32,8 @@
     "id": "04",
     "nombre": "Curso Spring",
     "imagen": "spring.jpg",
-    "info":"El curso de Spring Framework es una inmersión completa en uno de los frameworks más influyentes para el desarrollo de aplicaciones Java empresariales. Aprenderás a utilizar las características potentes y flexibles de Spring para crear aplicaciones Java eficientes, seguras y mantenibles. "
+    "info":"El curso de Spring Framework es una inmersión completa en uno de los frameworks más influyentes para el desarrollo de aplicaciones Java empresariales. Aprenderás a utilizar las características potentes y flexibles de Spring para crear aplicaciones Java eficientes, seguras y mantenibles. ",
+    "enlace": "/usuarios/html/anonimo/cursoSpringAnonimo.html"
 
 },
 
