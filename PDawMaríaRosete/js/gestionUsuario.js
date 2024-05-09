@@ -78,33 +78,54 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function eliminarUsuario(idUsuario) {
-        fetch(`http://localhost:8080/usuarios/eliminar/${idUsuario}`, {
+        // Primero, eliminar las inscripciones del usuario
+        fetch(`http://localhost:8080/inscripciones/eliminarInscripcionesUsuario/${idUsuario}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + localStorage.getItem('token') // Incluir el token JWT en el header de Authorization
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
             }
         })
-        .then(response =>  {
+        .then(response => {
             if (!response.ok) {
-                if (response.status === 500) {
-                    
+                throw new Error('Error al eliminar las inscripciones del usuario');
+            }
+            // Después de eliminar las inscripciones, eliminar las solicitudes de soporte del usuario
+            return fetch(`http://localhost:8080/solicitaSoporte/eliminarSolicitudesUsuario/${idUsuario}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
                 }
+            });
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al eliminar las solicitudes de soporte del usuario');
+            }
+            // Después de eliminar las solicitudes de soporte, eliminar al usuario
+            return fetch(`http://localhost:8080/usuarios/eliminar/${idUsuario}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                }
+            });
+        })
+        .then(response => {
+            if (!response.ok) {
                 throw new Error('Error al eliminar el usuario');
             }
-            return response.json();
-        })
-        .then(data => {
-            // Eliminar la fila de la tabla correspondiente al usuario eliminado
+            // Si todo está bien, eliminar la fila de la tabla correspondiente al usuario eliminado
             const filaAEliminar = document.querySelector(`.eliminar[data-idusuario="${idUsuario}"]`).closest('tr');
             filaAEliminar.remove();
-            console.log(data.message);
+            console.log('Usuario eliminado exitosamente');
         })
         .catch(error => {
             console.error('Error al eliminar el usuario:', error);
         });
     }
-
+    
     /************************Editar***************************************************************** */
     function mostrarFormularioEdicion(idUsuario) {
         document.querySelector('#editarModal').style.display = 'block'; // Mostrar el modal de edición
@@ -146,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 previewFotoPerfil.src = profileImage;
             } else {
                 // Si no hay una imagen de perfil guardada en el almacenamiento local, usar una imagen predeterminada
-                previewFotoPerfil.src = '/imagenes/usuario.jpg';
+                previewFotoPerfil.src = '/imagenes/Usuario.png';
             }
         })
         .catch(error => {

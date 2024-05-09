@@ -31,7 +31,7 @@
 <!-- Menú y submenú -->
 <nav>
     <ul>
-        <li><a href="/usuarios/html/admin/indexAdmin.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+        
         <li><a href="/usuarios/html/admin/indexAdmin.html" title="Panel Admin"><i class="fas fa-cogs"></i> Gestión <i class="fas fa-chevron-down"></i></a>
             <ul>
                 <li><a href="/usuarios/html/admin/gestionUsuarios.html">Usuarios</a></li>
@@ -48,15 +48,15 @@
 
 <!-- Botón de agregar curso -->
 <div class="agregar-contacto">
-    <a href="#" id="crearCurso"><i class="fas fa-plus"></i> Agregar Nuevo Curso</a>
+    <a href="#" id="crearCurso"><i class="fas fa-plus-circle" style="margin-right: 5px;"></i> Añadir Nuevo Curso</a>
 </div>
 
 <!-- Modal para crear curso -->
 <div id="modal" class="modal" style="display: none;">
     <div class="modal-content">
         <div class="registro-div">
-            <form id="registro2" class="formCurso">
-                <h2 class="title"><i class="fas fa-graduation-cap"></i> Nuevo Curso</h2>
+            <form id="registroCurso" class="form">
+                <h2 class="title"><i class="fas fa-plus-circle" style="margin-right: 5px;"></i> Añadir</h2>
                 <span class="close" id="cerrarModal">&times;</span>
 
                 <div class="inputContainer">
@@ -65,8 +65,8 @@
                 </div>
 
                 <div class="inputContainer">
+                    <textarea id="descripcion" name="descripcion" class="input" rows="6" cols="60" required></textarea>
                     <label for="descripcion" id="descripcionLabel" class="label">Descripción:</label>
-                    <textarea id="descripcion" name="descripcion" class="input" rows="5" cols="60" required></textarea>
                 </div>
 
                 <div class="inputContainer">
@@ -92,43 +92,46 @@
     <div class="modal-content">
         <div class="registro-div">
             
-            <form id="formularioEdicion" class="formCurso">
+            <form id="formularioEdicion" class="form">
                 <div class="encabezado-formulario">
                     <div class="imagen-perfil">
                         <label for="inputFotoCurso" class="icon"><i class="fas fa-plus"></i></label>
                         <input type="file" id="inputFotoCurso" accept="image/*" style="display: none;">
-                        <img id="previewFotoCurso" src="/imagenes/curso.png" alt="Imagen de perfil">
+                        <img id="previewFotoCurso" src="/imagenes/editarCurso.jpg" alt="Imagen de perfil">
                     </div>
-                    <h2 class="title"><i class="fas fa-edit"></i> Editar Curso</h2>
+                    <h2 class="title"><i class="fas fa-edit" style="margin-right: 5px;"></i> Editar</h2>
                     <span class="close" id="cerrarModal2">&times;</span>
                 </div>
             
                 <div class="inputContainer">
-                    <input type="text" id="editarTitulo" class="input" name="titulo" placeholder="Dejar en blanco para mantener el valor actual">
+                    <input type="text" id="editarTitulo" class="input" name="titulo">
                     <label for="editarTitulo" class="label">Título</label>
                 </div>
 
                 <div class="inputContainer">
-                    <textarea id="editarDescripcion" class="input" name="descripcion" rows="5" cols="60" placeholder="Dejar en blanco para mantener el valor actual"></textarea>
+                    <textarea id="editarDescripcion" class="input" name="descripcion" rows="5" cols="60"></textarea>
                     <label for="editarDescripcion" class="label">Descripción</label>
                 </div>
 
                 <div class="inputContainer">
+                    <label for="editarCategoria" class="label"></label>
+                    
                     <select id="editarCategoria" class="input" name="categoria">
-                        <option value="">Seleccione una categoría</option>
+                        <option value=""></option>
                         <option value="Programación">Programación</option>
                         <option value="Desarrollo Web">Desarrollo Web</option>
                         <option value="Bases de datos y SQL">Bases de datos y SQL</option>
                         <option value="Seguridad Informática">Seguridad Informática</option>
                         <option value="Tecnologías emergentes">Tecnologías emergentes</option>
                     </select>
-                    <label for="editarCategoria" class="label">Categoría</label>
+                    
                 </div>
                 <input type="submit" class="botonRegistro" value="Guardar">
             </form>
         </div>
     </div>
 </div>
+
 
 <!-- Tabla Cursos -->
 <div class="contenedor-tabla2">

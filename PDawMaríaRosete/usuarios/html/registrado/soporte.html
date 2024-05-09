@@ -47,7 +47,7 @@
     <div class="testimonios">
         <div class="testimonio">
             <h2><i class="fas fa-question-circle"></i> Solicitud de Soporte</h2>
-                <p>En SkillTech, nuestro equipo de soporte técnico está aquí para resolver cualquier problema que tengas. Utiliza nuestro formulario de soporte para comunicarte con nosotros y resolver cualquier inconveniente que surja durante tu aprendizaje</p>
+                <p>En SkillTech, nuestro equipo de soporte técnico está aquí para resolver cualquier problema que tengas. Utiliza nuestro formulario de soporte para comunicarte con nosotros y resolver cualquier inconveniente que surja durante tu aprendizaje.</p>
         
         </div>
     </div>
@@ -55,9 +55,10 @@
     <!-- Contenedor para formulario de soporte -->
     <div class="contenedor">
         <div class="soporte">
-            <h2><i class="fas fa-comment"></i> Formulario de Soporte</h2>
+            <h2 class="title"> Solicitud de Soporte</h2>
 
             <form id="registro">
+                
                 <label for="descripcion">Descripción del Problema:</label>
                 <textarea id="descripcion" name="descripcion" rows="5" cols="35" required></textarea>
 
@@ -65,25 +66,14 @@
                 <select id="material_curso">
                     <!-- Opciones de los cursos dinámicamente-->
                 </select>
-
-                <label for="captura">Captura de Pantalla:</label>
-                <input type="file" id="captura" name="captura">
-
-                <label for="gravedad">Gravedad del Problema:</label>
-                <select id="gravedad" name="gravedad">
-                    <option value="baja">Baja</option>
-                    <option value="media">Media</option>
-                    <option value="alta">Alta</option>
-                    <option value="critica">Crítica</option>
-                </select>
-
+                
                 <button type="submit" class="botonRegistro">Enviar</button>
             </form>
         </div>
 
         <!-- Sección para mostrar la respuesta -->
         <div id="respuestaAdminSection">
-            <h2><i class="fas fa-comments"></i> Respuesta de Soporte</h2>
+            <h2 class="title"><i class="fas fa-comments"></i> Respuesta de Soporte</h2>
             <p id="respuestaAdmin"></p>
         </div>
     </div>
@@ -122,6 +112,20 @@
             window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
         });
 
+    </script>
+    <script>
+        // Obtener la URL de la página actual
+        var currentPage = window.location.pathname;
+        var menuLinks = document.querySelectorAll('nav ul li a');
+    
+        // Iterar sobre cada enlace del menú
+        for (var link of menuLinks) {
+            var linkURL = link.getAttribute('href'); // Obtener la URL del enlace
+    
+            if (currentPage === linkURL) {
+                link.classList.add('activo');
+            }
+        }
     </script>
 </body>
 </html>

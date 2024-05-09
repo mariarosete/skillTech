@@ -109,8 +109,11 @@
                 <div class="estadisticas">
                     <h2>Estadísticas</h2>
                     <ul>
-                        <li><i class="fas fa-graduation-cap"></i> <strong>Cursos completados:</strong> 10</li>
+                        <li><i class="fas fa-graduation-cap"></i> <strong>Cursos completados:</strong> 4</li>
                         <li><i class="fas fa-star"></i> <strong>Promedio de calificación:</strong> 8.5</li>
+                        <li><i class="fas fa-clock"></i> <strong>Horas de estudio:</strong> 120</li>
+                        <li><i class="fas fa-trophy"></i> <strong>Logros desbloqueados:</strong> 5</li>
+   
                     </ul>
                 </div>
             </div>
@@ -195,6 +198,20 @@
             window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
         });
 
+    </script>
+    <script>
+        // Obtener la URL de la página actual
+        var currentPage = window.location.pathname;
+        var menuLinks = document.querySelectorAll('nav ul li a');
+    
+        // Iterar sobre cada enlace del menú
+        for (var link of menuLinks) {
+            var linkURL = link.getAttribute('href'); // Obtener la URL del enlace
+    
+            if (currentPage === linkURL) {
+                link.classList.add('activo');
+            }
+        }
     </script>
 </body>
 </html>

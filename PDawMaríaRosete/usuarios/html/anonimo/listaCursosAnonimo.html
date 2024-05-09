@@ -54,7 +54,7 @@
             <div class="registro-div">
                 <!-- formulario -->
                 <form id="registro" class="form">
-                    <h2 class="title"><i class="fas fa-user"></i> Bienvenid@</h2>
+                    <h2 class="title2"><img src="/imagenes/LogoHeader.png" alt="Icono de la aplicación"> Bienvenid@</h2>
                     <span class="close" id="cerrarModal">&times;</span>
                     <!-- Campo Nombre -->
                     <div class="inputContainer">
@@ -87,7 +87,7 @@
             <div class="registro-div">
                 <!-- Formulario de registro -->
                 <form id="registro2" class="form">
-                    <h2 class="title"><i class="fas fa-user"></i> Regístrate</h2>
+                    <h2 class="title2"><img src="/imagenes/LogoHeader.png" alt="Icono de la aplicación"> Regístrate</h2>
                     <span class="close" id="cerrarModal2">&times;</span>
                     
                     <!-- Campo Nombre -->
@@ -302,6 +302,19 @@
         rotateContainer.children[1].classList.toggle("rotar-ficha-front");
     }
     </script> 
-
+    <script>
+        // Obtener la URL de la página actual
+        var currentPage = window.location.pathname;
+        var menuLinks = document.querySelectorAll('nav ul li a');
+    
+        // Iterar sobre cada enlace del menú
+        for (var link of menuLinks) {
+            var linkURL = link.getAttribute('href'); // Obtener la URL del enlace
+    
+            if (currentPage === linkURL) {
+                link.classList.add('activo');
+            }
+        }
+    </script>
     </body>
     </html>

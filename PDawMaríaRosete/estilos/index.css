@@ -403,49 +403,6 @@ footer {
     margin-top: -15px; 
 }
 
-/* Estilos para el formulario de registro */
-
-.title2 {
-    font-size: 26px; 
-    color: var(--color-azulOscuro); 
-    margin-bottom: 20px; 
-    text-align: center; 
-    letter-spacing: 2px; 
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    margin-right: 36px;
-    
-  }
-  
-
-.title2 img {
-    width: 100px;   
-}
-
-
-#registro,
-#registro2 {
-    max-width: 500px;
-    height: 150%;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-#mostrarRegistro {
-    color: #0056b3; 
-    text-decoration: none; 
-    font-weight: bold; 
-    transition: color 0.3s; 
-}
-
-#mostrarRegistro:hover {
-    font-size: 1.1em; 
-}
 
 /* Estilos para el contenedor de Recomendaciones de cursos(index Registrado) */
 .contenedor-recomendaciones {

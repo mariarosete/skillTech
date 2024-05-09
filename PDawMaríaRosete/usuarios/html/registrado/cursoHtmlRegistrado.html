@@ -140,6 +140,29 @@
         </div>
     </div>
   </section>
+  <!-- Sección de Preguntas Frecuentes -->
+    <section class="faq-section">
+        <h2><i class="fas fa-question-circle"></i> Preguntas Frecuentes</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>¿Cuál es la duración del curso?</h3>
+                <p>El curso tiene una duración total de 4 semanas, con una carga horaria de 20 horas.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Necesito conocimientos previos para tomar este curso?</h3>
+                <p>No se requieren conocimientos previos. El curso está diseñado para principiantes en HTML.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Cuál es el coste del curso?</h3>
+                <p>El curso es totalmente gratuito. En SkillTech creemos en el acceso igualitario a la educación, por lo que este curso en particular no tiene ningún coste asociado.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>¿Hay algún requisito técnico para tomar el curso?</h3>
+                <p>Solo necesitas acceso a un ordenador con conexión a internet. No se requieren conocimientos técnicos avanzados.</p>
+            </div>
+        </div>
+    </section>
   
   <div class="contenedor-flex">
     <!-- Contenedor para la sección de beneficios del curso -->
@@ -189,15 +212,21 @@
     </div>
   </section>
 
-  <!-- Modal de confirmación de registro en el curso -->
-    <div id="bienvenidaModalRegistro" class="modal bienvenida-modal" style="display: none;">
-        <div class="modal-content">
-            <h2><i class="fas fa-user-check icon"></i> ¡Bienvenido!</h2>
-            <p>Te has registrado correctamente en el curso.</p>
-            <p>¡Bienvenido a bordo!</p>
-        </div>
+  <!-- Modal de confirmación de registro duplicado -->
+<div id="RegistroDuplicado" class="modal bienvenida-modal" style="display: none;">
+    <div class="modal-content">
+        <i class="fas fa-check-circle" style="color: #27ae60; font-size: 24px;"></i>
+        <p>¡Ya estás inscrito en el curso!</p>  
     </div>
-  
+</div>
+
+<!-- Modal de confirmación de registro en el curso -->
+<div id="bienvenidaModalRegistro" class="modal bienvenida-modal" style="display: none;">
+    <div class="modal-content">
+        <i class="fas fa-check-circle" style="color: #27ae60; font-size: 24px;"></i>
+        <p>Bienvenido al curso. ¡Te has inscrito con éxito!</p>  
+    </div>
+</div>
    
     <!-- Footer -->
     <footer>
@@ -216,72 +245,104 @@
             <p><i class="fab fa-facebook"></i> www.facebook.com</p>
         </div>
     </footer>
-  
-    <!--Script para inscribirse en los cursos  -->
-    <script>
-        document.getElementById("enlaceInscripcion").addEventListener('click', function() {
-            event.preventDefault(); 
-            // Obtener el token JWT almacenado en localStorage
-            const token = localStorage.getItem('token');
-        
-            const urlParams = new URLSearchParams(window.location.search);
-            const idcurso = urlParams.get('idcurso');
-        
-            // Función para obtener el ID de usuario del token JWT
-            function getIdUsuarioFromToken(token) {
-                const tokenParts = token.split('.');
-                const payload = JSON.parse(atob(tokenParts[1]));
-                return payload.userId;
-            }
 
-            // Obtener el ID del usuario del token JWT
-            const idusuario = getIdUsuarioFromToken(token);
-        
-            // Solicitud POST para insertar la inscripción
-            fetch('http://localhost:8080/inscripciones/insertar', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + token 
-                },
-                body: JSON.stringify({
-                    usuario: { idusuario: idusuario }, // Usar el ID de usuario obtenido del token JWT
-                    curso: { idcurso: idcurso }
-                })
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Error en la solicitud: ' + response.statusText);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Inscripción realizada exitosamente', data);
-            })
-            .catch(error => {
-                console.error('Error al realizar la inscripción:', error);
-                
-                var modal = document.getElementById('bienvenidaModalRegistro');
+   <!--Script para inscribirse en los cursos  -->
+    <script>
+            document.getElementById("enlaceInscripcion").addEventListener('click', function() {
+        event.preventDefault(); 
+        // Obtener el token JWT almacenado en localStorage
+        const token = localStorage.getItem('token');
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const idcurso = urlParams.get('idcurso');
+
+        // Función para obtener el ID de usuario del token JWT
+        function getIdUsuarioFromToken(token) {
+            const tokenParts = token.split('.');
+            const payload = JSON.parse(atob(tokenParts[1]));
+            return payload.userId;
+        }
+
+        // Obtener el ID del usuario del token JWT
+        const idusuario = getIdUsuarioFromToken(token);
+
+        // Verificar la inscripción del usuario en el curso antes de realizar la solicitud POST
+        const urlComprobarInscripcion = `http://localhost:8080/inscripciones/buscarInscripcionUsuarioCurso/${idusuario}/${idcurso}`;
+
+        fetch(urlComprobarInscripcion, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+        .then(response => {
+            if (response.status === 200) {
+                // El usuario ya está inscrito en el curso
+                console.log('El usuario ya está inscrito en este curso');
+                var modal = document.getElementById('RegistroDuplicado');
                 if (modal) {
                     modal.style.display = 'block';
-                    
-                    var nombreUsuarioRegistradooElement = document.getElementById('nombreUsuarioRegistradoo');
-                    if (nombreUsuarioRegistradooElement) {
-                        nombreUsuarioRegistradooElement.textContent = nombreUsuario; 
-                    } else {
-                        console.error('Elemento nombreUsuarioRegistradoo no encontrado en el DOM.');
-                    }
                     setTimeout(function() {
                         modal.style.display = 'none';
                     }, 3000);
                 } else {
-                    console.error('Modal de confirmación no encontrado en el DOM.');
+                    console.error('Modal de registro duplicado no encontrado en el DOM.');
                 }
-            });
+            } else if (response.status === 404) {
+                // El usuario no está inscrito en el curso
+                console.log('El usuario no está inscrito en este curso');
+                // Realizar la solicitud POST para inscribir al usuario
+                fetch('http://localhost:8080/inscripciones/insertar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + token 
+                    },
+                    body: JSON.stringify({
+                        usuario: { idusuario: idusuario },
+                        curso: { idcurso: idcurso }
+                    })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error en la solicitud: ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Inscripción realizada exitosamente', data);
+                    // Aquí puedes mostrar un mensaje al usuario indicando que se ha inscrito correctamente
+                })
+                .catch(error => {
+                    console.error('Error al realizar la inscripción:', error);
+                    var modal = document.getElementById('bienvenidaModalRegistro');
+                    if (modal) {
+                        modal.style.display = 'block';
+                        
+                        var nombreUsuarioRegistradooElement = document.getElementById('nombreUsuarioRegistradoo');
+                        if (nombreUsuarioRegistradooElement) {
+                            nombreUsuarioRegistradooElement.textContent = nombreUsuario; 
+                        } else {
+                            console.error('Elemento nombreUsuarioRegistradoo no encontrado en el DOM.');
+                        }
+                        setTimeout(function() {
+                            modal.style.display = 'none';
+                        }, 3000);
+                    } else {
+                        console.error('Modal de confirmación no encontrado en el DOM.');
+                    }
+                });
+            } else {
+                throw new Error('Error al verificar la inscripción del usuario: ' + response.statusText);
+            }
+        })
+        .catch(error => {
+            console.error('Error al verificar la inscripción del usuario:', error);
         });
-    </script>
+    });
 
-    <!--Script para cerrar sesión  -->
+    </script>
+  <!--Script para cerrar sesión  -->         
     <script>
         
         var botonCerrarSesion = document.getElementById('cerrarSesion');

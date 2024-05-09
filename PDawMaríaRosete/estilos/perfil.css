@@ -5,7 +5,7 @@
     max-width: 900px;
     margin: 50px auto; 
     padding: 20px;
-    background-color: #ffffff;
+    background: linear-gradient(to right, #7485C0, #E7E7EE);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
     margin-bottom: 100px;
@@ -95,8 +95,8 @@
     margin-bottom: 50px; 
     height: 40%;
     margin-left: 40px;
-    border: 2px solid #ACBEF2;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
 }
 
 .inputContainer {
@@ -118,7 +118,7 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s, box-shadow 0.3s;
-    padding: 12px 15px; 
+    
 }
 
 .inputContainer input[type="text"]:focus,

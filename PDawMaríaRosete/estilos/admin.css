@@ -81,7 +81,7 @@ h2,h1{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 18px;
+    margin-top: 55px;
 }
 
 .seccion {
@@ -135,15 +135,19 @@ a.seccion {
 
 /*******Estilos para el formulario de crear usuario**************************************/
 .title {
-    font-size: 26px; 
+    font-size: 30px; 
     color: var(--color-azulOscuro); 
-    margin-bottom: 20px; 
+    margin-bottom: 40px; 
     text-align: center; 
     letter-spacing: 2px; 
     font-weight: bold;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+    background: linear-gradient(to right, #7485C0, #021126); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 8px;
     
   }
   
@@ -154,20 +158,12 @@ a.seccion {
     transform: translate(-50%, -50%); 
 }
   
-#registro {
-    background-color: white;
-    width: 350px;
-    height: 480px;
-    border-radius: 8px;
-    padding: 20px 40px;
-    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
-}
 
 .inputContainer {
     position: relative;
     height: 45px;
     width: 90%;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
  }
   
 .input {
@@ -177,12 +173,13 @@ a.seccion {
     height: 100%;
     width: 100%;
     border: 1px solid #DADCE0;
-    border-radius: 7px;
+    border-radius: 10px;
     font-size: 16px;
     padding: 0 20px;
     outline: none;
     background: none;
     z-index: 1;
+    
   }
 
   #editarDescripcion{
@@ -190,15 +187,13 @@ a.seccion {
     margin-top: 10px;
   }
   
-.label {
+  .label {
     position: absolute;
-    top: 15px;
     left: 15px;
     padding: 0 4px;
-    background-color: white;
     color: #DADCE0;
     font-size: 16px;
-    transition: 0.5s;
+    transition: top 0.3s, font-size 0.3s, color 0.3s; 
     z-index: 0;
 }
 
@@ -232,18 +227,21 @@ a.seccion {
     font-size: 14px;
     font-weight: 600;
     color: var(--color-azulOscuro);
+    
 }
   
 .input:not(:placeholder-shown)+ .label {
-    top: -7px;
+    top: -16px;
     left: 3px;
     z-index: 10;
     font-size: 14px;
     font-weight: 600;
+    
 }
   
 .input:focus {
     border: 2px solid var(--color-azulOscuro);
+    background-color: #E6E6EE;
 }
   
 /* Estilos para el encabezado del formulario */
@@ -254,19 +252,10 @@ a.seccion {
 }
   
 .imagen-perfil img {
-    width: 181px; 
+    width: 170px; 
     height: 170px; 
     border-radius: 50%; 
     object-fit: cover; 
-}
-
-#registro2 {
-    background-color: white;
-    width: 350px;
-    height: 380px;
-    border-radius: 8px;
-    padding: 20px 40px;
-    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
 }
 
 #formularioEdicionContenido {
@@ -312,4 +301,75 @@ a.seccion {
     padding: 20px 40px;
     box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
 }
-  
+  /* Estilos para el formulario de registro */
+
+  .title2 {
+    font-size: 30px; 
+    color: var(--color-azulMuyOscuro); 
+    margin-bottom: 20px; 
+    text-align: center; 
+    letter-spacing: 2px; 
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-right: 36px;
+    background: linear-gradient(to right, #7485C0, #021126); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.title2 img {
+    width: 100px;   
+}
+
+ #registro {
+    width: 380px;
+    height: 455px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px; 
+    background: linear-gradient(to right, #7485C0, #E7E7EE);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); 
+    transition: box-shadow 0.3s ease-in-out; 
+} 
+#registroUsuario {
+    width: 400px;
+    height: 580px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#registroCurso {
+    width: 400px;
+    height: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#registro2 {
+    width: 390px;
+    height: 550px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px; 
+    background: linear-gradient(to right, #7485C0, #E7E7EE);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); 
+    transition: box-shadow 0.3s ease-in-out; 
+}
+
+#mostrarRegistro {
+    color: var(--color-azulMuyOscuro); 
+    font-size: large;
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: color 0.3s; 
+}
+
+#mostrarRegistro:hover {
+    font-size: 1.3em; 
+}

@@ -37,7 +37,7 @@
         <ul>
             <li><a href="/usuarios/html/anonimo/indexAnonimo.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
             <li><a href="/usuarios/html/anonimo/listaCursosAnonimo.html" title="Catálogo"><i class="fas fa-book-open"></i> Catálogo</a></li>
-            <li><a href="#" class="login" id="abrirModal"><i class="fas fa-user-lock"></i> Iniciar sesión</a></li>
+            <li><a href="#" class="login" id="abrirModal" ><i class="fas fa-user-lock"></i> Iniciar sesión</a></li>
         </ul>
     </nav>
     
@@ -84,11 +84,11 @@
             <form id="formBusquedaCategoria">
                 <select id="selectCategoria">
                     <option value="">Seleccionar categoría</option>
-                    <option value="Desarrollo web">Desarrollo web</option>
+                    <option value="Desarrollo Web">Desarrollo Web</option>
                     <option value="Programación">Programación</option>
-                    <option value="Bases de datos">Bases de datos</option>
-                    <option value="Seguridad">Seguridad</option>
-                    <option value="Tecnologias">Tecnologías</option>
+                    <option value="Bases de datos y SQL">Bases de datos y SQL</option>
+                    <option value="Seguridad Informática">Seguridad Informática</option>
+                    <option value="Tecnologías emergentes">Tecnologías emergentes</option>
                 </select>
                 <button type="submit">Buscar por categoría</button>
             </form>
@@ -433,7 +433,21 @@
     });
 });
 </script>
-   
+
+<script>
+    // Obtener la URL de la página actual
+    var currentPage = window.location.pathname;
+    var menuLinks = document.querySelectorAll('nav ul li a');
+
+    // Iterar sobre cada enlace del menú
+    for (var link of menuLinks) {
+        var linkURL = link.getAttribute('href'); // Obtener la URL del enlace
+
+        if (currentPage === linkURL) {
+            link.classList.add('activo');
+        }
+    }
+</script>
 </body>
 </html>
 

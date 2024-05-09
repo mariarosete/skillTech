@@ -8,12 +8,13 @@
 }
 
 .soporte {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 30px;
+    background: linear-gradient(to right, #7485C0, #E7E7EE);
+    border-radius: 12px; 
+    padding: 40px; 
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-    width: 90%;
-    max-width: 500px;
+    width: 450px;
+    height: 590px;
+    transition: all 0.3s ease;
 }
 
 #respuestaAdminSection {
@@ -25,9 +26,26 @@
 
 /* Estilos para el formulario */
 h2 {
+    font-size: 24px; 
     color: #333;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.title {
+    font-size: 30px;
+    color: var(--color-azulOscuro);
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#7485C0, #021126);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 8px;
 }
 
 form {
@@ -38,22 +56,27 @@ form {
 label {
     margin-top: 15px;
     font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
 }
 
-input[type="text"],
-input[type="file"],
+
 select,
 textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px; 
+    margin-top: 8px;
+    margin-bottom: 25px;
+    border: 2px solid white; 
+    border-radius: 8px; 
     box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    background-color: #E6E6EE;
 }
 
 select {
-    height: 40px;
+    height: 48px;
 }
 
 textarea {
@@ -64,11 +87,11 @@ textarea {
     background-color: var(--color-azulOscuro);
     color: white;
     border: none;
-    padding: 12px 20px;
-    margin-top: 20px;
-    border-radius: 5px;
+    padding: 14px 24px;
+    margin-top: 100px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     transition: background-color 0.3s ease;
 }
 
@@ -77,14 +100,14 @@ textarea {
 }
 
 /* Estilos para la respuesta */
-#respuestaAdmin {  
-    border: 1px solid #ccc;
-    font-size: 16px;
-    line-height: 1.5;
+#respuestaAdmin {
+    border: 2px solid #ccc;
+    font-size: 18px;
+    line-height: 1.6;
     background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
 }
 
 .mensaje-container {
@@ -100,3 +123,4 @@ textarea {
     color: red;
     margin-right: 5px;
 }
+

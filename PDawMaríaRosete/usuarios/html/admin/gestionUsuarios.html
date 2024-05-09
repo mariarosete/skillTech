@@ -30,7 +30,7 @@
      <!-- Menú y submenú -->
      <nav>
         <ul>
-            <li><a href="/usuarios/html/admin/indexAdmin.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+           
             <li><a href="/usuarios/html/admin/indexAdmin.html" title="Panel Admin"><i class="fas fa-cogs"></i> Gestión <i class="fas fa-chevron-down"></i></a>
                 <ul>
                     <li><a href="/usuarios/html/admin/gestionUsuarios.html">Usuarios</a></li>
@@ -43,11 +43,12 @@
         </ul>
     </nav>
            
-    <h1><i class="fas fa-user"></i> Gestión de Usuarios</h1>
+    <h1><i class="fas fa-users-cog"></i> Gestión de Usuarios</h1>
 
     <!-- Botón de agregar usuario -->
      <div class="agregar-contacto">
-        <a href="#" id="crearUsuario"><i class="fas fa-plus"></i> Agregar Nuevo Usuario</a>
+        <a href="#" id="crearUsuario"><i class="fas fa-user-plus" style="margin-right: 5px;"></i>
+            Añadir Nuevo Usuario</a>
     </div>
 
    <!-- Modal para crear usuario -->
@@ -56,8 +57,8 @@
             
                 <div class="registro-div">
                 
-                    <form id="registro" class="form">
-                        <h2 class="title"><i class="fas fa-user"></i> Nuevo Usuario</h2>
+                    <form id="registroUsuario" class="form">
+                        <h2 class="title"><i class="fas fa-user-plus" style="margin-right: 5px;"></i> Añadir</h2>
                         <span class="close" id="cerrarModal">&times;</span>
                         
                         <div class="inputContainer">
@@ -79,7 +80,7 @@
                 
                         <div class="inputContainer">
                             <input type="password" id="password" class="input" name="password" required>
-                            <label for="password" id="passwordLabel" class="label">Password:</label>
+                            <label for="password" id="passwordLabel" class="label">Contraseña:</label>
                             
                         </div>
 
@@ -103,16 +104,16 @@
             <div class="modal-content">
                 <!-- Formulario de edición con encabezado -->
                     <div class="registro-div">
-                    <form id="formularioEdicion" class="formUsuario">
+                    <form id="formularioEdicion" class="form">
 
                         <!-- Encabezado del formulario con la imagen de perfil y el título -->
                         <div class="encabezado-formulario">
                             <div class="imagen-perfil">
                                 <label for="inputFotoPerfil" class="icon"><i class="fas fa-plus"></i></label>
                                 <input type="file" id="inputFotoPerfil" accept="image/*" style="display: none;">
-                                <img id="previewFotoPerfil" src="/imagenes/usuario.jpg" alt="Imagen de perfil">
+                                <img id="previewFotoPerfil" src="/imagenes/Usuario.png" alt="Imagen de perfil">
                             </div>
-                            <h2 class="title"><i class="fas fa-user-edit"></i> Editar Usuario</h2>
+                            <h2 class="title"><i class="fas fa-user-edit" style="margin-right: 5px;"></i> Editar</h2>
                             <!-- Botón de cierre del modal de edición -->
                             <span class="close" id="cerrarModal2">&times;</span>
                             
@@ -134,9 +135,11 @@
                         </div>
             
                         <div class="inputContainer">
-                            <input type="password" id="editarPassword" class="input" name="password" placeholder="Dejar en blanco si no desea cambiar la password">
-                            <label for="editarPasswordInput" class="label">Password</label>
+                            <input type="password" id="editarPassword" class="input" name="password">
+                            <label for="password" class="label">Contraseña</label>
                         </div>
+
+            
 
                         <!-- Formulario de edición -->
                         <div class="inputContainer">
@@ -254,5 +257,6 @@
         });
 
     </script>
+    
 </body>
 </html>
