@@ -9,6 +9,7 @@
     <!-- CSS-->
     <link rel="stylesheet" href="/estilos/soporte.css">
     <link rel="stylesheet" href="/estilos/index.css">
+    <link rel="stylesheet" href="/estilos/objetivosCursoJs.css"> 
 
     <!-- JS-->
     <script src="/js/soporte.js"></script>   
@@ -53,7 +54,7 @@
     </div>
 
     <!-- Contenedor para formulario de soporte -->
-    <div class="contenedor">
+    <!-- <div class="contenedor">
         <div class="soporte">
             <h2 class="title"> Solicitud de Soporte</h2>
 
@@ -64,19 +65,45 @@
 
                 <label for="curso">Material del Curso:</label>
                 <select id="material_curso">
-                    <!-- Opciones de los cursos dinámicamente-->
+              
                 </select>
                 
                 <button type="submit" class="botonRegistro">Enviar</button>
             </form>
-        </div>
+        </div> -->
+        
 
-        <!-- Sección para mostrar la respuesta -->
-        <div id="respuestaAdminSection">
-            <h2 class="title"><i class="fas fa-comments"></i> Respuesta de Soporte</h2>
-            <p id="respuestaAdmin"></p>
+         <!-- Contenedor para imagen de Java y temario -->
+         <div class="contenedor">   
+    <div class="contenedor-colorido">
+        <div class="contenedor-flex">
+            <div class="curso-imagen">
+                <img src="/imagenes/soporte-tecnico.png" alt="Imagen de soporte">
+            </div>
+            <div class="temario">
+                <form id="registro">
+                
+                    <label for="descripcion">Descripción del Problema:</label>
+                    <textarea id="descripcion" name="descripcion" rows="5" cols="35" required></textarea>
+    
+                    <label for="curso">Material del Curso:</label>
+                    <select id="material_curso">
+                        <!-- Opciones de los cursos dinámicamente-->
+                    </select>
+                    
+                    <button type="submit" class="botonRegistro">Enviar</button>
+                </form>
+            </div>
         </div>
     </div>
+    <!-- Sección para mostrar la respuesta -->
+    <div id="respuestaAdminSection">
+        <h2 class="title"><i class="fas fa-comments"></i> Respuesta de Soporte</h2>
+        <p id="respuestaAdmin"></p>
+    </div>
+</div>
+
+        
     
     <!-- Modal de bienvenida para usuario registrado -->
     <div id="solicitudSoporteExitosaMessage" class="modal bienvenida-modal" style="display: none;">
