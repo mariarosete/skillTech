@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 enlaceCurso.href = '/usuarios/html/registrado/cursoHtmlRegistrado.html';
             } else if (curso.titulo === 'Curso Java') {
                 enlaceCurso.href = '/usuarios/html/registrado/cursoJavaRegistrado.html';
-            } else if (curso.titulo === 'Curso Javascript') {
+            } else if (curso.titulo === 'Curso JavaScript') {
                 enlaceCurso.href = '/usuarios/html/registrado/cursoJavascriptRegistrado.html';
             } else if (curso.titulo === 'Curso Spring') {
                 enlaceCurso.href = '/usuarios/html/registrado/cursoSpringRegistrado.html';

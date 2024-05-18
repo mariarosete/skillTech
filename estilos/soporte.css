@@ -61,7 +61,7 @@ label {
 }
 
 
-select,
+.soporteinput,
 textarea {
     width: 80%;
     padding: 12px; 

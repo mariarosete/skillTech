@@ -67,8 +67,8 @@
                     enlaceCurso.href = '/usuarios/html/anonimo/cursoHtmlAnonimo.html';
                 } else if (curso.titulo === 'Curso Java') {
                     enlaceCurso.href = '/usuarios/html/anonimo/cursoJavaAnonimo.html';
-                } else if (curso.titulo === 'Curso Javascript') {
-                    enlaceCurso.href = '/usuarios/html/anonimo/cursoJavascriptAnonimo.html';
+                } else if (curso.titulo === 'Curso JavaScript') {
+                    enlaceCurso.href = '/usuarios/html/registrado/cursoJavascriptRegistrado.html';
                 } else if (curso.titulo === 'Curso Spring') {
                     enlaceCurso.href = '/usuarios/html/anonimo/cursoSpringAnonimo.html';
                 } else {

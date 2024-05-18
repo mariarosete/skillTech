@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const enlaceCurso = document.createElement('a');
                 enlaceCurso.innerHTML = "<i class='fas fa-eye'></i> Ver curso";
                 enlaceCurso.href = `/usuarios/html/registrado/pagina_curso${inscripcion.curso.idcurso}.html`;
-                enlaceCurso.classList.add('enlace-curso');
+                enlaceCurso.classList.add('enlace-curso2');
 
                 listItem.append(titulo);
                 listItem.append(categoria);

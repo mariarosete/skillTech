@@ -41,7 +41,7 @@
     font-size: 1rem; 
 }
 
-.enlace-curso {
+.enlace-curso2 {
     display: block;
     width: 150px;
     margin: 0 auto; 
@@ -54,7 +54,7 @@
     transition: background-color 0.3s;
 }
 
-.enlace-curso:hover {
+.enlace-curso2:hover {
     background-color: var(--color-azulMuyOscuro);
 }
 #listaInscripciones {

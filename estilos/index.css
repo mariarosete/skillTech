@@ -82,7 +82,7 @@ select:hover {
 }
 
 /* Estilo para el foco del select */
-select,input:focus {
+select,input,textarea:focus {
     outline: none; 
     border-color: #007bff; 
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); 
