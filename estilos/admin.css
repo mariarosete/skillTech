@@ -5,7 +5,7 @@ h2,h1{
 }
 
 /************** CSS para la tabla de usuarios y tabla de cursos ****************************/
-.tablaUsuarios,.tablaCursos,.tablaContenido {
+.tablaUsuarios,.tablaCursos,.tablaContenido, .tablaInscripciones {
     width: 60%;
     border-collapse: separate; 
     border-spacing: 0; 
@@ -13,12 +13,12 @@ h2,h1{
     border: 2px solid #ddd;
 }
 
-.tablaUsuarios th, .tablaUsuarios td,.tablaCursos th, .tablaCursos td, .tablaContenido td {
+.tablaUsuarios th, .tablaUsuarios td,.tablaCursos th, .tablaCursos td, .tablaContenido td , .tablaInscripciones td{
     padding: 10px;
     border-bottom: 1px solid #ddd;   
 }
 
-.tablaUsuarios th, .tablaCursos th, .tablaContenido th {
+.tablaUsuarios th, .tablaCursos th, .tablaContenido th, .tablaInscripciones th {
     background-color:var(--color-azulOscuro);
     color: white;
     text-align: left;
@@ -86,7 +86,7 @@ h2,h1{
 
 .seccion {
     text-align: center;
-    width: 350px;
+    width: 300px;  
     margin: 20px;
     padding: 10px;
     border: 5px solid var(--color-azulMuyOscuro);
@@ -100,8 +100,8 @@ h2,h1{
 }
 
 .seccion img {
-    width: 350px; 
-    height: 220px; 
+    width: 300px; 
+    height: 200px; 
     object-fit: cover; 
     border-radius: 8px;
 }

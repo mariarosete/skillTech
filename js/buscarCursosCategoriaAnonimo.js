@@ -51,17 +51,34 @@
             contenedorResultados.append(mensajeElemento);
         }
 
-        // Función para mostrar los cursos en la página
-        function mostrarCursos(cursos) {
-            var contenedorResultados = document.querySelector('#contenedorResultados');
+       // Función para mostrar los cursos en la página
+       function mostrarCursos(cursos) {
+        var contenedorResultados = document.querySelector('#contenedorResultados');
 
-            // Recorrer la lista de cursos y crear un elemento para cada uno
-            for (const curso of cursos) {
-                var cursoElemento = document.createElement('div');
-                cursoElemento.textContent = curso.titulo + ' - ' + curso.descripcion;
-                contenedorResultados.append(cursoElemento);
+        // Recorrer la lista de cursos
+        for (const curso of cursos) {
+            // Crear enlaces para todos los cursos
+            var enlaceCurso = document.createElement('a');
+            enlaceCurso.textContent = curso.titulo + ' - ' + curso.descripcion;
+            enlaceCurso.className = 'enlace-curso';
+
+            // Verificar si el curso es uno de los específicos con URL
+            if (curso.titulo === 'Curso Html') {
+                enlaceCurso.href = '/usuarios/html/anonimo/cursoHtmlAnonimo.html';
+            } else if (curso.titulo === 'Curso Java') {
+                enlaceCurso.href = '/usuarios/html/anonimo/cursoJavaAnonimo.html';
+            } else if (curso.titulo === 'Curso Javascript') {
+                enlaceCurso.href = '/usuarios/html/anonimo/cursoJavascriptAnonimo.html';
+            } else if (curso.titulo === 'Curso Spring') {
+                enlaceCurso.href = '/usuarios/html/anonimo/cursoSpringAnonimo.html';
+            } else {
+                enlaceCurso.href = '#'; // Enlace predeterminado para los cursos sin URL específica
             }
+
+            contenedorResultados.append(enlaceCurso);
+            contenedorResultados.append(document.createElement('br')); // Agregar un salto de línea entre cada enlace
         }
+    }
 
         // Agregar listener para el formulario de búsqueda por categoría
         document.querySelector('#formBusquedaCategoria').addEventListener('submit', function(event) {

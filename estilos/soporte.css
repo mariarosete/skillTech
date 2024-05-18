@@ -63,7 +63,7 @@ label {
 
 select,
 textarea {
-    width: 100%;
+    width: 80%;
     padding: 12px; 
     margin-top: 8px;
     margin-bottom: 25px;
@@ -92,6 +92,7 @@ textarea {
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
+    width: 80%;
     transition: background-color 0.3s ease;
 }
 

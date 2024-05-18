@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Inscripciones</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/estilos/admin.css">
+    <link rel="stylesheet" href="/estilos/index.css">
+    <link rel="stylesheet" href="/estilos/modalBorrado.css">
+    
+    <!-- JS -->
+    <script src="/js/gestionInscripciones.js"></script>
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+
+    <!-- Enlace al favicon -->
+    <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+    
+</head>
+<body>
+    <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
+    </div>
+    
+    <!-- Menú y submenú -->
+    <nav>
+        <ul>
+            <li><a href="/usuarios/html/admin/indexAdmin.html" title="Panel Admin"><i class="fas fa-cogs"></i> Gestión <i class="fas fa-chevron-down"></i></a>
+                <ul>
+                    <li><a href="/usuarios/html/admin/gestionUsuarios.html">Usuarios</a></li>
+                    <li><a href="/usuarios/html/admin/gestionCursos.html">Cursos</a></li>
+                    <li><a href="/usuarios/html/admin/gestionContenido.html">Contenido</a></li>
+                    <li><a href="/usuarios/html/admin/formularioSoporteAdmin.html">Solicitud de Soporte</a></li>
+                    <li><a href="/usuarios/html/admin/gestionInscripciones.html">Inscripciones</a></li>
+                    <li><a href="/usuarios/html/admin/gestionInscripciones.html">Inscripciones</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="cerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+        </ul>
+    </nav>
+           
+    <h1><i class="fas fa-file"></i> Gestión de Inscripciones</h1>
+
+    <!-- Tabla Inscripciones -->
+    <div class="contenedor-tabla">
+        <table class="tablaInscripciones" id="tablaInscripciones">
+            <thead>
+                <tr>
+                    <th><i class="fas fa-user"></i> Nombre del Usuario</th>
+                    <th><i class="fas fa-book"></i> Nombre del Curso</th>
+                    <th><i class="fas fa-cogs"></i> Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyInscripciones">
+                <!-- Filas de la tabla dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div id="confirmModal" class="modal confirm-modal">
+        <div class="modal-content">
+            <h2>Confirmar Eliminación <i class="fas fa-trash-alt accion"></i></h2>
+            <p>¿Estás seguro de que deseas eliminar la INSCRIPCIÓN de este usuario?</p>
+            <div class="confirm-buttons">
+                <button id="confirmarEliminar">Sí, eliminar</button>
+                <button id="cancelarEliminar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal de éxito para la inserción de usuario -->
+     <div id="mensajeExitoModal2" class="modal bienvenida-modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-check-circle icon"></i> ¡Registro exitoso!</h2>
+            <p>El usuario se ha creado correctamente.</p>
+        </div>
+    </div>
+    
+    <!--Script para cerrar sesión  -->
+    <script>
+            
+        var botonCerrarSesion = document.getElementById('cerrarSesion');
+
+        botonCerrarSesion.addEventListener('click', function() {
+            window.location.href = '/usuarios/html/anonimo/indexAnonimo.html';
+        });
+
+    </script>
+    
+</body>
+</html>
