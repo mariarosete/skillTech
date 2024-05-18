@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Realizar la solicitud Fetch
-        fetch('http://localhost:8080/usuarios/insertar', {
+        fetch('https://skilltechback-42717f57a83b.herokuapp.com/usuarios/insertar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

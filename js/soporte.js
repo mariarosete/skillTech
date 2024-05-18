@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const token = localStorage.getItem('token');
 
     // Realizar la solicitud GET para obtener los cursos
-    fetch('http://localhost:8080/materialCursos/buscarMaterialCursos', {
+    fetch('https://skilltechback-42717f57a83b.herokuapp.com/materialCursos/buscarMaterialCursos', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Realizar la solicitud Fetch para enviar el formulario de soporte
-        fetch('http://localhost:8080/solicitaSoporte/insertar', {
+        fetch('https://skilltechback-42717f57a83b.herokuapp.com/solicitaSoporte/insertar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Al cargar la página, solicitar la respuesta del administrador solo para el usuario actual y mostrarla en la sección correspondiente
-    fetch('http://localhost:8080/solicitaSoporte/buscarSoporte', {
+    fetch('https://skilltechback-42717f57a83b.herokuapp.com/solicitaSoporte/buscarSoporte', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

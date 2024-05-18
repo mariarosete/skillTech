@@ -79,7 +79,7 @@
             var solicitudActiva = null; 
     
             function cargarSolicitudes() {
-                fetch('http://localhost:8080/solicitaSoporte/buscarSoporte', {
+                fetch('https://skilltechback-42717f57a83b.herokuapp.com/solicitaSoporte/buscarSoporte', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -137,7 +137,7 @@
                 var idSolicitud = document.getElementById('idSolicitud').value; // Obtener el ID de la solicitud
     
                 if (idSolicitud) {
-                    fetch('http://localhost:8080/solicitaSoporte/modificar/' + idSolicitud, {
+                    fetch('https://skilltechback-42717f57a83b.herokuapp.com/solicitaSoporte/modificar/' + idSolicitud, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json',

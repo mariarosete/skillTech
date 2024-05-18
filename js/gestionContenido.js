@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const token = localStorage.getItem('token');
 
     // Realizar la solicitud GET para obtener los materiales de cursos
-    fetch('http://localhost:8080/materialCursos/buscarMaterialCursos', {
+    fetch('https://skilltechback-42717f57a83b.herokuapp.com/materialCursos/buscarMaterialCursos', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para eliminar un material de curso
     function eliminarMaterialCurso(idmaterialCurso) {
-        fetch(`http://localhost:8080/materialCursos/eliminar/${idmaterialCurso}`, {
+        fetch(`https://skilltechback-42717f57a83b.herokuapp.com/materialCursos/eliminar/${idmaterialCurso}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('#editarModal').style.display = 'block'; // Mostrar el modal de edición
 
         // Realizar la solicitud GET para obtener los detalles del material de curso
-        fetch(`http://localhost:8080/materialCursos/buscarMaterialCursos/${idmaterialCurso}`, {
+        fetch(`https://skilltechback-42717f57a83b.herokuapp.com/materialCursos/buscarMaterialCursos/${idmaterialCurso}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             // Realizar la solicitud PUT para modificar los datos del material de curso
-            fetch(`http://localhost:8080/materialCursos/modificar/${idmaterialCurso}`, {
+            fetch(`https://skilltechback-42717f57a83b.herokuapp.com/materialCursos/modificar/${idmaterialCurso}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

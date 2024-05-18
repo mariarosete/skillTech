@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const idusuario = getIdUsuarioFromToken(token);
 
     // Realizar la solicitud GET para obtener las inscripciones del usuario actual
-    fetch(`http://localhost:8080/inscripciones/buscarInscripcionesUsuario/${idusuario}`, {
+    fetch(`https://skilltechback-42717f57a83b.herokuapp.com/inscripciones/buscarInscripcionesUsuario/${idusuario}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

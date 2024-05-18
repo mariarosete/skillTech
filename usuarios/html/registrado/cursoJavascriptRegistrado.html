@@ -243,7 +243,7 @@
     const idusuario = getIdUsuarioFromToken(token);
 
     // Verificar la inscripción del usuario en el curso antes de realizar la solicitud POST
-    const urlComprobarInscripcion = `http://localhost:8080/inscripciones/buscarInscripcionUsuarioCurso/${idusuario}/${idcurso}`;
+    const urlComprobarInscripcion = `https://skilltechback-42717f57a83b.herokuapp.com/inscripciones/buscarInscripcionUsuarioCurso/${idusuario}/${idcurso}`;
 
     fetch(urlComprobarInscripcion, {
         method: 'GET',
@@ -268,7 +268,7 @@
             // El usuario no está inscrito en el curso
             console.log('El usuario no está inscrito en este curso');
             // Realizar la solicitud POST para inscribir al usuario
-            fetch('http://localhost:8080/inscripciones/insertar', {
+            fetch('https://skilltechback-42717f57a83b.herokuapp.com/inscripciones/insertar', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

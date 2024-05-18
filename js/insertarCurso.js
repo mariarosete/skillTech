@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Realizar la solicitud Fetch
-        fetch('http://localhost:8080/cursos/insertar', {
+        fetch('https://skilltechback-42717f57a83b.herokuapp.com/cursos/insertar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 3000); 
         })
         .catch(error => {
-            console.error('Error al registrar el usuario:', error);
+            console.error('Error al registrar el curso:', error);
         });
     });
 

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const token = localStorage.getItem('token');
 
     // Realizar la solicitud GET para obtener los cursos
-    fetch('http://localhost:8080/cursos/buscarCursos', {
+    fetch('https://skilltechback-42717f57a83b.herokuapp.com/cursos/buscarCursos', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para eliminar un curso
     function eliminarCurso(idCurso) {
-        fetch(`http://localhost:8080/cursos/eliminar/${idCurso}`, {
+        fetch(`https://skilltechback-42717f57a83b.herokuapp.com/cursos/eliminar/${idCurso}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('#editarModal').style.display = 'block'; // Mostrar el modal de edición
 
         // Realizar la solicitud GET para obtener los detalles del curso
-        fetch(`http://localhost:8080/cursos/buscarCursos/${idCurso}`, {
+        fetch(`https://skilltechback-42717f57a83b.herokuapp.com/cursos/buscarCursos/${idCurso}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             // Realizar la solicitud PUT para modificar los datos del curso
-            fetch(`http://localhost:8080/cursos/modificar/${idCurso}`, {
+            fetch(`https://skilltechback-42717f57a83b.herokuapp.com/cursos/modificar/${idCurso}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

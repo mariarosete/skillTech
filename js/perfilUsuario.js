@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     idUsuario = getIdUsuarioFromToken(token);
 
     // Realizar la solicitud GET para obtener los detalles del usuario autenticado
-    fetch(`http://localhost:8080/usuarios/buscarUsuarios/${idUsuario}`, {
+    fetch(`https://skilltechback-42717f57a83b.herokuapp.com/usuarios/buscarUsuarios/${idUsuario}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Realizar la solicitud PUT para modificar los datos del usuario
-        fetch(`http://localhost:8080/usuarios/modificar/${idUsuario}`, {
+        fetch(`https://skilltechback-42717f57a83b.herokuapp.com/usuarios/modificar/${idUsuario}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

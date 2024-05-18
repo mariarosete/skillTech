@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const token = localStorage.getItem('token');
 
     // Realizar la solicitud GET para obtener los usuarios
-    fetch('http://localhost:8080/usuarios/buscarUsuarios', {
+    fetch('https://skilltechback-42717f57a83b.herokuapp.com/usuarios/buscarUsuarios', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function eliminarUsuario(idUsuario) {
         // Primero, eliminar las inscripciones del usuario
-        fetch(`http://localhost:8080/inscripciones/eliminarInscripcionesUsuario/${idUsuario}`, {
+        fetch(`https://skilltechback-42717f57a83b.herokuapp.com/inscripciones/eliminarInscripcionesUsuario/${idUsuario}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 throw new Error('Error al eliminar las inscripciones del usuario');
             }
             // Después de eliminar las inscripciones, eliminar las solicitudes de soporte del usuario
-            return fetch(`http://localhost:8080/solicitaSoporte/eliminarSolicitudesUsuario/${idUsuario}`, {
+            return fetch(`https://skilltechback-42717f57a83b.herokuapp.com/solicitaSoporte/eliminarSolicitudesUsuario/${idUsuario}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 throw new Error('Error al eliminar las solicitudes de soporte del usuario');
             }
             // Después de eliminar las solicitudes de soporte, eliminar al usuario
-            return fetch(`http://localhost:8080/usuarios/eliminar/${idUsuario}`, {
+            return fetch(`https://skilltechback-42717f57a83b.herokuapp.com/usuarios/eliminar/${idUsuario}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('#editarModal').style.display = 'block'; // Mostrar el modal de edición
 
         // Realizar la solicitud GET para obtener los detalles del usuario
-        fetch(`http://localhost:8080/usuarios/buscarUsuarios/${idUsuario}`, {
+        fetch(`https://skilltechback-42717f57a83b.herokuapp.com/usuarios/buscarUsuarios/${idUsuario}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             // Realizar la solicitud PUT para modificar los datos del usuario
-            fetch(`http://localhost:8080/usuarios/modificar/${idUsuario}`, {
+            fetch(`https://skilltechback-42717f57a83b.herokuapp.com/usuarios/modificar/${idUsuario}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
