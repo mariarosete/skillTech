@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const token = localStorage.getItem('token');
 
     // Realizar la solicitud GET para obtener las inscripciones
-    fetch('http://localhost:8080/inscripciones/buscarInscripciones', {
+    fetch('https://skilltechback-42717f57a83b.herokuapp.com/inscripciones/buscarInscripciones', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para eliminar una inscripción
     function eliminarInscripcion(idInscripcion) {
-        fetch(`http://localhost:8080/inscripciones/eliminar/${idInscripcion}`, {
+        fetch(`https://skilltechback-42717f57a83b.herokuapp.com/inscripciones/eliminar/${idInscripcion}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
