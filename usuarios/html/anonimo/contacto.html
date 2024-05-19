@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Cursos</title>
-
+    <title>Contacto - SkillTech</title>
+        
     <!-- CSS -->
     <link rel="stylesheet" href="/estilos/admin.css">
     <link rel="stylesheet" href="/estilos/index.css">
-    <link rel="stylesheet" href="/estilos/fichacursos.css">
-    
+    <link rel="stylesheet" href="/estilos/perfil.css"> 
+
     <!-- JS -->
-    <script src="/js/cursosAnonimo.js" defer></script>
     <script src="/js/modal.js"></script>
 
-   <!-- Fontawesome -->
-   <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
+   
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
 
-   <!-- Enlace al favicon -->
+    <!-- Enlace al favicon -->
    <link rel="icon" type="image/png" href="/imagenes/favicon.png">
+
 </head>
+
 <body>
-     <!-- Encabezado con imagen -->
+    <!-- Encabezado con imagen -->
     <div class="header">
         <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
     </div>
+
+    <!-- Menú y submenú -->
     <nav>
         <ul>
             <li><a href="/usuarios/html/anonimo/indexAnonimo.html" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
@@ -35,120 +39,113 @@
         </ul>
     </nav>
 
-    <!-- Contenedor para bienvenida -->
+        
+
+    <!-- Introducción -->
     <div class="testimonios">
         <div class="testimonio">
-            <h2><i class="fas fa-book-open"></i> Bienvenido al Catálogo de Cursos de SkillTech</h2>
-            <p>Explora nuestra selección de cursos expertamente diseñados para ayudarte a alcanzar tus metas de aprendizaje. Desde desarrollo web y programación hasta seguridad y tecnologías emergentes, tenemos todo lo que necesitas para potenciar tus habilidades y avanzar en tu carrera. ¡Comienza tu viaje de aprendizaje hoy mismo!</p>
-
+            <h2><i class="fas fa-phone"></i> Contacto</h2>
+            <p>¿Necesitas ayuda con la inscripción en nuestros cursos de informática o prefieres asistir presencialmente? ¡Estamos aquí para ayudarte! Contáctanos para obtener más información o para resolver cualquier duda que tengas.</p>
+  
         </div>
     </div>
-    
-    <!-- Contenedor para las fichas de los cursos --> 
-    <div class="cursos-container">
-        <section class="info-cursos"></section>
-    </div>
 
-    <!-- Ventana modal de inicio de sesión -->
-    <div id="modal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <div class="registro-div">
-                <!-- formulario -->
-                <form id="registro" class="form">
-                    <h2 class="title2"><img src="/imagenes/LogoHeader.png" alt="Icono de la aplicación"> Bienvenid@</h2>
-                    <span class="close" id="cerrarModal">&times;</span>
-                    <!-- Campo Nombre -->
-                    <div class="inputContainer">
-                        <input type="text" id="usuario" class="input" name="usuario" required>
-                        <label for="usuario" id="labelUsuario" class="label">Usuario:</label>
-                    </div>
-
-                    <!-- Campo Contraseña -->
-                    <div class="inputContainer">
-                        <input type="password" id="contrasena" class="input" name="contrasena" required>
-                        <label for="password" id="labelPassword" class="label">Contraseña:</label>
-                    </div>
-                                                
-                    <!-- Enlace a la página de registro -->
-                    <p>¿No tienes una cuenta? <a href="#" id="mostrarRegistro">Regístrate</a></p>
-                    
-                    <!-- Botón de registro -->
-                    <button type="submit" class="botonEnviar"><i class="fas fa-sign-in-alt"></i> Entrar</button>
-
-                    <!-- Mensaje de error -->
-                    <p class="mensaje-error" id="mensajeError" style="display: none; color: #ff5b5b;"><i class="fas fa-exclamation-circle"></i> Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.</p>
-                </form>
+   
+    <div class="perfil2">
+        <div class="contenedor2">
+            <div class="texto-izquierda2">
+                
+                <h3 class="color">¿Tienes alguna pregunta o necesitas ayuda?</h3>
+                <p class="center">¡No dudes en contactarnos!</p>
+                <p class="phone-icon"><i class="fas fa-mobile-alt"></i> +34 653 111 222</p>
+                <p><i class="fas fa-clock"></i> Lunes a Viernes, de 9:00h a 19:00h.</p>
+                <p><i class="fas fa-envelope"></i> SkillTech@mail.com</p>
+                <p><i class="fab fa-facebook"></i> www.facebook.com</p>
             </div>
-        </div>
-    </div>
-
-    <!-- Ventana modal de registro -->
-    <div id="modalRegistro" class="modal" style="display: none;">
-        <div class="modal-content">
-            <div class="registro-div">
-                <!-- Formulario de registro -->
-                <form id="registro2" class="form">
-                    <h2 class="title2"><img src="/imagenes/LogoHeader.png" alt="Icono de la aplicación"> Regístrate</h2>
-                    <span class="close" id="cerrarModal2">&times;</span>
-                    
-                    <!-- Campo Nombre -->
-                    <div class="inputContainer">
-                        <input type="text" id="nombre" class="input" name="nombre" required>
-                        <label for="nombre" id="labelNombre" class="label">Nombre:</label>
-                    </div>
-                    
-                    <!-- Campo Apellidos -->
-                    <div class="inputContainer">
-                        <input type="text" id="apellidos" class="input" name="apellidos" required>
-                        <label for="apellidos" id="labelApellidos" class="label">Apellidos:</label>
-                    </div>
-                    
-                    <!-- Campo Correo -->
-                    <div class="inputContainer">
-                        <input type="email" id="correo" class="input" name="correo" required>
-                        <label for="correo" id="labelCorreo" class="label">Correo:</label>
-                    </div>
-                    
-                    <!-- Campo Contraseña -->
-                    <div class="inputContainer">
-                        <input type="password" id="password" class="input" name="password" required>
-                        <label for="password" id="labelPass" class="label">Contraseña:</label>
-                    </div>
-                    
-                    <!-- Campo oculto para idrol -->
-                    <input type="hidden" class="input" id="idrol" name="idrol" value="2">
-
-                    <!-- Botón de registro -->
-                    <button type="submit" class="botonRegistro"><i class="fas fa-user-plus"></i> Registrarse</button>
-                </form>
+        
+            <div class="mapa-derecha">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.3281674761383!2d-5.66459792347404!3d43.53720075992518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367c6190290a35%3A0xe6151adbed1ec8f0!2sAv.%20de%20la%20Costa%2C%2025%2C%20Centro%2C%2033205%20Gij%C3%B3n%2C%20Asturias!5e0!3m2!1ses!2ses!4v1716125685524!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+            
         </div>
     </div>
+<!-- Ventana modal de inicio de sesión -->
+<div id="modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="registro-div">
+            <!-- formulario -->
+            <form id="registro" class="form">
+              <h2 class="title2"><img src="/imagenes/LogoHeader.png" alt="Icono de la aplicación"> Bienvenid@</h2>
+                <span class="close" id="cerrarModal">&times;</span>
+                <!-- Campo Nombre -->
+                <div class="inputContainer">
+                    <input type="text" id="usuario" class="input" name="usuario" required>
+                    <label for="usuario" id="labelUsuario" class="label">Usuario:</label>
+                </div>
 
-    <!-- Modal de bienvenida para administrador -->
-    <div id="bienvenidaModalAdmin" class="modal bienvenida-modal">
-        <div class="modal-content">
-            <h2><i class="fas fa-user-shield icon"></i> Bienvenid@ de nuevo<span id="nombreUsuarioAdmin"></span></h2>
-            <p>¡Hola administrador!</p>
-        </div>
-    </div>
+                <!-- Campo Contraseña -->
+                <div class="inputContainer">
+                    <input type="password" id="contrasena" class="input" name="contrasena" required>
+                    <label for="password" id="labelPassword" class="label">Contraseña:</label>
+                </div>
+                                            
+                <!-- Enlace a la página de registro -->
+                <p>¿No tienes una cuenta? <a href="#" id="mostrarRegistro">Regístrate</a></p>
+                
+                <!-- Botón de registro -->
+                <button type="submit" class="botonEnviar"><i class="fas fa-sign-in-alt"></i> Entrar</button>
 
-    <!-- Modal de bienvenida para usuario registrado -->
-    <div id="bienvenidaModalRegistrado" class="modal bienvenida-modal">
-        <div class="modal-content">
-            <h2><i class="fas fa-user icon"></i> Bienvenid@ de nuevo <span id="nombreUsuarioRegistrado"></span></h2>
-            <p>¡Es genial verte aquí!</p>
-        </div>
-    </div>
-    <!-- Modal de bienvenida para usuario registrado -->
-    <div id="bienvenidaModalRegistro" class="modal bienvenida-modal" style="display: none;">
-        <div class="modal-content">
-            <h2><i class="fas fa-user-check icon"></i> Bienvenid@ <span id="nombreUsuarioRegistradoo"></span></h2>
-            <p>Gracias por unirte a nosotros.</p>
-            <p id="registroExitosoMessage" style="display: none; color: green;">¡Te has registrado correctamente!</p>
-        </div>
-    </div>
 
+                <!-- Mensaje de error -->
+                <p class="mensaje-error" id="mensajeError" style="display: none; color: #ff5b5b;"><i class="fas fa-exclamation-circle"></i> Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.</p>
+            </form>
+        </div>
+    </div>
+</div>
+
+  <!-- Ventana modal de registro -->
+<div id="modalRegistro" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="registro-div">
+            <!-- Formulario de registro -->
+            <form id="registro2" class="form">
+              <h2 class="title2"><img src="/imagenes/LogoHeader.png" alt="Icono de la aplicación"> Regístrate</h2>
+                <span class="close" id="cerrarModal2">&times;</span>
+                
+                <!-- Campo Nombre -->
+                <div class="inputContainer">
+                    <input type="text" id="nombre" class="input" name="nombre" required>
+                    <label for="nombre" id="labelNombre" class="label">Nombre:</label>
+                </div>
+                
+                <!-- Campo Apellidos -->
+                <div class="inputContainer">
+                    <input type="text" id="apellidos" class="input" name="apellidos" required>
+                    <label for="apellidos" id="labelApellidos" class="label">Apellidos:</label>
+                </div>
+                
+                <!-- Campo Correo -->
+                <div class="inputContainer">
+                    <input type="email" id="correo" class="input" name="correo" required>
+                    <label for="correo" id="labelCorreo" class="label">Correo:</label>
+                </div>
+                
+                <!-- Campo Contraseña -->
+                <div class="inputContainer">
+                    <input type="password" id="password" class="input" name="password" required>
+                    <label for="password" id="labelPass" class="label">Contraseña:</label>
+                </div>
+                
+                <!-- Campo oculto para idrol -->
+                <input type="hidden" class="input" id="idrol" name="idrol" value="2">
+
+                <!-- Botón de registro -->
+                <button type="submit" class="botonRegistro"><i class="fas fa-user-plus"></i> Registrarse</button>
+            </form>
+        </div>
+    </div>
+</div>
+   
     <!-- Footer -->
     <footer>
         <div class="footer-column">
@@ -166,6 +163,23 @@
             <p><i class="fab fa-facebook"></i> www.facebook.com</p>
         </div>
     </footer>
+
+<!-- Modal de bienvenida para administrador -->
+<div id="bienvenidaModalAdmin" class="modal bienvenida-modal">
+    <div class="modal-content">
+        <h2><i class="fas fa-user-shield icon"></i> Bienvenid@ de nuevo </h2>
+        <p>¡Hola administrador!</p>
+    </div>
+</div>
+
+<!-- Modal de bienvenida para usuario registrado -->
+<div id="bienvenidaModalRegistrado" class="modal bienvenida-modal">
+    <div class="modal-content">
+        <h2><i class="fas fa-user icon"></i> Bienvenid@ de nuevo </h2>
+        <p>¡Es genial verte aquí!</p>
+    </div>
+</div>
+    
     <!-- Script para manejar el LOGIN -->
     <script>
         document.querySelector("#registro").addEventListener('submit', function(event) {
@@ -290,32 +304,5 @@
     });
     });
     </script>
-    <!-- Script para que giren las fichas de los cursos -->
-    <script>
-        function rotarFicha(button) {
-        const rotateContainer = button.closest(".rotate-container");
-        rotateContainer.children[0].classList.toggle("rotar-ficha-back");
-        rotateContainer.children[1].classList.toggle("rotar-ficha-front");
-    }
-    function volverFicha(button) {
-        const rotateContainer = button.closest(".rotate-container");
-        rotateContainer.children[0].classList.toggle("rotar-ficha-back");
-        rotateContainer.children[1].classList.toggle("rotar-ficha-front");
-    }
-    </script> 
-    <script>
-        // Obtener la URL de la página actual
-        var currentPage = window.location.pathname;
-        var menuLinks = document.querySelectorAll('nav ul li a');
-    
-        // Iterar sobre cada enlace del menú
-        for (var link of menuLinks) {
-            var linkURL = link.getAttribute('href'); // Obtener la URL del enlace
-    
-            if (currentPage === linkURL) {
-                link.classList.add('activo');
-            }
-        }
-    </script>
-    </body>
-    </html>
+</body>
+</html>

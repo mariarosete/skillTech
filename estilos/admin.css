@@ -4,22 +4,20 @@ h2,h1{
   text-align: center;
 }
 
-/************** CSS para la tabla de usuarios y tabla de cursos ****************************/
-.tablaUsuarios,.tablaCursos,.tablaContenido, .tablaInscripciones {
-    width: 60%;
-    border-collapse: separate; 
-    border-spacing: 0; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    border: 2px solid #ddd;
+/* Estilos generales para todas las tablas */
+.tablaUsuarios, .tablaCursos, .tablaContenido, .tablaInscripciones {
+    width: 80%;
+    border-collapse: collapse; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
-.tablaUsuarios th, .tablaUsuarios td,.tablaCursos th, .tablaCursos td, .tablaContenido td , .tablaInscripciones td{
-    padding: 10px;
-    border-bottom: 1px solid #ddd;   
-}
-
+/* Estilos para las celdas de encabezado */
 .tablaUsuarios th, .tablaCursos th, .tablaContenido th, .tablaInscripciones th {
-    background-color:var(--color-azulOscuro);
+    background-color: var(--color-azulOscuro);
     color: white;
     text-align: left;
     font-weight: bold; 
@@ -27,8 +25,16 @@ h2,h1{
     padding: 12px;       
 }
 
-.tablaUsuarios tr, .tablaCursos tr, .tablaContenido tr {
-    transition: background-color 0.3s;
+/* Estilos para las celdas de datos */
+.tablaUsuarios td, .tablaCursos td, .tablaContenido td, .tablaInscripciones td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para las filas al pasar el ratón */
+.tablaUsuarios tbody tr:hover, .tablaCursos tbody tr:hover, .tablaContenido tbody tr:hover, .tablaInscripciones tbody tr:hover {
+    background-color: var(--color-azulClaro); 
+    color: white;   
 }
 
 .tablaUsuarios tbody tr:hover, .tablaCursos tbody tr:hover, .tablaContenido tbody tr:hover {
@@ -41,32 +47,30 @@ h2,h1{
     color: white;    
 }
 
+/* Estilos para las filas pares */
 .tablaUsuarios tbody tr:nth-child(even) {
-    background-color: #e0e0e0; 
+    background-color: #f2f2f2; 
 }
 
-.contenedor-tabla {
+/* Estilos para los botones de acción */
+.tablaUsuarios .accion.modificar, .tablaCursos .accion.modificar, .tablaContenido .accion.modificar, .tablaInscripciones .accion.modificar {
+    margin-right: 10px; 
+}
+
+/* Estilos para el contenedor de la tabla */
+.contenedor-tabla, .contenedor-tabla2 {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    height: 70vh; 
-    margin-bottom: 15px; 
-}
-#tablaContenido,#tablaUsuarios,#tablaCursos{
-    width: 80%;
+    height: auto; 
+    margin-bottom: 20px; 
 }
 
-.contenedor-tabla2 {
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 80vh; 
-  margin-bottom: 15px; 
+/* Estilos para el ancho de las tablas */
+#tablaContenido, #tablaUsuarios, #tablaCursos, #tablaInscripciones {
+    width: 90%;
 }
 
-.tablaUsuarios .accion.modificar, .tablaCursos .accion.modificar, .tablaContenido .accion.modificar{
-    margin-right: 50px; 
-}
   /*******************Secciones index Admin*******************************/
 
 .contenedor {
@@ -270,6 +274,7 @@ a.seccion {
 #formularioEdicion {
     background-color: white;
     border-radius: 8px;
+    width: 380px;
     padding: 20px 40px;
     box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
 }
