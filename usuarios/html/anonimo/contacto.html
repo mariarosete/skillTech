@@ -304,5 +304,20 @@
     });
     });
     </script>
+    <script>
+        // Obtener la URL de la página actual
+        var currentPage = window.location.pathname;
+        var menuLinks = document.querySelectorAll('nav ul li a');
+    
+        // Iterar sobre cada enlace del menú
+        for (var link of menuLinks) {
+            var linkURL = link.getAttribute('href'); // Obtener la URL del enlace
+    
+            if (currentPage === linkURL) {
+                link.classList.add('activo');
+            }
+        }
+    </script>
+    
 </body>
 </html>
