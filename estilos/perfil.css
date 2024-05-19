@@ -198,7 +198,7 @@ button:hover {
 .texto-izquierda2 i {
     margin-right: 10px;
     font-size: 18px;
-    color: white;
+    color: var(--color-azulMuyOscuro);
 }
 .center{
     text-align: center; 
