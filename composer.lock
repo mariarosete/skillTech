@@ -1,0 +1,15 @@
+{
+    "_readme": [
+        "This is a basic composer.lock file to allow Heroku to deploy the application."
+    ],
+    "packages": [],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}
