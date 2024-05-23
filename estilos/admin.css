@@ -71,6 +71,30 @@ h2,h1{
     width: 90%;
 }
 
+.icono-modificar {
+    margin-right: 25px; 
+}
+
+.icono-eliminar {
+    margin-left: 25px; 
+}
+
+.accion-columna {
+    text-align: center;
+    position: relative; 
+}
+
+.centrar-vertical {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.accion-columna .eliminar {
+    margin: 0 30px; 
+}
+
+
   /*******************Secciones index Admin*******************************/
 
 .contenedor {

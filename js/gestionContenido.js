@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (const material of materiales) {
             const fila = document.createElement('tr');
-
+        
             // Agregar el contenido HTML a la fila
             fila.innerHTML = `
                 <td>${material.nombre}</td>
@@ -30,13 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${material.url}</td>
                 <td>${material.curso.titulo}</td>
                 <td>
-                    <i class="fas fa-pencil-alt accion modificar" data-idmaterialCurso="${material.idmaterialCurso}"></i> 
-                    <i class="fas fa-trash-alt accion eliminar" data-idmaterialCurso="${material.idmaterialCurso}"></i>
+                    <span class="icono-modificar">
+                        <i class="fas fa-pencil-alt accion modificar" data-idmaterialCurso="${material.idmaterialCurso}"></i> 
+                    </span>
+                    <span class="icono-eliminar">
+                        <i class="fas fa-trash-alt accion eliminar" data-idmaterialCurso="${material.idmaterialCurso}"></i>
+                    </span>
                 </td>
             `;
-
+        
             tbodyMateriales.append(fila);
         }
+        
 
         // Agregar listener de eventos a los botones de modificar
         const botonesModificar = document.querySelectorAll('.modificar');

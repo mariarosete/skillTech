@@ -63,7 +63,7 @@ label {
 
 .soporteinput,
 textarea {
-    width: 80%;
+    width: 85%;
     padding: 12px; 
     margin-top: 8px;
     margin-bottom: 25px;
@@ -92,7 +92,7 @@ textarea {
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
-    width: 80%;
+    width: 85%;
     transition: background-color 0.3s ease;
 }
 
@@ -125,3 +125,16 @@ textarea {
     margin-right: 5px;
 }
 
+.contenedor-colorido2 {
+    background-color: #acbef2;
+    border-radius: 15px;
+    padding: 20px; 
+    width: 950px; 
+    margin: 0 auto; 
+    margin-top: 20px; 
+    overflow: hidden; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+    height: 500px; /* Altura fija */
+    display: flex; /* Usa flexbox para centrar verticalmente */
+    align-items: center; /* Centra verticalmente los elementos hijos */
+  }

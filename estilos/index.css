@@ -485,11 +485,13 @@ footer {
 }
 
 .recomendacion img {
-    max-width: 100%; 
-    height: auto; 
+    width: 420px;
+    height: 255px;
+    object-fit: cover; 
     border-radius: 8px;
     margin-bottom: 10px;
 }
+
 
 .recomendacion .titulo {
     font-size: 20px;
@@ -715,5 +717,11 @@ footer {
     .container {display: flex; 
         flex-direction: column;
         gap: 20px; 
-    }     
+    }  
+    .recomendacion img {
+        max-width: 100%; 
+        height: auto; 
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }   
 }

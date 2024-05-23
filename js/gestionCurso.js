@@ -23,20 +23,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (const curso of cursos) {
             const fila = document.createElement('tr');
-
+        
             // Agregar el contenido HTML a la fila
             fila.innerHTML = `
                 <td>${curso.titulo}</td>
                 <td>${curso.descripcion}</td>
                 <td>${curso.categoria}</td>
                 <td>
-                    <i class="fas fa-pencil-alt accion modificar" data-idcurso="${curso.idcurso}"></i> 
-                    <i class="fas fa-trash-alt accion eliminar" data-idcurso="${curso.idcurso}"></i>
+                    <span class="icono-modificar">
+                        <i class="fas fa-pencil-alt accion modificar" data-idcurso="${curso.idcurso}"></i> 
+                    </span>
+                    <span class="icono-eliminar">
+                        <i class="fas fa-trash-alt accion eliminar" data-idcurso="${curso.idcurso}"></i>
+                    </span>
                 </td>
             `;
-
+        
             tbodyCursos.append(fila);
         }
+        
 
         // Agregar listener de eventos a los botones de modificar
         const botonesModificar = document.querySelectorAll('.modificar');

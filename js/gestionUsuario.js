@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (const usuario of usuarios) {
             const fila = document.createElement('tr');
-
+        
             // Agregar el contenido HTML a la fila
             fila.innerHTML = `
                 <td>${usuario.nombre}</td>
@@ -30,13 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${usuario.correo}</td>
                 <td>${usuario.rol.nombre}</td>
                 <td>
-                    <i class="fas fa-pencil-alt accion modificar" data-idusuario="${usuario.idusuario}"></i> 
-                    <i class="fas fa-trash-alt accion eliminar" data-idusuario="${usuario.idusuario}"></i>
+                    <span class="icono-modificar">
+                        <i class="fas fa-pencil-alt accion modificar" data-idusuario="${usuario.idusuario}"></i> 
+                    </span>
+                    <span class="icono-eliminar">
+                        <i class="fas fa-trash-alt accion eliminar" data-idusuario="${usuario.idusuario}"></i>
+                    </span>
                 </td>
             `;
-
+        
             tbodyUsuarios.append(fila);
         }
+        
 
         // Agregar listener de eventos a los botones de modificar
         const botonesModificar = document.querySelectorAll('.modificar');

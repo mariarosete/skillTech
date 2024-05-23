@@ -22,19 +22,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (const inscripcion of inscripciones) {
             const fila = document.createElement('tr');
-
+        
             // Agregar el contenido HTML a la fila
             fila.innerHTML = `
                 <td>${inscripcion.usuario.nombre} ${inscripcion.usuario.apellidos}</td>
                 <td>${inscripcion.curso.titulo}</td>
-                <td>
-                    <i class="fas fa-trash-alt accion eliminar" data-idinscripcion="${inscripcion.idinscripcion}"></i>
+                <td class="accion-columna">
+                    <div class="centrar-vertical">
+                        <i class="fas fa-trash-alt accion eliminar" data-idinscripcion="${inscripcion.idinscripcion}"></i>
+                    </div>
                 </td>
             `;
-
+        
             tbodyInscripciones.append(fila);
         }
-
+        
+        
         // Agregar listener de eventos a los botones de eliminar
         const botonesEliminar = document.querySelectorAll('.eliminar');
         for (const boton of botonesEliminar) {
