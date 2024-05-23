@@ -1,1 +1,1 @@
-<?php header('Location: /html/usuarios/anonimo/indexAnonimo.html'); ?>
+<?php header('Location: /usuarios/html/anonimo/indexAnonimo.html'); ?>
