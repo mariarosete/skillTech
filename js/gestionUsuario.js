@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${usuario.rol.nombre}</td>
                 <td>
                     <span class="icono-modificar">
-                        <i class="fas fa-pencil-alt accion modificar" data-idusuario="${usuario.idusuario}"></i> 
+                        <i class="fas fa-edit accion modificar" data-idusuario="${usuario.idusuario}"></i> 
                     </span>
                     <span class="icono-eliminar">
                         <i class="fas fa-trash-alt accion eliminar" data-idusuario="${usuario.idusuario}"></i>
