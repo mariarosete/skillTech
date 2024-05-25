@@ -73,11 +73,18 @@ h2,h1{
 
 .icono-modificar {
     margin-right: 25px; 
+    color:green;
 }
 
 .icono-eliminar {
     margin-left: 25px; 
+    color: red;
 }
+.accion-columna
+{
+    color: red;
+}
+
 
 .accion-columna {
     text-align: center;

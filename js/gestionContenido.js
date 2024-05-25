@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${material.curso.titulo}</td>
                 <td>
                     <span class="icono-modificar">
-                        <i class="fas fa-pencil-alt accion modificar" data-idmaterialCurso="${material.idmaterialCurso}"></i> 
+                        <i class="fas fa-edit accion modificar" data-idmaterialCurso="${material.idmaterialCurso}"></i> 
                     </span>
                     <span class="icono-eliminar">
                         <i class="fas fa-trash-alt accion eliminar" data-idmaterialCurso="${material.idmaterialCurso}"></i>

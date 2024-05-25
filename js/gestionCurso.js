@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${curso.categoria}</td>
                 <td>
                     <span class="icono-modificar">
-                        <i class="fas fa-pencil-alt accion modificar" data-idcurso="${curso.idcurso}"></i> 
+                        <i class="fas fa-edit accion modificar" data-idcurso="${curso.idcurso}"></i> 
                     </span>
                     <span class="icono-eliminar">
                         <i class="fas fa-trash-alt accion eliminar" data-idcurso="${curso.idcurso}"></i>
