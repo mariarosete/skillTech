@@ -676,7 +676,7 @@ footer {
     color: var(--color-azulMuyOscuro); 
 }
 
-@media (width < 768px) {
+/* @media (width < 768px) {
     .div-principal {
         width: 100%; 
     }
@@ -724,4 +724,4 @@ footer {
         border-radius: 8px;
         margin-bottom: 10px;
     }   
-}
+} */
