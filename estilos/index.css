@@ -768,4 +768,16 @@ footer {
     .contenido-noticia p {
         font-size: 14px; 
     }
+
+     /* Ajustar testimonios para que estén en una fila */
+     .testimonios {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .testimonio {
+        width: 80%; 
+        margin: 0 auto 20px; 
+    }
+   
 }
