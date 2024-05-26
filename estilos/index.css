@@ -730,7 +730,23 @@ footer {
         height: auto; 
         border-radius: 8px;
         margin-bottom: 10px;
-    }   
+    }  
+   
+    .contenedor-recomendaciones {
+            text-align: center; /* Centrar el contenido */
+    }
+    
+    .recomendaciones {
+            display: flex;
+            flex-direction: column; /* Colocar las recomendaciones en columna */
+            align-items: center; /* Centrar las recomendaciones horizontalmente */
+    }
+    
+    .recomendacion {
+            width: 80%; /* Reducir el ancho de cada recomendación */
+            margin: 0 auto 20px; /* Centrar horizontalmente y agregar margen inferior */
+    }
+
 
     /* Reglas para colocar las noticias en columna */
     .noticias {
