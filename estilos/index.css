@@ -305,7 +305,7 @@ canvas {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease; 
     display: flex;
-    flex-direction: column; 
+    flex-direction: row ;
     justify-content: center; 
 }
 
