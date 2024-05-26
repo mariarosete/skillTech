@@ -66,9 +66,7 @@ h2{
 
 /* Estilos para el menú */
 nav {
-    position: fixed; /* Posiciona el menú de manera fija en la parte superior */
-    top: 0;
-    left: 0;
+    position: relative; /* Cambiamos a relative */
     width: 100%;
     background-color: rgba(88, 107, 166, 0.9);    
     border-bottom: 4px solid rgba(2, 17, 64, 0.5); 
