@@ -66,11 +66,12 @@ h2{
 
 /* Estilos para el menú */
 nav {
-    position: relative; /* Cambiamos a relative */
+    position: relative; 
     width: 100%;
-    background-color: rgba(88, 107, 166, 0.9);    
+    background-color: rgba(88, 107, 166, 0.9); 
+    border-top: 4px solid rgba(2, 17, 64, 0.5);    
     border-bottom: 4px solid rgba(2, 17, 64, 0.5); 
-    z-index: 1000; /* Asegura que el menú esté siempre por encima de otros contenidos */
+    z-index: 1000; 
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);    
 }
 
