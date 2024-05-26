@@ -291,11 +291,12 @@ canvas {
 
 .testimonios {
     display: flex;
-    flex-wrap: wrap; 
     justify-content: center;
     gap: 40px; 
     margin-top: 20px;
 }
+
+
 
 .testimonio {
     flex-basis: calc(50% - 40px); 
@@ -304,9 +305,6 @@ canvas {
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease; 
-    display: flex;
-    flex-direction: row ;
-    justify-content: center; 
 }
 
 .testimonio:hover {
@@ -732,18 +730,18 @@ footer {
     }  
    
     .contenedor-recomendaciones {
-            text-align: center; /* Centrar el contenido */
+            text-align: center; 
     }
     
     .recomendaciones {
             display: flex;
-            flex-direction: column; /* Colocar las recomendaciones en columna */
-            align-items: center; /* Centrar las recomendaciones horizontalmente */
+            flex-direction: column; 
+            align-items: center; 
     }
     
     .recomendacion {
-            width: 80%; /* Reducir el ancho de cada recomendación */
-            margin: 0 auto 20px; /* Centrar horizontalmente y agregar margen inferior */
+            width: 80%; 
+            margin: 0 auto 20px; 
     }
 
 
@@ -754,20 +752,20 @@ footer {
     }
 
     .noticia {
-        width: 80%; /* Reducir el ancho de la noticia */
-        margin: 0 auto 20px; /* Centrar horizontalmente y agregar margen inferior */
+        width: 80%; 
+        margin: 0 auto 20px; 
     }
 
     /* Reducir tamaño del texto en noticias */
     .contenido-noticia h3 {
-        font-size: 16px; /* Tamaño de fuente más pequeño */
+        font-size: 16px; 
     }
 
     .fecha {
-        font-size: 14px; /* Tamaño de fuente más pequeño para la fecha */
+        font-size: 14px; 
     }
 
     .contenido-noticia p {
-        font-size: 14px; /* Tamaño de fuente más pequeño para el contenido */
+        font-size: 14px; 
     }
 }
