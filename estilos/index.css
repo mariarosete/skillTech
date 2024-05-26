@@ -687,7 +687,6 @@ footer {
     margin-bottom: 20px;
     color: var(--color-azulMuyOscuro); 
 }
-
 @media (max-width: 768px) {
     .div-principal {
         width: 100%; 
@@ -699,32 +698,44 @@ footer {
     .texto{
         width: 100%;
     } 
-    .contenedor-graficos {
-        display: flex; 
-        flex-direction: column; 
-        gap: 20px; 
-    }
+
+    /* Reducir el tamaño del carrusel */
     .carrusel {
         margin-bottom: 20px; 
-        width: 100%;
+        max-width: 80%; /* Reducir el ancho máximo del carrusel */
+        margin: 0 auto; /* Centrar horizontalmente */
     }
+
+    /* Reducir el tamaño de la gráfica */
     .contenedor-grafico {
-        width: 100%;
+        width: 80%; /* Reducir el ancho del contenedor de la gráfica */
+        margin: 0 auto; /* Centrar horizontalmente */
     }
+
+    /* Ajustar el tamaño del formulario de búsqueda de categorías */
     #formBusquedaCategoria{
-        width: 20%;
+        width: 80%;
+        margin: 0 auto; /* Centrar horizontalmente */
     }
+
+    /* Ajustar el tamaño del input de búsqueda de títulos */
     #inputTitulo{
-        width: 50%;
+        width: 80%;
+        margin: 0 auto; /* Centrar horizontalmente */
     }
+
+    /* Ajustar el tamaño del botón */
     button{
         width: 80%;
+        margin: 0 auto; /* Centrar horizontalmente */
     }
+
     .container {
         display: flex; 
         flex-direction: column;
         gap: 20px; 
     }  
+
     .recomendacion img {
         max-width: 100%; 
         height: auto; 
@@ -733,20 +744,19 @@ footer {
     }  
    
     .contenedor-recomendaciones {
-            text-align: center; /* Centrar el contenido */
+        text-align: center; /* Centrar el contenido */
     }
     
     .recomendaciones {
-            display: flex;
-            flex-direction: column; /* Colocar las recomendaciones en columna */
-            align-items: center; /* Centrar las recomendaciones horizontalmente */
+        display: flex;
+        flex-direction: column; /* Colocar las recomendaciones en columna */
+        align-items: center; /* Centrar las recomendaciones horizontalmente */
     }
     
     .recomendacion {
-            width: 80%; /* Reducir el ancho de cada recomendación */
-            margin: 0 auto 20px; /* Centrar horizontalmente y agregar margen inferior */
+        width: 80%; /* Reducir el ancho de cada recomendación */
+        margin: 0 auto 20px; /* Centrar horizontalmente y agregar margen inferior */
     }
-
 
     /* Reglas para colocar las noticias en columna */
     .noticias {
