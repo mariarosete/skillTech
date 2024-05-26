@@ -698,65 +698,38 @@ footer {
     .texto{
         width: 100%;
     } 
-
-    /* Reducir el tamaño del carrusel */
+    .contenedor-graficos {
+        display: flex; 
+        flex-direction: column; 
+        gap: 20px; 
+    }
     .carrusel {
         margin-bottom: 20px; 
-        max-width: 80%; /* Reducir el ancho máximo del carrusel */
-        margin: 0 auto; /* Centrar horizontalmente */
+        width: 100%;
     }
-
-    /* Reducir el tamaño de la gráfica */
     .contenedor-grafico {
-        width: 80%; /* Reducir el ancho del contenedor de la gráfica */
-        margin: 0 auto; /* Centrar horizontalmente */
+        width: 100%;
     }
-
-    /* Ajustar el tamaño del formulario de búsqueda de categorías */
     #formBusquedaCategoria{
-        width: 80%;
-        margin: 0 auto; /* Centrar horizontalmente */
+        width: 20%;
     }
-
-    /* Ajustar el tamaño del input de búsqueda de títulos */
     #inputTitulo{
-        width: 80%;
-        margin: 0 auto; /* Centrar horizontalmente */
+        width: 50%;
     }
-
-    /* Ajustar el tamaño del botón */
     button{
         width: 80%;
-        margin: 0 auto; /* Centrar horizontalmente */
     }
-
     .container {
         display: flex; 
         flex-direction: column;
         gap: 20px; 
     }  
-
     .recomendacion img {
         max-width: 100%; 
         height: auto; 
         border-radius: 8px;
         margin-bottom: 10px;
-    }  
-   
-    .contenedor-recomendaciones {
-        text-align: center; /* Centrar el contenido */
-    }
-    
-    .recomendaciones {
-        display: flex;
-        flex-direction: column; /* Colocar las recomendaciones en columna */
-        align-items: center; /* Centrar las recomendaciones horizontalmente */
-    }
-    
-    .recomendacion {
-        width: 80%; /* Reducir el ancho de cada recomendación */
-        margin: 0 auto 20px; /* Centrar horizontalmente y agregar margen inferior */
-    }
+    }   
 
     /* Reglas para colocar las noticias en columna */
     .noticias {
@@ -780,6 +753,21 @@ footer {
 
     .contenido-noticia p {
         font-size: 14px; /* Tamaño de fuente más pequeño para el contenido */
+    }
+
+    .contenedor-recomendaciones {
+        text-align: center; /* Centrar el contenido */
+    }
+
+    .recomendaciones {
+        display: flex;
+        flex-direction: column; /* Colocar las recomendaciones en columna */
+        align-items: center; /* Centrar las recomendaciones horizontalmente */
+    }
+
+    .recomendacion {
+        width: 80%; /* Reducir el ancho de cada recomendación */
+        margin: 0 auto 20px; /* Centrar horizontalmente y agregar margen inferior */
     }
 }
 
