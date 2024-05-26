@@ -32,11 +32,12 @@ html, body {
 }
 
 .header img {
-   width: 100%; 
-   height: 100%;
-   object-fit:cover;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 
 h2{
     color: var(--color-azulOscuro) 
@@ -64,39 +65,43 @@ h2{
     background-color: rgba(172, 190, 242, 0.5);
 }
 
-/*******Submenu*************************/
-nav ul ul {
-    display: none;
-    position: absolute;
-    top: calc(100% + 14px); 
-    width: 275px;
-    background-color: var(--color-azulMuyOscuro);
-    transition: opacity 0.3s, visibility 0.3s, box-shadow 0.3s; 
-    border-radius: 5px;
-    transform: translateY(-10px); 
+/* Estilos para el menú */
+nav {
+    position: relative; 
+    width: 100%;
+    background-color: rgba(88, 107, 166, 0.9); 
+    border-top: 4px solid rgba(2, 17, 64, 0.5);    
+    border-bottom: 4px solid rgba(2, 17, 64, 0.5); 
+    z-index: 1000; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);  
+    margin-bottom: 0;  
 }
 
-
-nav ul ul li a {
-    padding: 12px 20px;
-    color: #B6EDF5; 
-    text-decoration: none;
-    font-weight: bold;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
 }
 
-/* Estilo del enlace del menú principal cuando se hace hover */
-nav > ul > li:hover > a {
-    background-color: rgba(172, 190, 242, 0.5);
-    transform: scale(1.05); 
+nav ul li {
+    margin: 0 15px; 
 }
-/* Mostrar el submenu al hacer hover sobre el elemento del menú principal */
-nav > ul > li:hover > ul {
+
+nav ul li a {
     display: block;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 20px 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
-nav ul ul li a:hover {
-    color: white;  
+nav ul li a:hover {
+    background-color: rgba(2, 17, 64, 0.7);
+    transform: translateY(-2px);
 }
 
 /* Media Queries para adaptabilidad */
@@ -128,13 +133,13 @@ nav ul ul {
     display: none;
     position: absolute;
     top: calc(100% + 14px); 
-    left: -8px;
     width: 275px;
     background-color: var(--color-azulMuyOscuro);
     transition: opacity 0.3s, visibility 0.3s, box-shadow 0.3s; 
     border-radius: 5px;
     transform: translateY(-10px); 
 }
+
 
 nav ul ul li a {
     padding: 12px 20px;
