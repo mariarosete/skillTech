@@ -739,8 +739,22 @@ footer {
     }
 
     .noticia {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 80%; /* Reducir el ancho de la noticia */
+        margin: 0 auto 20px; /* Centrar horizontalmente y agregar margen inferior */
+    }
+
+    /* Reducir tamaño del texto en noticias */
+    .contenido-noticia h3 {
+        font-size: 16px; /* Tamaño de fuente más pequeño */
+    }
+
+    .fecha {
+        font-size: 14px; /* Tamaño de fuente más pequeño para la fecha */
+    }
+
+    .contenido-noticia p {
+        font-size: 14px; /* Tamaño de fuente más pequeño para el contenido */
     }
 }
+
 
