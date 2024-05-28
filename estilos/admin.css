@@ -80,11 +80,11 @@ h2,h1{
     margin-left: 25px; 
     color: red;
 }
+
 .accion-columna
 {
     color: red;
 }
-
 
 .accion-columna {
     text-align: center;
@@ -100,15 +100,13 @@ h2,h1{
 .accion-columna .eliminar {
     margin: 0 30px; 
 }
-
-
-  /*******************Secciones index Admin*******************************/
-
-.contenedor {
+ /*******************Secciones index Admin*******************************/
+ .contenedor {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 70vh; 
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    padding: 20px; /* Añade relleno para evitar que se superponga con el menú */
 }
 
 .secciones {
@@ -116,12 +114,12 @@ h2,h1{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 55px;
+    width: 100%;
 }
 
 .seccion {
     text-align: center;
-    width: 300px;  
+    width: 300px;
     margin: 20px;
     padding: 10px;
     border: 5px solid var(--color-azulMuyOscuro);
@@ -135,9 +133,9 @@ h2,h1{
 }
 
 .seccion img {
-    width: 300px; 
-    height: 200px; 
-    object-fit: cover; 
+    width: 100%; /* Ajusta el ancho al 100% del contenedor .seccion */
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
 }
 
@@ -146,6 +144,73 @@ h2,h1{
     font-size: 20px;
     font-weight: bold;
     color: white;
+}
+
+/***************Estilos responsivos*************************************/
+@media (max-width: 1024px) {
+    .seccion {
+        width: 45%; /* Ajusta el ancho para pantallas medianas */
+    }
+}
+@media (max-width: 1155px) {
+    .seccion {
+        width: 30%; /* Porcentaje del contenedor */
+        max-width: 300px; /* Máximo ancho para evitar que las secciones sean demasiado grandes */
+    }
+}
+@media (min-width: 782px) and (max-width: 1159px) {
+    .secciones {
+        flex-wrap: wrap; /* Permite que las secciones se envuelvan en filas */
+        justify-content: center; /* Centra las secciones */
+    }
+
+    .seccion {
+        width: calc(25% - 20px); /* Calcula el ancho para que quepan cuatro en una fila con un margen entre ellas */
+        max-width: 300px; /* Máximo ancho para evitar que las secciones sean demasiado grandes */
+        margin: 10px; /* Ajuste del margen entre las secciones */
+    }
+}
+
+@media (min-width: 771px) and (max-width: 779px) {
+    .secciones {
+        flex-wrap: wrap; /* Permite que las secciones se envuelvan en filas */
+        justify-content: center; /* Centra las secciones */
+    }
+
+    .seccion {
+        width: calc(50% - 20px); /* Calcula el ancho para que quepan dos en una fila con un margen entre ellas */
+        max-width: 300px; /* Máximo ancho para evitar que las secciones sean demasiado grandes */
+        margin: 10px; /* Ajuste del margen entre las secciones */
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 781px) {
+    .secciones {
+        flex-wrap: wrap; /* Permitir que las secciones se envuelvan en filas */
+        justify-content: center; /* Centrar las secciones */
+    }
+
+    .seccion {
+        width: calc(33.33% - 20px); /* Calcular el ancho para que quepan tres en una fila con un margen entre ellas */
+        max-width: 300px; /* Ancho máximo para evitar que las secciones sean demasiado grandes */
+        margin: 10px; /* Ajuste del margen entre las secciones */
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        height: auto; /* Permite que el contenedor se expanda en altura según sea necesario */
+    }
+
+    .seccion {
+        width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+        margin: 10px 0; /* Ajusta el margen para pantallas pequeñas */
+    }
+
+    .secciones {
+        justify-content: center; /* Centra los elementos en pantallas pequeñas */
+    }
 }
 
 /**************Botón Agregar Usuario**************************************/
@@ -305,8 +370,8 @@ a.seccion {
 #formularioEdicion {
     background-color: white;
     border-radius: 8px;
-    width: 380px;
     padding: 20px 40px;
+    width: 380px;
     box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
 }
 
