@@ -149,71 +149,46 @@ h2,h1{
 /***************Estilos responsivos*************************************/
 @media (max-width: 1024px) {
     .seccion {
-        width: 45%; /* Ajusta el ancho para pantallas medianas */
+        width: 45%; 
     }
 }
 @media (max-width: 1155px) {
     .seccion {
-        width: 30%; /* Porcentaje del contenedor */
-        max-width: 300px; /* Máximo ancho para evitar que las secciones sean demasiado grandes */
+        width: 30%; 
+        max-width: 300px; 
     }
 }
-@media (min-width: 782px) and (max-width: 1159px) {
+@media (min-width: 769px) and (max-width: 1159px) {
     .secciones {
-        flex-wrap: wrap; /* Permite que las secciones se envuelvan en filas */
-        justify-content: center; /* Centra las secciones */
+        flex-wrap: wrap; 
+        justify-content: center; 
     }
 
     .seccion {
-        width: calc(25% - 20px); /* Calcula el ancho para que quepan cuatro en una fila con un margen entre ellas */
-        max-width: 300px; /* Máximo ancho para evitar que las secciones sean demasiado grandes */
-        margin: 10px; /* Ajuste del margen entre las secciones */
-    }
-}
-
-@media (min-width: 771px) and (max-width: 779px) {
-    .secciones {
-        flex-wrap: wrap; /* Permite que las secciones se envuelvan en filas */
-        justify-content: center; /* Centra las secciones */
-    }
-
-    .seccion {
-        width: calc(50% - 20px); /* Calcula el ancho para que quepan dos en una fila con un margen entre ellas */
-        max-width: 300px; /* Máximo ancho para evitar que las secciones sean demasiado grandes */
-        margin: 10px; /* Ajuste del margen entre las secciones */
+        width: calc(25% - 20px); 
+        max-width: 300px; 
+        margin: 10px; 
     }
 }
 
 
-@media (min-width: 769px) and (max-width: 781px) {
-    .secciones {
-        flex-wrap: wrap; /* Permitir que las secciones se envuelvan en filas */
-        justify-content: center; /* Centrar las secciones */
-    }
-
-    .seccion {
-        width: calc(33.33% - 20px); /* Calcular el ancho para que quepan tres en una fila con un margen entre ellas */
-        max-width: 300px; /* Ancho máximo para evitar que las secciones sean demasiado grandes */
-        margin: 10px; /* Ajuste del margen entre las secciones */
-    }
-}
 
 @media (max-width: 768px) {
     .contenedor {
-        height: auto; /* Permite que el contenedor se expanda en altura según sea necesario */
+        height: auto; 
     }
 
     .seccion {
-        width: 100%; /* Ajusta el ancho para pantallas pequeñas */
-        margin: 10px 0; /* Ajusta el margen para pantallas pequeñas */
+        width: 100%; 
+        margin: 10px 0; 
     }
 
     .secciones {
-        justify-content: center; /* Centra los elementos en pantallas pequeñas */
+        justify-content: center; 
     }
 }
 
-/**************Botón Agregar Usuario**************************************/
+/**************Botón Agregar Usuario****************************************************************************/
 .agregar-contacto {
     text-align: center;
     margin-top: 40px;
