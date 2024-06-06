@@ -245,65 +245,77 @@
 
 
     <!-- Script para REGISTRAR un usuario en la BBDD desde el formulario de registro -->
-    <script>
+<script>
     document.querySelector("#registro2").addEventListener('submit', function(event) {
-    event.preventDefault();
+        event.preventDefault();
 
-    // Obtener los valores del formulario
-    var nombre = document.querySelector('#nombre').value;
-    var apellidos = document.querySelector('#apellidos').value;
-    var correo = document.querySelector('#correo').value;
-    var password = document.querySelector('#password').value;
-    var rol = "REGISTRADO"; 
+        // Obtener los valores del formulario
+        const nombre = document.querySelector('#nombre').value;
+        const apellidos = document.querySelector('#apellidos').value;
+        const correo = document.querySelector('#correo').value;
+        const password = document.querySelector('#password').value;
+        const rol = "REGISTRADO";
 
-    // Verificar que los campos no estén vacíos
-    if (nombre === '' || apellidos === '' || correo === '' || password === '') {
-        console.error('Por favor, complete todos los campos.');
-        return;
-    }
-
-    // Crear un objeto JSON con los datos del usuario
-    var usuario = {
-        nombre: nombre,
-        apellidos: apellidos,
-        correo: correo,
-        password: password,
-        rol: rol 
-    };
-
-    // Realizar la solicitud Fetch
-    fetch('https://skilltechback-42717f57a83b.herokuapp.com/usuarios/insertar', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(usuario)
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error al registrar el usuario');
+        // Verificar que los campos no estén vacíos
+        if (nombre === '' || apellidos === '' || correo === '' || password === '') {
+            console.error('Por favor, complete todos los campos.');
+            return;
         }
-        // Mostrar la ventana modal de bienvenida para el usuario registrado
-        var nombreUsuarioRegistradoElement = document.querySelector('#nombreUsuarioRegistradoo');
-        if (nombreUsuarioRegistradoElement) {
-            nombreUsuarioRegistradoElement.textContent = nombre; 
-        } else {
-            console.error('Elemento nombreUsuarioRegistrado no encontrado en el DOM.');
-        }
-        document.querySelector('#bienvenidaModalRegistro').style.display = 'block';
-        // Mostrar mensaje de registro exitoso
-        document.querySelector('#registroExitosoMessage').style.display = 'block';
-        setTimeout(function() {
-            document.querySelector('#registroExitosoMessage').style.display = 'none';
-            document.querySelector('#bienvenidaModalRegistro').style.display = 'none'; 
-        }, 3000);
-    })
 
-    .catch(error => {
-        console.error('Error:', error);
+        // Crear un objeto JSON con los datos del usuario
+        const usuario = {
+            nombre,
+            apellidos,
+            correo,
+            password,
+            rol
+        };
+
+        // Realizar la solicitud Fetch
+        fetch('https://skilltechback-42717f57a83b.herokuapp.com/usuarios/insertar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(usuario)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al registrar el usuario');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Mostrar la ventana modal de bienvenida para el usuario registrado
+            const nombreUsuarioRegistradoElement = document.querySelector('#nombreUsuarioRegistradoo');
+            if (nombreUsuarioRegistradoElement) {
+                nombreUsuarioRegistradoElement.textContent = nombre;
+            } else {
+                console.error('Elemento nombreUsuarioRegistrado no encontrado en el DOM.');
+            }
+            document.querySelector('#bienvenidaModalRegistro').style.display = 'block';
+            
+            // Mostrar mensaje de registro exitoso
+            document.querySelector('#registroExitosoMessage').style.display = 'block';
+            setTimeout(() => {
+                document.querySelector('#registroExitosoMessage').style.display = 'none';
+                document.querySelector('#bienvenidaModalRegistro').style.display = 'none';
+                // Cerrar la ventana modal de registro y abrir la ventana modal de login
+                const modalRegistro = document.querySelector('#modalRegistro');
+                const modalLogin = document.querySelector('#modalLogin');
+                if (modalRegistro) {
+                    modalRegistro.style.display = 'none';
+                }
+                if (modalLogin) {
+                    modalLogin.style.display = 'block';
+                }
+            }, 3000);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     });
-    });
-    </script>
+</script>
     <script>
         // Obtener la URL de la página actual
         var currentPage = window.location.pathname;
