@@ -58,7 +58,7 @@ Java · Spring Boot · MySQL · JWT · JavaScript · HTML · CSS
 
 El backend está desarrollado en Java con Spring Boot y se encuentra en el siguiente repositorio:
 
-🔗 [Repositorio Backend SkillTech](https://github.com/mariarosete/pdawBack)
+🔗 [Repositorio SkillTech (Backend)](https://github.com/mariarosete/skillTech/tree/main/back)
 
 ---
 
