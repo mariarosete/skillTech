@@ -42,7 +42,40 @@ Puedes acceder al panel de administración con las siguientes credenciales:
 
 ## 📸 Capturas de pantalla
 
+### 🏠 Inicio  
+![1](https://github.com/mariarosete/skillTech/blob/main/1.png?raw=true)
+![2](https://github.com/mariarosete/skillTech/blob/main/2.png?raw=true)
+![3](https://github.com/mariarosete/skillTech/blob/main/3.png?raw=true)
 
+### 📋 Catálogo  
+![4](https://github.com/mariarosete/skillTech/blob/main/4.png?raw=true)
+![5](https://github.com/mariarosete/skillTech/blob/main/5.png?raw=true)
+
+### 📨 Contacto 
+![12](https://github.com/mariarosete/skillTech/blob/main/12.png?raw=true)
+
+### 🔑 Inicio de sesión 
+![6](https://github.com/mariarosete/skillTech/blob/main/6.png?raw=true)  
+
+### 👤 Panel de usuario (alumno)  
+![7](https://github.com/mariarosete/skillTech/blob/main/7.png?raw=true)  
+![8](https://github.com/mariarosete/skillTech/blob/main/8.png?raw=true)
+![9](https://github.com/mariarosete/skillTech/blob/main/9.png?raw=true) 
+![10](https://github.com/mariarosete/skillTech/blob/main/10.png?raw=true)  
+![11](https://github.com/mariarosete/skillTech/blob/main/11.png?raw=true) 
+
+### 📚 Panel de administración   
+![13](https://github.com/mariarosete/skillTech/blob/main/13.png?raw=true)   
+
+### 🔄 Gestión de usuarios 
+![14](https://github.com/mariarosete/skillTech/blob/main/14.png?raw=true) 
+![15](https://github.com/mariarosete/skillTech/blob/main/15.png?raw=true)  
+
+### 🔄 Solictudes de soporte 
+![16](https://github.com/mariarosete/skillTech/blob/main/16.png?raw=true)
+
+### 🔄 Gestión de contenido  
+![17](https://github.com/mariarosete/skillTech/blob/main/17.png?raw=true)
 
 ---
 
