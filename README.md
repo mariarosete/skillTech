@@ -31,6 +31,28 @@ Java · Spring Boot · MySQL · JWT · JavaScript · HTML · CSS
 
 ---
 
+## 💻 Cómo ejecutar el frontend
+
+1. Clona este repositorio o descárgalo como ZIP.
+   ```bash
+git clone https://github.com/mariarosete/skillTech.git
+
+3. Abre la carpeta `front` en tu editor de código (por ejemplo, VSCode).
+4. Abre el archivo `indexAnonimo.html` ubicado en `front/usuarios/html/anonimo/`.
+5. Haz clic derecho y selecciona **"Open with Live Server"**.
+
+🔗 [Repositorio SkillTech (Frontend)](https://github.com/mariarosete/skillTech/tree/main/front)
+
+---
+
+## 🧠 Repositorio backend
+
+El backend está desarrollado en Java con Spring Boot y se encuentra en el siguiente repositorio:
+
+🔗 [Repositorio Backend SkillTech](https://github.com/mariarosete/pdawBack)
+
+---
+
 ## 🔐 Acceso al panel de administración
 
 Puedes acceder al panel de administración con las siguientes credenciales:
@@ -71,10 +93,10 @@ Puedes acceder al panel de administración con las siguientes credenciales:
 ![14](https://github.com/mariarosete/skillTech/blob/main/screenshots/14.png?raw=true) 
 ![15](https://github.com/mariarosete/skillTech/blob/main/screenshots/15.png?raw=true)  
 
-### 🔄 Solictudes de soporte 
+### 📨 Solicitudes de soporte 
 ![16](https://github.com/mariarosete/skillTech/blob/main/screenshots/16.png?raw=true)
 
-### 🔄 Gestión de contenido  
+### 📂 Gestión de contenido  
 ![17](https://github.com/mariarosete/skillTech/blob/main/screenshots/17.png?raw=true)
 
 ---
@@ -86,3 +108,4 @@ Puedes acceder al panel de administración con las siguientes credenciales:
 💻 [GitHub](https://github.com/mariarosete)
 
 ---
+
