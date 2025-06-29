@@ -1,0 +1,19 @@
+# Archivos de entorno/editor
+.vscode/
+.vs/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Composer
+vendor/
+composer.lock
+
+# Cachés de PHP
+*.cache
+*.php~
