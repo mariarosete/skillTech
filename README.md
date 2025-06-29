@@ -33,13 +33,22 @@ Java · Spring Boot · MySQL · JWT · JavaScript · HTML · CSS
 
 ## 💻 Cómo ejecutar el frontend
 
-1. Clona este repositorio o descárgalo como ZIP.
-   ```bash
-git clone https://github.com/mariarosete/skillTech.git
 
-3. Abre la carpeta `front` en tu editor de código (por ejemplo, VSCode).
-4. Abre el archivo `indexAnonimo.html` ubicado en `front/usuarios/html/anonimo/`.
-5. Haz clic derecho y selecciona **"Open with Live Server"**.
+1. Clona este repositorio o descárgalo como ZIP.
+
+   ```bash
+   git clone https://github.com/mariarosete/skillTech.git
+   ```
+
+2. Abre la carpeta `front` en tu editor de código (por ejemplo, VSCode).
+
+3. Navega hasta el archivo:
+
+   ```
+   front/usuarios/html/anonimo/indexAnonimo.html
+   ```
+
+4. Haz clic derecho sobre el archivo y selecciona **"Open with Live Server"**.
 
 🔗 [Repositorio SkillTech (Frontend)](https://github.com/mariarosete/skillTech/tree/main/front)
 
