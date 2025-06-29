@@ -1,6 +1,6 @@
 # 👨‍🏫 SkillTech – Plataforma web educativa
 
-![Banner SkillTech](https://github.com/mariarosete/skillTech/blob/main/banner.png?raw=true)
+![Banner SkillTech](https://github.com/mariarosete/skillTech/blob/main/front/banner.png?raw=true)
 
 SkillTech es una plataforma web desarrollada para la gestión de cursos y recursos educativos, dirigida a estudiantes y profesionales de informática. 
 Brinda una experiencia de aprendizaje personalizada y acceso centralizado a materiales educativos.
