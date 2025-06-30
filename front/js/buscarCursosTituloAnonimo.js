@@ -6,7 +6,7 @@
             var titulo = document.querySelector('#inputTitulo').value;
 
             // Realizar la solicitud GET al backend para buscar cursos por nombre
-            fetch('https://skilltechback-42717f57a83b.herokuapp.com/cursos/buscarCursosPorTitulo/' + encodeURIComponent(titulo), {
+            fetch('http://localhost:8080/cursos/buscarCursosPorTitulo/' + encodeURIComponent(titulo), {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -79,6 +79,7 @@
                 contenedorResultados.append(document.createElement('br')); // Agregar un salto de línea entre cada enlace
             }
         }
+
 
         // Agregar listener para el formulario de búsqueda por nombre
         document.querySelector('#formBusquedaTitulo').addEventListener('submit', function(event) {

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const token = localStorage.getItem('token');
 
     // Realizar la solicitud GET para obtener los materiales de cursos
-    fetch('https://skilltechback-42717f57a83b.herokuapp.com/materialCursos/buscarMaterialCursos', {
+    fetch('http://localhost:8080/materialCursos/buscarMaterialCursos', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${material.curso.titulo}</td>
                 <td>
                     <span class="icono-modificar">
-                        <i class="fas fa-edit accion modificar" data-idmaterialCurso="${material.idmaterialCurso}"></i> 
+                        <i class="fas fa-edit modificar" data-idmaterialCurso="${material.idmaterialCurso}"></i> 
                     </span>
                     <span class="icono-eliminar">
                         <i class="fas fa-trash-alt accion eliminar" data-idmaterialCurso="${material.idmaterialCurso}"></i>
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para eliminar un material de curso
     function eliminarMaterialCurso(idmaterialCurso) {
-        fetch(`https://skilltechback-42717f57a83b.herokuapp.com/materialCursos/eliminar/${idmaterialCurso}`, {
+        fetch(`http://localhost:8080/materialCursos/eliminar/${idmaterialCurso}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('#editarModal').style.display = 'block'; // Mostrar el modal de edición
 
         // Realizar la solicitud GET para obtener los detalles del material de curso
-        fetch(`https://skilltechback-42717f57a83b.herokuapp.com/materialCursos/buscarMaterialCursos/${idmaterialCurso}`, {
+        fetch(`http://localhost:8080/materialCursos/buscarMaterialCursos/${idmaterialCurso}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             // Realizar la solicitud PUT para modificar los datos del material de curso
-            fetch(`https://skilltechback-42717f57a83b.herokuapp.com/materialCursos/modificar/${idmaterialCurso}`, {
+            fetch(`http://localhost:8080/materialCursos/modificar/${idmaterialCurso}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

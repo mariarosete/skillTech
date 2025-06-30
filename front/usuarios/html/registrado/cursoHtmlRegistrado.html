@@ -24,7 +24,7 @@
 <body>
     <!-- Encabezado con imagen -->
     <div class="header">
-        <img src="/imagenes/header/Header Proyecto.jpg" alt="Imagen de encabezado">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
     </div>
 
 <!-- Menú y submenú -->
@@ -54,33 +54,32 @@
         </div>
     </div>
 
- <!-- Contenedor para imagen HTML y temario -->
-    <div class="contenedor-colorido">
-        <div class="contenedor-flex">
-            <div class="curso-imagen">
-                <img src="/imagenes/CursoHtml.jpg" alt="Imagen del curso">
-            </div>
-            <div class="temario">
-                <h3><i class="fas fa-book-open"></i> Temario del curso</h3>
-                <ul>
-                    <li>Introducción a HTML</li>
-                    <li>Estructura básica de una página HTML</li>
-                    <li>Etiquetas y elementos HTML</li>
-                    <li>Formularios y elementos de entrada</li>
-                    <li>Estilos y diseño con CSS</li>
-                </ul>
-            </div>
-           
+<!-- Contenedor para imagen HTML y temario -->
+<div class="contenedor-colorido">
+    <div class="contenedor-flex">
+        <div class="curso-imagen">
+            <img src="/imagenes/CursoHtml.jpg" alt="Imagen del curso">
         </div>
+        <div class="temario">
+            <h3><i class="fas fa-book-open"></i> Temario del curso</h3>
+            <ul>
+                <li>Introducción a HTML</li>
+                <li>Estructura básica de una página HTML</li>
+                <li>Etiquetas y elementos HTML</li>
+                <li>Formularios y elementos de entrada</li>
+                <li>Estilos y diseño con CSS</li>
+            </ul>
+        </div>
+       
     </div>
-
+</div>
   
   <!-- Contenedor para Objetivos del curso -->
   <div class="contenedor-recomendaciones">
     <h2><i class="fas fa-bullseye"></i> Objetivos</h2>
     <div class="recomendaciones">
         <div class="recomendacion">
-            <img src="/imagenes/htmlobjetivo1.jpg" alt="HTML">
+            <img src="/imagenes/Etiquetas-HTML.jpg" alt="HTML">
             <div class="titulo">Objetivo 1</div>
             <div class="descripcion">Comprender los conceptos fundamentales de HTML, incluyendo etiquetas y elementos básicos.</div>
         </div>
@@ -244,7 +243,7 @@
         const idusuario = getIdUsuarioFromToken(token);
 
         // Verificar la inscripción del usuario en el curso antes de realizar la solicitud POST
-        const urlComprobarInscripcion = `https://skilltechback-42717f57a83b.herokuapp.com/inscripciones/buscarInscripcionUsuarioCurso/${idusuario}/${idcurso}`;
+        const urlComprobarInscripcion = `http://localhost:8080/inscripciones/buscarInscripcionUsuarioCurso/${idusuario}/${idcurso}`;
 
         fetch(urlComprobarInscripcion, {
             method: 'GET',
@@ -269,7 +268,7 @@
                 // El usuario no está inscrito en el curso
                 console.log('El usuario no está inscrito en este curso');
                 // Realizar la solicitud POST para inscribir al usuario
-                fetch('https://skilltechback-42717f57a83b.herokuapp.com/inscripciones/insertar', {
+                fetch('http://localhost:8080/inscripciones/insertar', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

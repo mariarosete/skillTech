@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Cargar los datos desde el archivo JSON
+    // Cargar los datos desde el archivo JSON para el gráfico de inscripciones
     fetch('/json/cursosGrafica.json')
         .then(response => response.json())
         .then(data => {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     hoverBorderColor: '#000', // Color del borde al pasar el ratón
                 }]
             };
-            
+
             const config = {
                 type: 'pie',
                 data: dataConfig,
@@ -70,10 +70,27 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             };
-            
 
             // Crear el gráfico usando Chart.js
             new Chart(ctx, config);
         })
         .catch(error => console.error('Error al cargar el archivo JSON:', error));
+
+    // Función para actualizar el contador de usuarios
+    function actualizarContadorUsuarios() {
+        // Aquí podrías realizar una petición al servidor para obtener el número de usuarios registrados
+        // Pero como en este caso no tenemos una fuente de datos real, simplemente vamos a establecer un número aleatorio
+        const numeroUsuarios = Math.floor(Math.random() * 20); // Número aleatorio entre 0 y 100
+        document.getElementById('numeroUsuarios').textContent = numeroUsuarios;
+    }
+
+    // Obtener el total de inscripciones al cargar la página
+    actualizarContadorUsuarios();
+
+    // Manejar el registro de un nuevo usuario
+    document.getElementById('registrarUsuario').addEventListener('click', function() {
+        // Aquí podrías enviar una petición al servidor para registrar un nuevo usuario
+        // Pero como en este caso no tenemos una funcionalidad real de registro, simplemente vamos a actualizar el contador
+        actualizarContadorUsuarios();
+    });
 });

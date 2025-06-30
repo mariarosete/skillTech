@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Token:', token); // Verificar que el token se obtiene correctamente
 
     // Hacer una solicitud Fetch para obtener los materiales del curso desde el servidor
-    fetch('https://skilltechback-42717f57a83b.herokuapp.com/materialCursos/buscarMaterialCursos', {
+    fetch('http://localhost:8080/materialCursos/buscarMaterialCursos', {
         method: 'GET', // Agregar el método GET
         headers: {
             'Authorization': 'Bearer ' + token // Incluir el token JWT en el header de Authorization

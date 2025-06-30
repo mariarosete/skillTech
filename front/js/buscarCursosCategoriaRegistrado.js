@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var categoria = document.querySelector('#selectCategoria').value;
 
         // Realizar la solicitud GET al backend para buscar cursos por categoría
-        fetch('https://skilltechback-42717f57a83b.herokuapp.com/cursos/buscarCursosPorCategoria/' + encodeURIComponent(categoria), {
+        fetch('http://localhost:8080/cursos/buscarCursosPorCategoria/' + encodeURIComponent(categoria), {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

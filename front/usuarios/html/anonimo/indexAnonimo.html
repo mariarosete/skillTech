@@ -52,30 +52,29 @@
     </div> 
        
     <!-- Contenedor para Carrusel y Gráfico -->
-    <div class="contenedor-graficos">
-        <!-- Carrusel de cursos -->
-        <div class="carrusel">
-            <div class="atras">
-                <img id="atras" src="/imagenes/atras.svg" alt="atras" loading="lazy">
-            </div>
-            <div class="imagenes">
-                <div id="img"></div>
-                <div id="texto" class="texto">
-                    <h3></h3>
-                    <p></p>
-                </div>
-            </div>
-            <div class="adelante">
-                <img id="adelante" src="/imagenes/adelante.svg" alt="adelante" loading="lazy">
+<div class="contenedor-graficos">
+    <!-- Carrusel de cursos -->
+    <div class="carrusel">
+        <div class="atras">
+            <img id="atras" src="/imagenes/atras.svg" alt="atras" loading="lazy">
+        </div>
+        <div class="imagenes">
+            <div id="img"></div>
+            <div id="texto" class="texto">
+                <h3></h3>
+                <p></p>
             </div>
         </div>
-        
-        <!-- Contenedor del gráfico -->
-        <div class="contenedor-grafico">
-            <canvas id="graficoInscripciones"></canvas>
+        <div class="adelante">
+            <img id="adelante" src="/imagenes/adelante.svg" alt="adelante" loading="lazy">
         </div>
+    </div>
+    
+    <!-- Contenedor del gráfico -->
+    <div class="contenedor-grafico">
+        <canvas id="graficoInscripciones"></canvas>
+    </div>
 
-        
     </div>
 
     <div class="puntos" id="puntos"></div>
@@ -221,6 +220,8 @@
                     <!-- Botón de registro -->
                     <button type="submit" class="botonEnviar"><i class="fas fa-sign-in-alt"></i> Entrar</button>
 
+
+
                     <!-- Mensaje de error -->
                     <p class="mensaje-error" id="mensajeError" style="display: none; color: #ff5b5b;"><i class="fas fa-exclamation-circle"></i> Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.</p>
 
@@ -263,6 +264,7 @@
 
                     <!-- Botón de registro -->
                     <button type="submit" class="botonRegistro"><i class="fas fa-user-plus"></i> Registrarse</button>
+
                 </form>
             </div>
         </div>
@@ -321,7 +323,7 @@
             var clave = document.querySelector('#contrasena').value;
 
             // Realizar la solicitud Fetch
-            fetch('https://skilltechback-42717f57a83b.herokuapp.com/usuarios/login', {
+            fetch('http://localhost:8080/usuarios/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -376,8 +378,8 @@
     </script>
 
 
- <!-- Script para REGISTRAR un usuario en la BBDD desde el formulario de registro -->
- <script>
+<!-- Script para REGISTRAR un usuario en la BBDD desde el formulario de registro -->
+<script>
     document.querySelector("#registro2").addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -404,8 +406,7 @@
         };
 
         // Realizar la solicitud Fetch
-        fetch('https://skilltechback-42717f57a83b.herokuapp.com/usuarios/insertar', {
-            
+        fetch('http://localhost:8080/usuarios/insertar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -449,6 +450,8 @@
         });
     });
 </script>
+
+
 <script>
     // Obtener la URL de la página actual
     var currentPage = window.location.pathname;

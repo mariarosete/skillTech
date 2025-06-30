@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const token = localStorage.getItem('token');
 
     // Realizar la solicitud GET para obtener los cursos
-    fetch('https://skilltechback-42717f57a83b.herokuapp.com/cursos/buscarCursos', {
+    fetch('http://localhost:8080/cursos/buscarCursos', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
             tbodyCursos.append(fila);
         }
-        
 
         // Agregar listener de eventos a los botones de modificar
         const botonesModificar = document.querySelectorAll('.modificar');
@@ -84,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para eliminar un curso
     function eliminarCurso(idCurso) {
-        fetch(`https://skilltechback-42717f57a83b.herokuapp.com/cursos/eliminar/${idCurso}`, {
+        fetch(`http://localhost:8080/cursos/eliminar/${idCurso}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -116,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('#editarModal').style.display = 'block'; // Mostrar el modal de edición
 
         // Realizar la solicitud GET para obtener los detalles del curso
-        fetch(`https://skilltechback-42717f57a83b.herokuapp.com/cursos/buscarCursos/${idCurso}`, {
+        fetch(`http://localhost:8080/cursos/buscarCursos/${idCurso}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -153,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             // Realizar la solicitud PUT para modificar los datos del curso
-            fetch(`https://skilltechback-42717f57a83b.herokuapp.com/cursos/modificar/${idCurso}`, {
+            fetch(`http://localhost:8080/cursos/modificar/${idCurso}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

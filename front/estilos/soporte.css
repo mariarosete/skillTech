@@ -63,7 +63,7 @@ label {
 
 .soporteinput,
 textarea {
-    width: 85%;
+    width: 80%;
     padding: 12px; 
     margin-top: 8px;
     margin-bottom: 25px;
@@ -75,7 +75,7 @@ textarea {
     background-color: #E6E6EE;
 }
 
-select {
+select  {
     height: 48px;
 }
 
@@ -92,7 +92,7 @@ textarea {
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
-    width: 85%;
+    width: 80%;
     transition: background-color 0.3s ease;
 }
 
@@ -124,7 +124,6 @@ textarea {
     color: red;
     margin-right: 5px;
 }
-
 .contenedor-colorido2 {
     background-color: #acbef2;
     border-radius: 15px;

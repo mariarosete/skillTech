@@ -20,9 +20,9 @@
 </head>
 <body>
 
-   <!-- Encabezado con imagen -->
-   <div class="header">
-    <img src="/imagenes/header/Header Proyecto.jpg" alt="Imagen de encabezado">
+    <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
     </div>
             
     <!-- Menú y submenú -->
@@ -80,7 +80,7 @@
             var solicitudActiva = null; 
     
             function cargarSolicitudes() {
-                fetch('https://skilltechback-42717f57a83b.herokuapp.com/solicitaSoporte/buscarSoporte', {
+                fetch('http://localhost:8080/solicitaSoporte/buscarSoporte', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -138,7 +138,7 @@
                 var idSolicitud = document.getElementById('idSolicitud').value; // Obtener el ID de la solicitud
     
                 if (idSolicitud) {
-                    fetch('https://skilltechback-42717f57a83b.herokuapp.com/solicitaSoporte/modificar/' + idSolicitud, {
+                    fetch('http://localhost:8080/solicitaSoporte/modificar/' + idSolicitud, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json',

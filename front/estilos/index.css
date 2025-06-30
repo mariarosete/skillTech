@@ -687,6 +687,8 @@ footer {
     margin-bottom: 20px;
     color: var(--color-azulMuyOscuro); 
 }
+
+
 @media (max-width: 768px) {
     .div-principal {
         width: 100%; 

@@ -6,7 +6,7 @@
             var categoria = document.querySelector('#selectCategoria').value;
 
             // Realizar la solicitud GET al backend para buscar cursos por categoría
-            fetch('https://skilltechback-42717f57a83b.herokuapp.com/cursos/buscarCursosPorCategoria/' + encodeURIComponent(categoria), {
+            fetch('http://localhost:8080/cursos/buscarCursosPorCategoria/' + encodeURIComponent(categoria), {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -51,34 +51,35 @@
             contenedorResultados.append(mensajeElemento);
         }
 
-       // Función para mostrar los cursos en la página
-       function mostrarCursos(cursos) {
-        var contenedorResultados = document.querySelector('#contenedorResultados');
+        // Función para mostrar los cursos en la página
+        function mostrarCursos(cursos) {
+            var contenedorResultados = document.querySelector('#contenedorResultados');
 
-        // Recorrer la lista de cursos
-        for (const curso of cursos) {
-            // Crear enlaces para todos los cursos
-            var enlaceCurso = document.createElement('a');
-            enlaceCurso.textContent = curso.titulo + ' - ' + curso.descripcion;
-            enlaceCurso.className = 'enlace-curso';
+            // Recorrer la lista de cursos
+            for (const curso of cursos) {
+                // Crear enlaces para todos los cursos
+                var enlaceCurso = document.createElement('a');
+                enlaceCurso.textContent = curso.titulo + ' - ' + curso.descripcion;
+                enlaceCurso.className = 'enlace-curso';
 
-            // Verificar si el curso es uno de los específicos con URL
-            if (curso.titulo === 'Curso Html') {
-                enlaceCurso.href = '/usuarios/html/anonimo/cursoHtmlAnonimo.html';
-            } else if (curso.titulo === 'Curso Java') {
-                enlaceCurso.href = '/usuarios/html/anonimo/cursoJavaAnonimo.html';
-            } else if (curso.titulo === 'Curso JavaScript') {
-                enlaceCurso.href = '/usuarios/html/anonimo/cursoJavascriptAnonimo.html';
-            } else if (curso.titulo === 'Curso Spring') {
-                enlaceCurso.href = '/usuarios/html/anonimo/cursoSpringAnonimo.html';
-            } else {
-                enlaceCurso.href = '#'; // Enlace predeterminado para los cursos sin URL específica
+                // Verificar si el curso es uno de los específicos con URL
+                if (curso.titulo === 'Curso Html') {
+                    enlaceCurso.href = '/usuarios/html/anonimo/cursoHtmlAnonimo.html';
+                } else if (curso.titulo === 'Curso Java') {
+                    enlaceCurso.href = '/usuarios/html/anonimo/cursoJavaAnonimo.html';
+                } else if (curso.titulo === 'Curso JavaScript') {
+                    enlaceCurso.href = '/usuarios/html/anonimo/cursoJavascriptAnonimo.html';
+                } else if (curso.titulo === 'Curso Spring') {
+                    enlaceCurso.href = '/usuarios/html/anonimo/cursoSpringAnonimo.html';
+                } else {
+                    enlaceCurso.href = '#'; // Enlace predeterminado para los cursos sin URL específica
+                }
+
+                contenedorResultados.append(enlaceCurso);
+                contenedorResultados.append(document.createElement('br')); // Agregar un salto de línea entre cada enlace
             }
-
-            contenedorResultados.append(enlaceCurso);
-            contenedorResultados.append(document.createElement('br')); // Agregar un salto de línea entre cada enlace
         }
-    }
+
 
         // Agregar listener para el formulario de búsqueda por categoría
         document.querySelector('#formBusquedaCategoria').addEventListener('submit', function(event) {

@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="/estilos/admin.css">
     <link rel="stylesheet" href="/estilos/index.css">
     <link rel="stylesheet" href="/estilos/perfil.css"> 
-
+    
     <!-- JS -->
     <script src="/js/modal.js"></script>
-
-   
+    
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/7a779ca8ce.js" crossorigin="anonymous"></script>
 
@@ -26,7 +25,7 @@
 <body>
     <!-- Encabezado con imagen -->
     <div class="header">
-        <img src="/imagenes/header/Header Proyecto.jpg" alt="Imagen de encabezado">
+        <img src="/imagenes/header/HeaderSkillTech.png" alt="Imagen de encabezado">
     </div>
 
     <!-- Menú y submenú -->
@@ -189,7 +188,7 @@
             var clave = document.querySelector('#contrasena').value;
 
             // Realizar la solicitud Fetch
-            fetch('https://skilltechback-42717f57a83b.herokuapp.com/usuarios/login', {
+            fetch('http://localhost:8080/usuarios/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -272,7 +271,7 @@
         };
 
         // Realizar la solicitud Fetch
-        fetch('https://skilltechback-42717f57a83b.herokuapp.com/usuarios/insertar', {
+        fetch('http://localhost:8080/usuarios/insertar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -330,6 +329,5 @@
             }
         }
     </script>
-    
 </body>
 </html>
