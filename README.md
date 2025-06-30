@@ -64,23 +64,21 @@ Java · Spring Boot · MySQL · JWT · JavaScript · HTML · CSS
    git clone https://github.com/mariarosete/skillTech.git
    ```
 
-3. Abre Eclipse y **elige un workspace distinto** del del proyecto original (por ejemplo, uno vacío o diferente al que usaste para desarrollarlo).
-
-4. En Eclipse, ve a:
+3. En Eclipse, ve a:
 
    ```
    File > Import > Maven > Existing Maven Projects
    ```
 
-5. Selecciona como **Root Directory** la carpeta:
+4. Selecciona como **Root Directory** la carpeta:
 
    ```
    skillTech/back
    ```
 
-6. Eclipse detectará automáticamente el archivo `pom.xml`. Márcalo y haz clic en **Finish**.
+5. Eclipse detectará automáticamente el archivo `pom.xml`. Márcalo y haz clic en **Finish**.
 
-7. Una vez importado, ejecuta la clase principal:
+6. Una vez importado, ejecuta la clase principal:
 
    ```
    PdawMariaRoseteTokensApplication.java
