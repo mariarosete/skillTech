@@ -54,9 +54,39 @@ Java · Spring Boot · MySQL · JWT · JavaScript · HTML · CSS
 
 ---
 
-## 🧠 Repositorio backend
+## 💻 Cómo ejecutar el backend
 
-El backend está desarrollado en Java con Spring Boot y se encuentra en el siguiente repositorio:
+1. Asegúrate de tener Java 17+ y Eclipse (o cualquier IDE compatible con Maven y Spring Boot).
+
+2. Si aún no lo has hecho, clona este repositorio:
+
+   ```bash
+   git clone https://github.com/mariarosete/skillTech.git
+   ```
+
+3. Abre Eclipse y **elige un workspace distinto** del del proyecto original (por ejemplo, uno vacío o diferente al que usaste para desarrollarlo).
+
+4. En Eclipse, ve a:
+
+   ```
+   File > Import > Maven > Existing Maven Projects
+   ```
+
+5. Selecciona como **Root Directory** la carpeta:
+
+   ```
+   skillTech/back
+   ```
+
+6. Eclipse detectará automáticamente el archivo `pom.xml`. Márcalo y haz clic en **Finish**.
+
+7. Una vez importado, ejecuta la clase principal:
+
+   ```
+   PdawMariaRoseteTokensApplication.java
+   ```
+
+   con clic derecho → **Run As > Spring Boot App**.
 
 🔗 [Repositorio SkillTech (Backend)](https://github.com/mariarosete/skillTech/tree/main/back)
 
