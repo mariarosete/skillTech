@@ -120,7 +120,7 @@ Puedes acceder al panel de administración con las siguientes credenciales:
 | 📚 Panel de administración | 🔄 Gestión de usuarios |
 |----------------------------|------------------------|
 | ![13](https://github.com/mariarosete/skillTech/blob/main/screenshots/13.png?raw=true) | ![14](https://github.com/mariarosete/skillTech/blob/main/screenshots/14.png?raw=true) |
-| | ![15](https://github.com/mariarosete/skillTech/blob/main/screenshots/15.png?raw=true) |
+| ![15](https://github.com/mariarosete/skillTech/blob/main/screenshots/15.png?raw=true) |
 
 | 📨 Solicitudes de soporte | 📂 Gestión de contenido |
 |---------------------------|--------------------------|
