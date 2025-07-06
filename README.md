@@ -101,40 +101,31 @@ Puedes acceder al panel de administración con las siguientes credenciales:
 
 ## 📸 Capturas de pantalla
 
-### 🏠 Inicio  
-![1](https://github.com/mariarosete/skillTech/blob/main/screenshots/1.png?raw=true)
-![2](https://github.com/mariarosete/skillTech/blob/main/screenshots/2.png?raw=true)
-![3](https://github.com/mariarosete/skillTech/blob/main/screenshots/3.png?raw=true)
+| 🏠 Inicio | 📋 Catálogo |
+|----------|-------------|
+| ![1](https://github.com/mariarosete/skillTech/blob/main/screenshots/1.png?raw=true) | ![4](https://github.com/mariarosete/skillTech/blob/main/screenshots/4.png?raw=true) |
+| ![2](https://github.com/mariarosete/skillTech/blob/main/screenshots/2.png?raw=true) | ![5](https://github.com/mariarosete/skillTech/blob/main/screenshots/5.png?raw=true) |
+| ![3](https://github.com/mariarosete/skillTech/blob/main/screenshots/3.png?raw=true) | |
 
-### 📋 Catálogo  
-![4](https://github.com/mariarosete/skillTech/blob/main/screenshots/4.png?raw=true)
-![5](https://github.com/mariarosete/skillTech/blob/main/screenshots/5.png?raw=true)
+| 📨 Contacto | 🔑 Inicio de sesión |
+|-------------|----------------------|
+| ![12](https://github.com/mariarosete/skillTech/blob/main/screenshots/12.png?raw=true) | ![6](https://github.com/mariarosete/skillTech/blob/main/screenshots/6.png?raw=true) |
 
-### 📨 Contacto 
-![12](https://github.com/mariarosete/skillTech/blob/main/screenshots/12.png?raw=true)
+| 👤 Panel de usuario (alumno) | |
+|------------------------------|--|
+| ![7](https://github.com/mariarosete/skillTech/blob/main/screenshots/7.png?raw=true) | ![8](https://github.com/mariarosete/skillTech/blob/main/screenshots/8.png?raw=true) |
+| ![9](https://github.com/mariarosete/skillTech/blob/main/screenshots/9.png?raw=true) | ![10](https://github.com/mariarosete/skillTech/blob/main/screenshots/10.png?raw=true) |
+| ![11](https://github.com/mariarosete/skillTech/blob/main/screenshots/11.png?raw=true) | |
 
-### 🔑 Inicio de sesión 
-![6](https://github.com/mariarosete/skillTech/blob/main/screenshots/6.png?raw=true)  
+| 📚 Panel de administración | 🔄 Gestión de usuarios |
+|----------------------------|------------------------|
+| ![13](https://github.com/mariarosete/skillTech/blob/main/screenshots/13.png?raw=true) | ![14](https://github.com/mariarosete/skillTech/blob/main/screenshots/14.png?raw=true) |
+| | ![15](https://github.com/mariarosete/skillTech/blob/main/screenshots/15.png?raw=true) |
 
-### 👤 Panel de usuario (alumno)  
-![7](https://github.com/mariarosete/skillTech/blob/main/screenshots/7.png?raw=true)  
-![8](https://github.com/mariarosete/skillTech/blob/main/screenshots/8.png?raw=true)
-![9](https://github.com/mariarosete/skillTech/blob/main/screenshots/9.png?raw=true) 
-![10](https://github.com/mariarosete/skillTech/blob/main/screenshots/10.png?raw=true)  
-![11](https://github.com/mariarosete/skillTech/blob/main/screenshots/11.png?raw=true) 
+| 📨 Solicitudes de soporte | 📂 Gestión de contenido |
+|---------------------------|--------------------------|
+| ![16](https://github.com/mariarosete/skillTech/blob/main/screenshots/16.png?raw=true) | ![17](https://github.com/mariarosete/skillTech/blob/main/screenshots/17.png?raw=true) |
 
-### 📚 Panel de administración   
-![13](https://github.com/mariarosete/skillTech/blob/main/screenshots/13.png?raw=true)   
-
-### 🔄 Gestión de usuarios 
-![14](https://github.com/mariarosete/skillTech/blob/main/screenshots/14.png?raw=true) 
-![15](https://github.com/mariarosete/skillTech/blob/main/screenshots/15.png?raw=true)  
-
-### 📨 Solicitudes de soporte 
-![16](https://github.com/mariarosete/skillTech/blob/main/screenshots/16.png?raw=true)
-
-### 📂 Gestión de contenido  
-![17](https://github.com/mariarosete/skillTech/blob/main/screenshots/17.png?raw=true)
 
 ---
 
