@@ -31,6 +31,13 @@ Java · Spring Boot · MySQL · JWT · JavaScript · HTML · CSS
 - Envío de solicitudes de soporte a través de un formulario de contacto.
 
 ---
+## ✨ Aspectos destacados
+
+- Separación clara entre backend (API REST con Spring Boot) y frontend (HTML + JS).
+- Autenticación segura mediante **JWT** y control de acceso por roles.
+- Panel de administración completo y funcional, con diseño responsive.
+- Simulación realista de un entorno profesional de formación online.
+---
 
 ## 💻 Cómo ejecutar el frontend
 
@@ -129,7 +136,11 @@ Puedes acceder al panel de administración con las siguientes credenciales:
 
 
 ---
+## 🔮 Próximas mejoras
 
+- Incorporación de estadísticas visuales sobre cursos y actividad del usuario.
+- Soporte multilenguaje para mejorar la accesibilidad.
+---
 ## 📩 Contacto
 
 <p align="center">
