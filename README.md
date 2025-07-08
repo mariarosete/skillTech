@@ -20,11 +20,12 @@ Java · Spring Boot · MySQL · JWT · JavaScript · HTML · CSS
 - Crear, editar y eliminar cursos con título, descripción, categoría y materiales asociados.
 - Gestionar usuarios (registro, edición y eliminación).
 - Asignar materiales educativos a los cursos (PDF, enlaces, vídeos).
+- Gestionar las inscripciones de los alumnos a los cursos.
 - Visualizar y responder solicitudes de soporte enviadas por los usuarios.
-
+  
 ### 🎓 Para alumnos:
 
-- Registro e inicio de sesión con rol (alumno o administrador).
+- Registro e inicio de sesión con rol (alumno o administrador). Autenticación mediante JWT.
 - Acceso a los cursos en los que está inscrito.
 - Consulta y edición parcial de su perfil personal.
 - Envío de solicitudes de soporte a través de un formulario de contacto.
