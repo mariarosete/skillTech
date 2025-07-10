@@ -6,6 +6,19 @@ SkillTech es una plataforma web desarrollada para la gestión de cursos y recurs
 Brinda una experiencia de aprendizaje personalizada y acceso centralizado a materiales educativos.
 
 ---
+## 📑 Tabla de contenidos
+
+- [👨‍🏫 SkillTech – Plataforma web educativa](#-skilltech--plataforma-web-educativa)
+- [🛠 Tecnologías utilizadas](#-tecnologías-utilizadas)
+- [🚀 Funcionalidades destacadas](#-funcionalidades-destacadas)
+- [✨ Aspectos destacados](#-aspectos-destacados)
+- [💻 Cómo ejecutar el frontend](#-cómo-ejecutar-el-frontend)
+- [💻 Cómo ejecutar el backend](#-cómo-ejecutar-el-backend)
+- [🔐 Acceso al panel de administración](#-acceso-al-panel-de-administración)
+- [📸 Capturas de pantalla](#-capturas-de-pantalla)
+- [🔮 Próximas mejoras](#-próximas-mejoras)
+- [📩 Contacto](#-contacto)
+---
 
 ## 🛠 Tecnologías utilizadas
 
