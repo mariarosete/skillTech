@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Token:', token); // Verificar que el token se obtiene correctamente
 
     // Hacer una solicitud Fetch para obtener los materiales del curso desde el servidor
-    fetch('http://localhost:8080/materialCursos/buscarMaterialCursos', {
+    fetch('https://skilltech-api.onrender.com/materialCursos/buscarMaterialCursos', {
         method: 'GET', // Agregar el método GET
         headers: {
             'Authorization': 'Bearer ' + token // Incluir el token JWT en el header de Authorization
