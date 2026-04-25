@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Realizar la solicitud Fetch
-        fetch('http://localhost:8080/usuarios/insertar', {
+        fetch('https://skilltech-api.onrender.com/usuarios/insertar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
