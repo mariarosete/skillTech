@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Función para cargar los cursos disponibles
     function cargarCursosDisponibles() {
-        fetch('http://localhost:8080/cursos/buscarCursos', {
+        fetch('https://skilltech-api.onrender.com/cursos/buscarCursos', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Realizar la solicitud Fetch para insertar el contenido
-        fetch('http://localhost:8080/materialCursos/insertar', {
+        fetch('https://skilltech-api.onrender.com/materialCursos/insertar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
