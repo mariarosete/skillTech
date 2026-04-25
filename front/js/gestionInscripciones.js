@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
             // Agregar el contenido HTML a la fila
             fila.innerHTML = `
-                <td>${inscripcion.usuario.nombre} ${inscripcion.usuario.apellidos}</td>
-                <td>${inscripcion.curso.titulo}</td>
+                <td>${inscripcion.usuario ? `${inscripcion.usuario.nombre} ${inscripcion.usuario.apellidos}` : 'Usuario no disponible'}</td>
+                <td>${inscripcion.curso ? inscripcion.curso.titulo : 'Curso no disponible'}</td>
                 <td class="accion-columna">
                     <div class="centrar-vertical">
                         <i class="fas fa-trash-alt accion eliminar" data-idinscripcion="${inscripcion.idinscripcion}"></i>
