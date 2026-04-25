@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var categoria = document.querySelector('#selectCategoria').value;
 
         // Realizar la solicitud GET al backend para buscar cursos por categoría
-        fetch('http://localhost:8080/cursos/buscarCursosPorCategoria/' + encodeURIComponent(categoria), {
+        fetch('https://skilltech-api.onrender.com/cursos/buscarCursosPorCategoria/' + encodeURIComponent(categoria), {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
