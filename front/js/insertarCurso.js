@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Realizar la solicitud Fetch
-        fetch('http://localhost:8080/cursos/insertar', {
+        fetch('https://skilltech-api.onrender.com/cursos/insertar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
