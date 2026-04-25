@@ -188,7 +188,7 @@
             var clave = document.querySelector('#contrasena').value;
 
             // Realizar la solicitud Fetch
-            fetch('http://localhost:8080/usuarios/login', {
+            fetch('https://skilltech-api.onrender.com/usuarios/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -271,7 +271,7 @@
         };
 
         // Realizar la solicitud Fetch
-        fetch('http://localhost:8080/usuarios/insertar', {
+        fetch('https://skilltech-api.onrender.com/usuarios/insertar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
