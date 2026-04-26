@@ -2,9 +2,8 @@
 
 ![Banner SkillTech](https://github.com/mariarosete/skillTech/blob/main/front/banner.png?raw=true)
 
-SkillTech es una plataforma web educativa desarrollada como aplicación full stack, que permite la gestión de cursos, usuarios e inscripciones en un entorno real.
-
-Incluye un backend con API REST, autenticación mediante JWT y un frontend conectado en producción.
+Desarrollo de backend en Spring Boot con base de datos MySQL, creando una API REST para la gestión de usuarios, cursos e inscripciones. 
+Implementa autenticación con JWT, control de acceso por roles y persistencia de datos, siguiendo una arquitectura cliente-servidor.
 
 ---
 
