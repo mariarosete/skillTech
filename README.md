@@ -15,6 +15,8 @@ Puedes probar la aplicación aquí:
 
 🖥️ Optimizada para versión escritorio (no adaptada a móvil)
 
+⚠️ El backend puede tardar unos segundos en arrancar si está inactivo.
+
 👤 Acceso admin:  
 - Usuario: `maria`  
 - Contraseña: `123`  
