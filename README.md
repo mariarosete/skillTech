@@ -32,7 +32,6 @@ Puedes probar la aplicación aquí:
 ## 📑 Tabla de contenidos
 
 - [🌐 Aplicación en funcionamiento](#-aplicación-en-funcionamiento)
-- [🎥 Demo en vídeo](#-demo-en-vídeo)
 - [🛠 Tecnologías utilizadas](#-tecnologías-utilizadas)
 - [🧩 Arquitectura](#-arquitectura)
 - [🚀 Funcionalidades destacadas](#-funcionalidades-destacadas)
