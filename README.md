@@ -14,7 +14,7 @@ Puedes probar la aplicación aquí:
 
 [👉 Probar SkillTech](https://maria-skilltech.vercel.app/usuarios/html/anonimo/indexAnonimo.html)
 
-🖥️ Optimizada para versión escritorio
+🖥️ Optimizada para versión escritorio (no adaptada a móvil)
 
 👤 Acceso admin:  
 - Usuario: `maria`  
@@ -22,9 +22,17 @@ Puedes probar la aplicación aquí:
 
 ---
 
+## 🎥 Demo en vídeo
+
+[Ver demo en vídeo](https://mariarosete.vercel.app/skillTech.mp4)
+
+---
+
+
 ## 📑 Tabla de contenidos
 
 - [🌐 Aplicación en funcionamiento](#-aplicación-en-funcionamiento)
+- [🎥 Demo en vídeo](#-demo-en-vídeo)
 - [🛠 Tecnologías utilizadas](#-tecnologías-utilizadas)
 - [🧩 Arquitectura](#-arquitectura)
 - [🚀 Funcionalidades destacadas](#-funcionalidades-destacadas)
