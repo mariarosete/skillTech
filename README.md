@@ -8,11 +8,13 @@ Incluye un backend con API REST, autenticación mediante JWT y un frontend conec
 
 ---
 
-## 🌐 Demo en producción
+## 🌐 Aplicación en funcionamiento
 
 Puedes probar la aplicación aquí:
 
-👉 https://maria-skilltech.vercel.app/usuarios/html/anonimo/indexAnonimo.html  
+[👉 Probar SkillTech](https://maria-skilltech.vercel.app/usuarios/html/anonimo/indexAnonimo.html)
+
+🖥️ Optimizada para versión escritorio
 
 👤 Acceso admin:  
 - Usuario: `maria`  
@@ -22,6 +24,7 @@ Puedes probar la aplicación aquí:
 
 ## 📑 Tabla de contenidos
 
+- [🌐 Aplicación en funcionamiento](#-aplicación-en-funcionamiento)
 - [🛠 Tecnologías utilizadas](#-tecnologías-utilizadas)
 - [🧩 Arquitectura](#-arquitectura)
 - [🚀 Funcionalidades destacadas](#-funcionalidades-destacadas)
