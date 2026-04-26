@@ -23,7 +23,9 @@ Puedes probar la aplicación aquí:
 
 ## 🎥 Demo en vídeo
 
-[Ver demo en vídeo](http://localhost:5173/src/assets/skillTech.mp4)
+Puedes ver el funcionamiento de la aplicación aquí:
+
+👉 https://mariarosete.vercel.app/assets/skillTech-CbHMBt_u.mp4
 
 ---
 
