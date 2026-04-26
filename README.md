@@ -24,7 +24,7 @@ Puedes probar la aplicación aquí:
 
 ## 🎥 Demo en vídeo
 
-[Ver demo en vídeo](https://mariarosete.vercel.app/skillTech.mp4)
+[Ver demo en vídeo](http://localhost:5173/src/assets/skillTech.mp4)
 
 ---
 
