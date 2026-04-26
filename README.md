@@ -2,22 +2,33 @@
 
 ![Banner SkillTech](https://github.com/mariarosete/skillTech/blob/main/front/banner.png?raw=true)
 
-SkillTech es una plataforma web desarrollada para la gestión de cursos y recursos educativos, dirigida a estudiantes y profesionales de informática. 
-Brinda una experiencia de aprendizaje personalizada y acceso centralizado a materiales educativos.
+SkillTech es una plataforma web educativa desarrollada como aplicación full stack, que permite la gestión de cursos, usuarios e inscripciones en un entorno real.
+
+Incluye un backend con API REST, autenticación mediante JWT y un frontend conectado en producción.
 
 ---
+
+## 🌐 Demo en producción
+
+Puedes probar la aplicación aquí:
+
+👉 https://maria-skilltech.vercel.app/usuarios/html/anonimo/indexAnonimo.html  
+
+👤 Acceso admin:  
+- Usuario: `maria`  
+- Contraseña: `123`  
+
+---
+
 ## 📑 Tabla de contenidos
 
-- [👨‍🏫 SkillTech – Plataforma web educativa](#-skilltech--plataforma-web-educativa)
 - [🛠 Tecnologías utilizadas](#-tecnologías-utilizadas)
+- [🧩 Arquitectura](#-arquitectura)
 - [🚀 Funcionalidades destacadas](#-funcionalidades-destacadas)
 - [✨ Aspectos destacados](#-aspectos-destacados)
-- [💻 Cómo ejecutar el frontend](#-cómo-ejecutar-el-frontend)
-- [💻 Cómo ejecutar el backend](#-cómo-ejecutar-el-backend)
-- [🔐 Acceso al panel de administración](#-acceso-al-panel-de-administración)
-- [📸 Capturas de pantalla](#-capturas-de-pantalla)
 - [🔮 Próximas mejoras](#-próximas-mejoras)
 - [📩 Contacto](#-contacto)
+
 ---
 
 ## 🛠 Tecnologías utilizadas
@@ -30,6 +41,14 @@ Brinda una experiencia de aprendizaje personalizada y acceso centralizado a mate
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
+---
+
+## 🧩 Arquitectura
+
+- **Backend:** API REST con Spring Boot desplegada en Render  
+- **Base de datos:** MySQL en Railway  
+- **Frontend:** HTML, CSS y JavaScript desplegado en Vercel  
+- **Autenticación:** JWT con control de roles  
 
 ---
 
@@ -37,101 +56,40 @@ Brinda una experiencia de aprendizaje personalizada y acceso centralizado a mate
 
 ### 👩‍💻 Para administradores:
 
-- Crear, editar y eliminar cursos con título, descripción, categoría y materiales asociados.
+- Crear, editar y eliminar cursos con título, descripción y categoría.
 - Gestionar usuarios (registro, edición y eliminación).
 - Asignar materiales educativos a los cursos (PDF, enlaces, vídeos).
-- Gestionar las inscripciones de los alumnos a los cursos.
-- Visualizar y responder solicitudes de soporte enviadas por los usuarios.
-  
+- Gestionar inscripciones de alumnos.
+- Visualizar y responder solicitudes de soporte.
+
 ### 🎓 Para alumnos:
 
-- Registro e inicio de sesión con rol (alumno o administrador). Autenticación mediante JWT.
+- Registro e inicio de sesión con autenticación JWT.
 - Acceso a los cursos en los que está inscrito.
-- Consulta y edición parcial de su perfil personal.
-- Envío de solicitudes de soporte a través de un formulario de contacto.
+- Consulta y edición parcial de su perfil.
+- Envío de solicitudes de soporte.
 
 ---
+
 ## ✨ Aspectos destacados
 
-- Separación clara entre backend (API REST con Spring Boot) y frontend (HTML + JS).
-- Autenticación segura mediante **JWT** y control de acceso por roles.
-- Panel de administración completo y funcional, con diseño responsive.
-- Simulación realista de un entorno profesional de formación online.
----
-
-## 💻 Cómo ejecutar el frontend
-
-
-1. Clona este repositorio o descárgalo como ZIP.
-
-   ```bash
-   git clone https://github.com/mariarosete/skillTech.git
-   ```
-
-2. Abre la carpeta `front` en tu editor de código (por ejemplo, VSCode).
-
-3. Navega hasta el archivo:
-
-   ```
-   front/usuarios/html/anonimo/indexAnonimo.html
-   ```
-
-4. Haz clic derecho sobre el archivo y selecciona **"Open with Live Server"**.
-
-🔗 [Repositorio SkillTech (Frontend)](https://github.com/mariarosete/skillTech/tree/main/front)
-
----
-
-## 💻 Cómo ejecutar el backend
-
-1. Asegúrate de tener Java 17+ y Eclipse (o cualquier IDE compatible con Maven y Spring Boot).
-
-2. Si aún no lo has hecho, clona este repositorio:
-
-   ```bash
-   git clone https://github.com/mariarosete/skillTech.git
-   ```
-
-3. En Eclipse, ve a:
-
-   ```
-   File > Import > Maven > Existing Maven Projects
-   ```
-
-4. Selecciona como **Root Directory** la carpeta:
-
-   ```
-   skillTech/back
-   ```
-
-5. Eclipse detectará automáticamente el archivo `pom.xml`. Márcalo y haz clic en **Finish**.
-
-6. Una vez importado, ejecuta la clase principal:
-
-   ```
-   PdawMariaRoseteTokensApplication.java
-   ```
-
-   con clic derecho → **Run As > Spring Boot App**.
-
-🔗 [Repositorio SkillTech (Backend)](https://github.com/mariarosete/skillTech/tree/main/back)
-
----
-
-## 🔐 Acceso al panel de administración
-
-Puedes acceder al panel de administración con las siguientes credenciales:
-
-- **Usuario:** `maria`  
-- **Contraseña:** `123`
+- Aplicación full stack desplegada en producción.
+- Separación clara entre backend (API REST) y frontend.
+- Autenticación segura mediante JWT y control de roles.
+- Integración real con base de datos.
+- Panel de administración funcional y responsive.
 
 ---
 
 ## 🔮 Próximas mejoras
 
-- Incorporación de estadísticas visuales sobre cursos y actividad del usuario.
-- Soporte multilenguaje para mejorar la accesibilidad.
+- Incorporación de estadísticas visuales.
+- Mejora de la experiencia de usuario.
+- Soporte multilenguaje.
+- Optimización de rendimiento y seguridad.
+
 ---
+
 ## 📩 Contacto
 
 <p align="center">
@@ -144,10 +102,8 @@ Puedes acceder al panel de administración con las siguientes credenciales:
   <a href="https://github.com/mariarosete">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-   <a href="https://mariarosete.vercel.app/">
-    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
+  <a href="https://mariarosete.vercel.app/">
+    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
 </p>
-
-
----
 
