@@ -13,7 +13,7 @@ Puedes probar la aplicación aquí:
 
 [👉 Probar SkillTech](https://maria-skilltech.vercel.app/usuarios/html/anonimo/indexAnonimo.html)
 
-🖥️ Optimizada para versión escritorio (no adaptada a móvil)
+🖥️ Optimizada para versión ESCRITORIO
 
 ⚠️ El backend puede tardar unos segundos en arrancar si está inactivo.
 
