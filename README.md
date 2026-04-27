@@ -31,19 +31,6 @@ Puedes ver el funcionamiento de la aplicación aquí:
 
 ---
 
-
-## 📑 Tabla de contenidos
-
-- [🌐 Aplicación en funcionamiento](#-aplicación-en-funcionamiento)
-- [🛠 Tecnologías utilizadas](#-tecnologías-utilizadas)
-- [🧩 Arquitectura](#-arquitectura)
-- [🚀 Funcionalidades destacadas](#-funcionalidades-destacadas)
-- [✨ Aspectos destacados](#-aspectos-destacados)
-- [🔮 Próximas mejoras](#-próximas-mejoras)
-- [📩 Contacto](#-contacto)
-
----
-
 ## 🛠 Tecnologías utilizadas
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
