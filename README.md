@@ -43,7 +43,7 @@ Puedes ver el funcionamiento de la aplicación aquí:
 
 ---
 
-## 🧩 Arquitectura
+## Arquitectura
 
 - **Backend:** API REST con Spring Boot desplegada en Render  
 - **Base de datos:** MySQL en Railway  
@@ -52,7 +52,7 @@ Puedes ver el funcionamiento de la aplicación aquí:
 
 ---
 
-## 🚀 Funcionalidades destacadas
+## Funcionalidades destacadas
 
 ### 👩‍💻 Para administradores:
 
@@ -71,7 +71,7 @@ Puedes ver el funcionamiento de la aplicación aquí:
 
 ---
 
-## ✨ Aspectos destacados
+## Aspectos destacados
 
 - Aplicación full stack desplegada en producción.
 - Separación clara entre backend (API REST) y frontend.
@@ -81,7 +81,7 @@ Puedes ver el funcionamiento de la aplicación aquí:
 
 ---
 
-## 🔮 Próximas mejoras
+## Próximas mejoras
 
 - Incorporación de estadísticas visuales.
 - Mejora de la experiencia de usuario.
