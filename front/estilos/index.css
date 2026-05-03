@@ -1065,4 +1065,23 @@ footer {
 .phone-icon {
     margin-right: 3px;
 }
+    .footer-column p.has-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.footer-column p.has-icon i,
+.footer-column p.has-icon svg {
+    flex-shrink: 0;
+    width: 13px;
+    text-align: center;
+}
+
+.footer-column:nth-child(3) p {
+    font-size: 10.5px;
+}
 }
