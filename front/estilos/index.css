@@ -689,9 +689,6 @@ footer {
 }
 
 
-/* =======================
-   VERSIÓN MÓVIL 
-======================= */
 @media (max-width: 768px) {
 
     * {
@@ -702,292 +699,99 @@ footer {
         overflow-x: hidden;
     }
 
-    .global {
+    /* MENÚ MÓVIL HORIZONTAL */
+    nav {
         width: 100%;
-        padding: 0 15px;
+        background-color: #6f82bd;
+        padding: 10px 8px;
+        overflow-x: auto;
+        white-space: nowrap;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
     }
 
-    /* Lista de inscripciones */
-    #listaInscripciones {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-    }
-
-    #listaInscripciones li {
-        width: 100%;
-        margin-bottom: 0;
-        padding: 18px;
-    }
-
-    .curso-titulo {
-        font-size: 18px;
-    }
-
-    .enlace-curso {
-        font-size: 15px;
-        padding: 12px;
-    }
-
-    /* Carrusel */
-    .carrusel {
-        width: 100%;
-        margin: 25px 0;
-        position: relative;
-    }
-
-    .imagenes {
-        width: 100%;
-    }
-
-    .img {
-        width: 100%;
-        height: 240px;
-        border-radius: 12px;
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
         margin: 0;
+        list-style: none;
     }
 
-    .texto {
-        width: 90%;
-        height: auto;
-        min-height: 70px;
-        padding: 10px;
-        border-radius: 18px;
-        margin-bottom: 10px;
+    nav ul li {
+        flex: 0 0 auto;
     }
 
-    .texto h3 {
-        font-size: 18px;
-        margin: 5px 0;
-    }
-
-    .texto p {
-        display: none;
-    }
-
-    .imagenes:hover .texto {
-        transform: none;
-        height: auto;
-        background-color: rgba(63, 106, 138, 0.65);
-    }
-
-    .imagenes:hover .texto p {
-        display: none;
-    }
-
-    .atras,
-    .adelante {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 10;
-        margin: 0;
-    }
-
-    .atras {
-        left: 10px;
-    }
-
-    .adelante {
-        right: 10px;
-    }
-
-    .puntos {
+    nav ul li a {
+        display: flex;
+        align-items: center;
         justify-content: center;
-        margin: 10px 0 0 0;
+        gap: 6px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.15);
+        transition: background-color 0.3s ease;
     }
 
-    .puntos p {
-        font-size: 35px;
+    nav ul li a:hover,
+    nav ul li a.active,
+    nav ul li a.actual {
+        background-color: rgba(255, 255, 255, 0.32);
     }
 
-    /* Gráficos */
-    .contenedor-graficos {
-        flex-direction: column;
-        width: 100%;
-        gap: 20px;
-    }
-
-    .contenedor-grafico {
-        width: 100%;
-        flex: none;
-        padding: 15px;
-    }
-
-    canvas {
-        height: 280px;
-    }
-
-    /* Iconos */
-    .seccion-iconos {
-        margin: 35px 15px 60px;
-        padding: 20px;
-    }
-
-    .seccion-iconos h2 {
-        font-size: 24px;
-    }
-
-    .iconos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .icono {
-        width: 100%;
-        flex-basis: auto;
-    }
-
-    .icono p {
-        font-size: 17px;
-    }
-
-    /* Testimonios */
-    .testimonios {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .testimonio {
-        width: 90%;
-        flex-basis: auto;
-        padding: 22px;
-    }
-
-    .seccion-testimonios h2 {
-        font-size: 26px;
-    }
-
-    /* Noticias */
-    .noticias {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-        margin-bottom: 60px;
-    }
-
-    .noticia {
-        width: 90%;
-    }
-
-    .seccion-noticias h2 {
-        font-size: 26px;
-    }
-
-    .contenido-noticia h3 {
-        font-size: 17px;
-    }
-
-    .contenido-noticia p,
-    .fecha {
-        font-size: 14px;
-    }
-
-    /* Recomendaciones */
-    .contenedor-recomendaciones {
-        padding: 0 15px;
-        margin-top: 35px;
-    }
-
-    .contenedor-recomendaciones h2 {
-        font-size: 24px;
-    }
-
-    .recomendaciones {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .recomendacion {
-        width: 100%;
-        max-width: 380px;
-    }
-
-    .recomendacion img {
-        width: 100%;
-        height: 200px;
-    }
-
-    /* Buscador */
-    .container {
-        width: 92%;
-        padding: 15px;
-        margin: 20px auto;
-    }
-
-    .buscadores {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 15px;
-    }
-
-    .buscadores form {
-        flex-direction: column;
-        width: 100%;
-        gap: 12px;
-    }
-
-    .buscadores select,
-    .buscadores input[type="text"] {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .buscadores button,
-    button {
-        width: 100%;
-        padding: 10px;
-    }
-
-    #formBusquedaCategoria,
-    #inputTitulo {
-        width: 100%;
-    }
-
-    #contenedorResultados {
-        padding: 15px;
-    }
-
-    /* Modal */
-    .bienvenida-modal .modal-content {
-        width: 90%;
-        padding: 25px 18px;
-    }
-
-    .bienvenida-modal h2 {
-        font-size: 22px;
-    }
-
-    .bienvenida-modal p {
-        font-size: 16px;
-    }
-
-    /* Footer */
+    /* FOOTER MÓVIL */
     footer {
+        background-color: #8fa0df;
+        padding: 35px 20px;
+        text-align: center;
+        display: flex;
         flex-direction: column;
-        gap: 25px;
-        padding: 30px 15px;
+        gap: 28px;
     }
 
     .footer-column {
-        max-width: 100%;
         width: 100%;
+        max-width: 100%;
         padding: 0;
+        align-items: center;
     }
 
     .footer-column h3 {
-        font-size: 22px;
+        font-size: 24px;
+        color: #07164a;
+        margin-bottom: 12px;
     }
 
     .footer-column p {
-        font-size: 16px;
+        font-size: 17px;
+        line-height: 1.5;
+        color: white;
+        margin: 6px 0;
         text-align: center;
+    }
+
+    .footer-column p.has-icon {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo {
+        width: 75px;
+        margin-bottom: 8px;
     }
 
     .contact-heading {
         margin-left: 0;
+    }
+
+    .phone-icon {
+        margin-right: 8px;
     }
 
     .footer-column:first-child {
