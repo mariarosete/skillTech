@@ -146,48 +146,6 @@ h2,h1{
     color: white;
 }
 
-/***************Estilos responsivos*************************************/
-@media (max-width: 1024px) {
-    .seccion {
-        width: 45%; 
-    }
-}
-@media (max-width: 1155px) {
-    .seccion {
-        width: 30%; 
-        max-width: 300px; 
-    }
-}
-@media (min-width: 769px) and (max-width: 1159px) {
-    .secciones {
-        flex-wrap: wrap; 
-        justify-content: center; 
-    }
-
-    .seccion {
-        width: calc(25% - 20px); 
-        max-width: 300px; 
-        margin: 10px; 
-    }
-}
-
-
-
-@media (max-width: 768px) {
-    .contenedor {
-        height: auto; 
-    }
-
-    .seccion {
-        width: 100%; 
-        margin: 10px 0; 
-    }
-
-    .secciones {
-        justify-content: center; 
-    }
-}
-
 /**************Botón Agregar Usuario****************************************************************************/
 .agregar-contacto {
     text-align: center;
@@ -449,3 +407,313 @@ a.seccion {
 #mostrarRegistro:hover {
     font-size: 1.3em; 
 }
+
+/* =======================
+   VERSIÓN MÓVIL 
+======================= */
+@media (max-width: 768px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+        padding: 0 15px;
+    }
+
+    /* MENÚ MÓVIL 2x2 */
+    nav {
+        width: 100%;
+        background-color: #6f82bd;
+        padding: 14px 16px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav ul li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        width: 100%;
+        min-height: 46px;
+        padding: 10px;
+        border-radius: 14px;
+        background-color: rgba(255, 255, 255, 0.18);
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active,
+    nav ul li a.actual {
+        background-color: rgba(255, 255, 255, 0.32);
+    }
+
+    /* TABLAS */
+    .contenedor-tabla,
+    .contenedor-tabla2 {
+        width: 100%;
+        padding: 0 10px;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .tablaUsuarios,
+    .tablaCursos,
+    .tablaContenido,
+    .tablaInscripciones,
+    #tablaContenido,
+    #tablaUsuarios,
+    #tablaCursos,
+    #tablaInscripciones {
+        width: 100%;
+        min-width: 650px;
+        margin: 20px 0;
+        font-size: 13px;
+    }
+
+    .tablaUsuarios th,
+    .tablaCursos th,
+    .tablaContenido th,
+    .tablaInscripciones th {
+        font-size: 13px;
+        padding: 9px;
+        white-space: nowrap;
+    }
+
+    .tablaUsuarios td,
+    .tablaCursos td,
+    .tablaContenido td,
+    .tablaInscripciones td {
+        padding: 8px;
+        white-space: nowrap;
+    }
+
+    .icono-modificar {
+        margin-right: 12px;
+    }
+
+    .icono-eliminar {
+        margin-left: 12px;
+    }
+
+    .accion-columna .eliminar {
+        margin: 0 12px;
+    }
+
+    /* SECCIONES INDEX ADMIN */
+    .contenedor {
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .secciones {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .seccion {
+        width: 100%;
+        max-width: 360px;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .seccion img {
+        height: 180px;
+    }
+
+    .seccion h2 {
+        font-size: 18px;
+    }
+
+    /* BOTÓN AGREGAR */
+    .agregar-contacto {
+        margin-top: 25px;
+        padding: 0 15px;
+    }
+
+    .agregar-contacto a {
+        width: 100%;
+        max-width: 320px;
+        padding: 12px 18px;
+    }
+
+    /* FORMULARIOS */
+    .registro-div {
+        position: static;
+        transform: none;
+        width: 100%;
+        padding: 25px 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #formularioEdicion,
+    #formularioEdicion2,
+    #formularioEdicionContenido,
+    #registro,
+    #registro2,
+    #registroUsuario,
+    #registroCurso,
+    #registroContenido,
+    .formUsuario,
+    .formCurso {
+        width: 100%;
+        max-width: 390px;
+        height: auto;
+        min-height: auto;
+        padding: 22px 20px;
+    }
+
+    .title,
+    .title2 {
+        font-size: 24px;
+        margin: 0 0 25px;
+        letter-spacing: 1px;
+    }
+
+    .title2 {
+        margin-right: 0;
+    }
+
+    .title2 img {
+        width: 75px;
+    }
+
+    .inputContainer {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .input {
+        font-size: 15px;
+        padding: 0 14px;
+    }
+
+    .label {
+        font-size: 15px;
+    }
+
+    .botonEnviar,
+    .botonRegistro {
+        width: 100%;
+        padding: 13px 20px;
+    }
+
+    .encabezado-formulario {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagen-perfil img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* FOOTER MÓVIL HORIZONTAL */
+    footer {
+        background-color: #909FDC;
+        color: #fff;
+        padding: 18px 12px;
+        display: grid;
+        grid-template-columns: 0.8fr 1fr 1fr;
+        align-items: start;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: auto;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 38px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .footer-column h3,
+    .contact-heading {
+        font-size: 14px;
+        color: #021140;
+        margin: 0 0 6px;
+        line-height: 1.1;
+    }
+
+    .footer-column p {
+        font-size: 11px;
+        color: white;
+        line-height: 1.25;
+        margin: 2px 0;
+        text-align: center;
+    }
+
+    .footer-column p.has-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .footer-column p.has-icon i,
+    .footer-column p.has-icon svg {
+        flex-shrink: 0;
+        width: 13px;
+        text-align: center;
+    }
+
+    .footer-column:nth-child(3) p {
+        font-size: 10.5px;
+    }
+
+    .footer-column:first-child {
+        justify-content: center;
+        padding-top: 8px;
+    }
+
+    .footer-column:first-child p {
+        display: none;
+    }
+
+    .contact-heading {
+        margin-left: 0;
+    }
+
+    .phone-icon {
+        margin-right: 3px;
+    }
+}
+
+
+
+
+
+
+
