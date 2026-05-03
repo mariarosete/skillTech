@@ -1005,45 +1005,45 @@ footer {
   footer {
     background-color: #909FDC;
     color: #fff;
-    padding: 18px 15px;
+    padding: 16px 10px;
     text-align: center;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
 }
 
 .footer-column {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    margin: 0 0 14px 0;
-    display: block;
-}
-
-.footer-column:first-child p {
-    display: none;
-}
-
-.footer-column:last-child {
-    margin-bottom: 0;
+    flex: 1;
+    max-width: 33.33%;
+    width: 33.33%;
+    padding: 0 4px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo {
-    width: 55px;
+    width: 42px;
     height: auto;
     margin-bottom: 4px;
 }
 
 .footer-column h3,
 .contact-heading {
-    font-size: 18px;
+    font-size: 13px;
     color: #021140;
-    margin: 0 0 6px 0;
+    margin: 0 0 5px 0;
+    line-height: 1.1;
 }
 
 .footer-column p {
-    font-size: 14px;
+    font-size: 11px;
     color: white;
-    line-height: 1.3;
-    margin: 3px 0;
+    line-height: 1.25;
+    margin: 2px 0;
     text-align: center;
 }
 
@@ -1053,7 +1053,7 @@ footer {
 }
 
 .phone-icon {
-    margin-right: 5px;
+    margin-right: 3px;
 }
 
 .contact-heading {
@@ -1062,5 +1062,9 @@ footer {
 
 .footer-column:first-child {
     margin-top: 0;
+}
+
+.footer-column:first-child p {
+    display: none;
 }
 }
