@@ -689,17 +689,101 @@ footer {
 }
 
 
+/* =======================
+   VERSIÓN MÓVIL 
+======================= */
 @media (max-width: 768px) {
-    .div-principal {
-        width: 100%; 
+
+    * {
+        box-sizing: border-box;
     }
-    
-    .div-testimonio{
-        width: 50%;
+
+    body {
+        overflow-x: hidden;
     }
-    .texto{
+
+    .global {
         width: 100%;
-    } 
+        padding: 0 15px;
+    }
+
+    /* Lista de inscripciones */
+    #listaInscripciones {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    #listaInscripciones li {
+        width: 100%;
+        margin-bottom: 0;
+        padding: 18px;
+    }
+
+    .curso-titulo {
+        font-size: 18px;
+    }
+
+    .enlace-curso {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    /* Carrusel */
+    .carrusel {
+        width: 100%;
+        margin: 25px 0;
+        position: relative;
+    }
+
+    .imagenes {
+        width: 100%;
+    }
+
+    .img {
+        width: 100%;
+        height: 240px;
+        border-radius: 12px;
+        margin: 0;
+    }
+
+    .texto {
+        width: 90%;
+        height: auto;
+        min-height: 70px;
+        padding: 10px;
+        border-radius: 18px;
+        margin-bottom: 10px;
+    }
+
+    .texto h3 {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    .texto p {
+        display: none;
+    }
+
+    .imagenes:hover .texto {
+        transform: none;
+        height: auto;
+        background-color: rgba(63, 106, 138, 0.65);
+    }
+
+    .imagenes:hover .texto p {
+        display: none;
+    }
+
+    .atras,
+    .adelante {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        margin: 0;
+    }
+
     .atras {
         left: 10px;
     }
@@ -707,96 +791,210 @@ footer {
     .adelante {
         right: 10px;
     }
-    .atras, .adelante {
-        position: absolute;
-        top: 50%;
-        transform: translateY(1100%);
+
+    .puntos {
+        justify-content: center;
+        margin: 10px 0 0 0;
     }
 
+    .puntos p {
+        font-size: 35px;
+    }
+
+    /* Gráficos */
     .contenedor-graficos {
-        display: flex; 
-        flex-direction: column; 
-        gap: 20px; 
-    }
-    .carrusel {
-        margin-bottom: 20px; 
+        flex-direction: column;
         width: 100%;
+        gap: 20px;
     }
+
     .contenedor-grafico {
         width: 100%;
-    }
-   
-
-    #formBusquedaCategoria{
-        width: 20%;
-    }
-    #inputTitulo{
-        width: 50%;
-    }
-    button{
-        width: 80%;
-    }
-    .container {
-        display: flex; 
-        flex-direction: column;
-        gap: 20px; 
-    }  
-    .recomendacion img {
-        max-width: 100%; 
-        height: auto; 
-        border-radius: 8px;
-        margin-bottom: 10px;
-    }  
-   
-    .contenedor-recomendaciones {
-            text-align: center; 
-    }
-    
-    .recomendaciones {
-            display: flex;
-            flex-direction: column; 
-            align-items: center; 
-    }
-    
-    .recomendacion {
-            width: 80%; 
-            margin: 0 auto 20px; 
+        flex: none;
+        padding: 15px;
     }
 
+    canvas {
+        height: 280px;
+    }
 
-    /* Reglas para colocar las noticias en columna */
-    .noticias {
+    /* Iconos */
+    .seccion-iconos {
+        margin: 35px 15px 60px;
+        padding: 20px;
+    }
+
+    .seccion-iconos h2 {
+        font-size: 24px;
+    }
+
+    .iconos {
         flex-direction: column;
         align-items: center;
     }
 
-    .noticia {
-        width: 80%; 
-        margin: 0 auto 20px; 
+    .icono {
+        width: 100%;
+        flex-basis: auto;
     }
 
-    /* Reducir tamaño del texto en noticias */
-    .contenido-noticia h3 {
-        font-size: 16px; 
+    .icono p {
+        font-size: 17px;
     }
 
-    .fecha {
-        font-size: 14px; 
-    }
-
-    .contenido-noticia p {
-        font-size: 14px; 
-    }
-
-     /* Ajustar testimonios para que estén en una fila */
-     .testimonios {
-        flex-direction: column; 
-        align-items: center; 
+    /* Testimonios */
+    .testimonios {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
     }
 
     .testimonio {
-        width: 80%; 
-        margin: 0 auto 20px; 
+        width: 90%;
+        flex-basis: auto;
+        padding: 22px;
     }
-   
+
+    .seccion-testimonios h2 {
+        font-size: 26px;
+    }
+
+    /* Noticias */
+    .noticias {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+
+    .noticia {
+        width: 90%;
+    }
+
+    .seccion-noticias h2 {
+        font-size: 26px;
+    }
+
+    .contenido-noticia h3 {
+        font-size: 17px;
+    }
+
+    .contenido-noticia p,
+    .fecha {
+        font-size: 14px;
+    }
+
+    /* Recomendaciones */
+    .contenedor-recomendaciones {
+        padding: 0 15px;
+        margin-top: 35px;
+    }
+
+    .contenedor-recomendaciones h2 {
+        font-size: 24px;
+    }
+
+    .recomendaciones {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .recomendacion {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .recomendacion img {
+        width: 100%;
+        height: 200px;
+    }
+
+    /* Buscador */
+    .container {
+        width: 92%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .buscadores {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .buscadores form {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .buscadores select,
+    .buscadores input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .buscadores button,
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #formBusquedaCategoria,
+    #inputTitulo {
+        width: 100%;
+    }
+
+    #contenedorResultados {
+        padding: 15px;
+    }
+
+    /* Modal */
+    .bienvenida-modal .modal-content {
+        width: 90%;
+        padding: 25px 18px;
+    }
+
+    .bienvenida-modal h2 {
+        font-size: 22px;
+    }
+
+    .bienvenida-modal p {
+        font-size: 16px;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px 15px;
+    }
+
+    .footer-column {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .footer-column h3 {
+        font-size: 22px;
+    }
+
+    .footer-column p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .contact-heading {
+        margin-left: 0;
+    }
+
+    .footer-column:first-child {
+        margin-top: 0;
+    }
+
+    .footer-column:first-child p {
+        margin-top: 0;
+    }
 }
