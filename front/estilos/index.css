@@ -1002,36 +1002,36 @@ footer {
     }
 
     /* FOOTER MÓVIL */
-    footer {
-    background-color: #eef1fb;
-    padding: 28px 18px;
+   footer {
+    background-color: #6f82bd;
+    padding: 28px 20px 22px;
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 18px;
-    text-align: center;
 }
 
 .footer-column {
     width: 100%;
     max-width: 100%;
-    padding: 22px 18px;
-    border-radius: 20px;
-    background-color: #8fa0df;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
     align-items: center;
 }
 
 .footer-column h3 {
-    font-size: 22px;
-    color: #061447;
-    margin: 0 0 12px;
+    font-size: 21px;
+    color: #07164a;
+    margin: 0 0 8px;
 }
 
 .footer-column p {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.45;
     color: white;
-    margin: 6px 0;
+    margin: 4px 0;
     text-align: center;
 }
 
@@ -1041,9 +1041,9 @@ footer {
 }
 
 .logo {
-    width: 70px;
+    width: 65px;
     height: auto;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .contact-heading {
