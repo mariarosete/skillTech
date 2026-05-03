@@ -1003,55 +1003,53 @@ footer {
 
     /* FOOTER MÓVIL */
    footer {
-    background-color: #6f82bd;
-    padding: 28px 20px 22px;
+    background-color: #021140;
+    color: white;
+    padding: 28px 18px;
+    display: block;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
 }
 
 .footer-column {
     width: 100%;
     max-width: 100%;
     padding: 0;
-    background: transparent;
-    box-shadow: none;
-    border-radius: 0;
-    align-items: center;
+    margin: 0 0 22px 0;
+    display: block;
 }
 
-.footer-column h3 {
-    font-size: 21px;
-    color: #07164a;
-    margin: 0 0 8px;
+.footer-column:last-child {
+    margin-bottom: 0;
+}
+
+.footer-column h3,
+.contact-heading {
+    color: white;
+    font-size: 20px;
+    margin: 0 0 10px 0;
 }
 
 .footer-column p {
-    font-size: 16px;
-    line-height: 1.45;
-    color: white;
-    margin: 4px 0;
+    color: #e8ecff;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 5px 0;
     text-align: center;
 }
 
 .footer-column p.has-icon {
-    justify-content: center;
+    display: block;
     text-align: center;
 }
 
 .logo {
-    width: 65px;
+    width: 70px;
     height: auto;
-    margin-bottom: 5px;
-}
-
-.contact-heading {
-    margin-left: 0;
+    margin-bottom: 8px;
 }
 
 .phone-icon {
-    margin-right: 8px;
+    margin-right: 6px;
 }
 
 .footer-column:first-child {
