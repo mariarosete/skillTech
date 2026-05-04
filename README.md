@@ -27,7 +27,7 @@ Puedes probar la aplicación aquí:
 
 Puedes ver el funcionamiento de la aplicación aquí:
 
-👉 https://mariarosete.vercel.app/assets/skillTech-CbHMBt_u.mp4
+👉 https://mariarosete.vercel.app/skillTech.mp4
 
 ---
 
